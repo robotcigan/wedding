@@ -1,0 +1,290 @@
+@import 'helpers/variables.styl'
+@import 'helpers/mixins.styl'
+@import 'base/base.styl'
+
+
+.grid--container
+  max-width 1216px
+
+.link
+  &--primary
+    color $primary
+    text-decoration none
+
+.h1
+  font-size 3.2rem
+  font-weight 600
+  margin-bottom 3.2rem
+  margin-top 0
+
+.empty
+  display block
+  height 10rem
+
+.offset
+  margin-bottom 8rem
+
+.main-header
+  background-color #fff
+  max-height 10rem
+  padding-bottom 2rem
+  padding-top 2rem
+  position fixed
+  top 0
+  width 100%
+  z-index 100
+  &__right
+    text-align right
+  .link--primary
+    margin-right 2rem
+
+.header-nav
+  li
+    display inline-block
+    margin-right 1.5rem
+    &:last-child
+      margin-right 0
+  &__link
+    color $main
+    line-height 6rem
+    text-decoration none
+    &:hover
+      color $primary
+
+.logo
+  display inline-block
+  background url('../../img/logo.png') no-repeat
+  background-size contain
+  height 6rem
+  float left
+  margin-right 2rem
+  width 15rem
+
+.city
+  display inline-block
+  margin-right 2rem
+  &__icon
+    background url('../../img/location.png') no-repeat
+    background-size contain
+    display inline-block
+    height 2rem
+    margin-right .4rem
+    vertical-align middle
+    width 1.5rem
+  &__name
+    display inline-block
+    vertical-align middle
+
+.banners
+  .banner
+    color #fff
+    display inline-block
+    font-weight 700
+    height 4.8rem
+    text-align center
+    text-decoration none
+    width 100%
+    &__icon
+      background-size contain !important
+      display inline-block
+      height 3rem
+      line-height 4.8rem
+      margin-right .5rem
+      vertical-align middle
+    &__title
+      display inline-block
+      line-height 4.8rem
+      vertical-align middle
+    &--type-1
+      background $secondary url('../../img/pattern1.png')
+      .banner__icon
+        background url('../../img/pattern-icon-1.png') no-repeat
+        width 3.2rem
+    &--type-2
+      background $primary url('../../img/pattern2.png')
+      .banner__icon
+        background url('../../img/pattern-icon-2.png') no-repeat
+        width 5rem
+
+.hero
+  background url('../../img/bg.jpg') 50% no-repeat
+  background-size cover
+  display block
+  height 100vh
+  height calc(100vh - 4.8rem)
+  margin 0
+  position relative
+  width 100%
+  &:before
+    content ''
+    background-color rgba(#0b0b1b, .6)
+    height 100%
+    position absolute
+    width 100%
+    z-index 0
+  &__align
+    align-items center
+    display flex
+    flex-wrap wrap
+    height 100%
+    justify-content center
+  &__content
+    color #fff
+    // margin 0 auto
+    text-align center
+    position relative
+    z-index 50
+    // width 75%
+  &__header
+    font-size 4.4rem
+    font-weight 700
+    letter-spacing 1px
+    line-height 1
+    margin 0
+    margin-bottom 1rem
+  &__subheader
+    font-size 2.4rem
+    line-height 1
+    margin 0
+    font-weight 300
+  &__time
+    font-size 3rem
+    font-weight 600
+
+.index-category
+  &__link
+    color $blue
+    display block
+    margin-bottom .4rem
+    text-decoration none
+    &:hover
+      color $primary
+  &__img
+    max-width 100%
+
+.center
+  text-align center
+  width 100%
+
+.breadcrumbs
+  border-bottom 1px dashed rgba($main, .2)
+  margin-bottom 3.2rem
+  padding 1.2rem 0
+  &__link
+    color $main
+    position relative
+    margin-right 3.2rem
+    text-decoration none
+    &:after
+      content '\f105'
+      font-family FontAwesome
+      position absolute
+      right -1.6rem
+    &--active
+      color $secondary
+      &:after
+        display none
+    &:hover
+      color $primary
+  h1
+    font-size 1.8rem
+    font-weight 400
+    margin 0
+
+.btn
+  display inline-block
+  border-radius 24px
+  cursor pointer
+  font-weight 600
+  padding .8rem 2rem
+  text-decoration none
+  transition all .5s
+  &--primary
+    background $primary
+    color #fff
+    &:hover
+      background $primary - 8%
+      filter: drop-shadow(0 6px 10px rgba($primary, .5))
+  &--empty
+    border 2px solid $secondary
+    color $secondary
+    font-weight 600
+    font-size 1.8rem
+
+.sitebar
+  border $border
+  border-radius $radius
+  padding 0
+  &__link
+    color $main
+    display block
+    border-bottom $border
+    line-height 4rem
+    padding-left 1rem
+    text-decoration none
+    &:hover
+      color $primary
+    &--active
+      background-color rgba($secondary, .1)
+      color $secondary
+      font-weight 600
+      &:hover
+        color $secondary
+    &--special
+      color $primary
+      font-weight 600
+
+.catalog
+  margin-bottom 3rem
+  .specialist
+    &__photo
+      height 28rem
+
+.specialist
+  display block
+  margin-bottom 2.5rem
+  &__photo
+    background-position 50%
+    background-size cover !important
+    display block
+    height 24rem
+    margin-bottom .5rem
+    overflow hidden
+    position relative
+    text-align center
+  &__plate
+    background $primary
+    color #fff
+    display block
+    font-size 1.2rem
+    font-weight 700
+    left 0
+    letter-spacing 1px
+    padding .5rem 1rem
+    position absolute
+    text-transform uppercase
+    top 0
+  &__name
+    color $main
+    display block
+    font-size 1.8rem
+    font-weight 600
+    text-decoration none
+  &__role
+    color $primary
+    font-size 1.2rem
+    font-weight 600
+    text-transform uppercase
+
+
+
+
+
+.main-footer
+  margin-top 10rem
+
+
+
+
+
+@import 'base/media.styl'

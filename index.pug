@@ -1,0 +1,104 @@
+doctype html
+html(lang="ru")
+  head
+    meta(charset="utf-8")
+    title Wedding office
+    meta(name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="format-detection" content="telephone=no")
+    link(rel="stylesheet", href="styles/css/vendor.css")
+    link(rel="stylesheet", href="styles/css/main.css")
+
+  body
+
+    header.main-header
+      .grid.grid--container
+        .row.row--sm-center
+          .col.col--sm-2
+            a(href="/pages.html").logo
+          .col.col--sm-6
+            nav.header-nav
+              li: a(href="").header-nav__link Каталог
+              li: a(href="").header-nav__link Тендеры
+              li: a(href="").header-nav__link Новости
+              li: a(href="").header-nav__link Статьи
+              li: a(href="").header-nav__link Cвадебный консультант
+              li: a(href="").header-nav__link О проекте
+          .col.col--sm-4.main-header__right
+            .city
+              .city__icon
+              .city__name Краснодар
+            a(href="").link.link--primary Войти
+            a(href="").btn.btn--primary Разместить заявку
+
+    .hero
+      .hero__align
+        .hero__content
+          .grid.grid--container
+            .row
+              .col.col--sm-10.col--sm-offset-1
+                h1.hero__header Добро пожаловать в наш праздничный офис!
+                .hero__subheader Мы собрали для Вас проверенных временем и имеющих отличные рекомендации  специалистов и организации, предоставляющие свадебные услуги в Краснодаре.
+    
+    .grid.grid--no-gutters.banners
+      .row.row--no-gutters
+        .col.col--sm-6.col--no-gutters
+          a(href="").banner.banner--type-1
+            i.banner__icon.banner__icon--microphone
+            .banner__title Ежегодная встреча шоуменов
+        .col.col--sm-6.col--no-gutters
+          a(href="").banner.banner--type-2
+            i.banner__icon.banner__icon--thing
+            .banner__title Премия «Золотая штучка»
+
+    main
+      .grid.grid--container
+        h1.h1 Все для подготовки к свадьбе в Краснодаре
+        .row
+          .col.col--sm-9
+            .row.index-category
+              .col.col--sm-3
+                a(href="").index-category__link.index-category__link--active Эксклюзив
+                a(href="").index-category__link Песня-подарок
+                a(href="").index-category__link Ведущие
+                a(href="").index-category__link Шоу-программы
+                a(href="").index-category__link Диджеи и музыканыты
+                a(href="").index-category__link Видеографы
+              .col.col--sm-3
+                a(href="").index-category__link Свадебные салоны
+                a(href="").index-category__link Оформители
+                a(href="").index-category__link Фейерверки и салюты
+                a(href="").index-category__link Прокат автомобилей
+                a(href="").index-category__link Звук, свет, сцена
+                a(href="").index-category__link Обручальные кольца
+              .col.col--sm-3
+                a(href="").index-category__link Салоны красоты
+                a(href="").index-category__link Кейтеринг
+                a(href="").index-category__link Кондитеры
+                a(href="").index-category__link Аниматоры
+                a(href="").index-category__link Хендмейдеры
+                a(href="").index-category__link Фотографы
+              .col.col--sm-3
+                a(href="").index-category__link Кафе, рестораны
+                a(href="").index-category__link Свадебные распорядители
+                a(href="").index-category__link Отели и гостиницы
+                a(href="").index-category__link Свадебные агенства
+                a(href="").index-category__link Шоу-микс
+          .col.col--sm-3
+            img(src="img/ring.jpg", alt="").index-category__img
+        
+        include viewed.pug
+
+    footer.main-footer
+      .grid.grid--container
+        .row
+          .col.col--sm-8
+            p Проект "Свадебные штучки" не несёт ответственность за текстовые, фото-, видео-, и аудиоматериалы, предоставляемые специалистами и организациями, размещёнными на сайте www.wedding-office.ru.
+          .col.col--sm-4
+            .copyright
+              span Copyright © 2017
+
+
+  script(src="js/jquery.min.js")
+  script(src="js/slick.min.js")
+  script(src="js/main.js")

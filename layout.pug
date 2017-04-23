@@ -1,0 +1,60 @@
+doctype html
+html(lang="ru")
+  head
+    meta(charset="utf-8")
+    title Wedding office
+    meta(name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="format-detection" content="telephone=no")
+    link(rel="stylesheet", href="styles/css/vendor.css")
+    link(rel="stylesheet", href="styles/css/main.css")
+
+  body
+    
+    section.empty
+    header.main-header
+      .grid.grid--container
+        .row.row--sm-center
+          .col.col--sm-8
+            a(href="/pages.html").logo
+            nav.header-nav
+              li: a(href="").header-nav__link Каталог
+              li: a(href="").header-nav__link Тендеры
+              li: a(href="").header-nav__link Новости
+              li: a(href="").header-nav__link Статьи
+              li: a(href="").header-nav__link Cвадебный консультант
+              li: a(href="").header-nav__link О проекте
+          .col.col--sm-4.main-header__right
+            .city
+              .city__icon
+              .city__name Краснодар
+            a(href="").link.link--primary Войти
+            a(href="").btn.btn--primary Разместить заявку
+    
+    .grid.grid--no-gutters.banners
+      .row.row--no-gutters
+        .col.col--sm-6.col--no-gutters
+          a(href="").banner.banner--type-1
+            i.banner__icon.banner__icon--microphone
+            .banner__title Ежегодная встреча шоуменов
+        .col.col--sm-6.col--no-gutters
+          a(href="").banner.banner--type-2
+            i.banner__icon.banner__icon--thing
+            .banner__title Премия «Золотая штучка»
+
+    main
+      block content
+
+    footer.main-footer
+      .grid.grid--container
+        .row
+          .col.col--sm-8
+            p Проект "Свадебные штучки" не несёт ответственность за текстовые, фото-, видео-, и аудиоматериалы, предоставляемые специалистами и организациями, размещёнными на сайте www.wedding-office.ru.
+          .col.col--sm-4
+            .copyright
+              span Copyright © 2017
+
+
+  script(src="js/jquery.min.js")
+  script(src="js/slick.min.js")
+  script(src="js/main.js")
