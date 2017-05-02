@@ -1,0 +1,169 @@
+.form-control
+  min-height 5rem
+  margin-bottom 1.6 rem
+  position relative
+  &__icon
+    color #ddd
+    position absolute
+    right .5rem
+    top 1rem
+    transition color .2s
+  &__words
+    bottom 2rem
+    font-size 1.2rem
+    position absolute
+    right 1rem
+  label
+    background #fff
+    cursor text
+    left 0
+    position absolute
+    top 6px
+    transition all .2s
+    // will-change font-size, top
+    width 100%
+    z-index 0
+  input[type="text"],
+  input[type="password"],
+  input[type="date"],
+  input[type="email"],
+  input[type="number"],
+  select
+    background transparent
+    border 0
+    border-bottom 2px solid $light-gray
+    display block
+    height 4rem
+    font-family $font
+    font-size 1.6rem
+    transition border-color .2s
+    position relative
+    width 100%
+    z-index 2
+    -webkit-appearance none
+    &:invalid
+      & + label
+        color $gray
+        font-size 1.2rem
+        top -12px
+    &:focus
+      border-color $primary
+      & + label
+        color $primary
+        font-size 1.2rem
+        top -12px
+      & + label + .form-control__icon
+        color $primary
+  textarea
+    background transparent
+    border 0
+    border-bottom 2px solid $light-gray
+    min-height 17.6rem
+    font-family $font
+    font-size 1.6rem
+    resize vertical
+    padding-top 3rem
+    transition border-color .2s
+    width 100%
+    -webkit-appearance none
+    & + label
+      top 0
+    &:focus
+      border-color $primary
+      & + label
+        color $primary
+
+
+.btn
+  border 0
+  border-radius 24px
+  cursor pointer
+  display inline-block
+  font-family $font
+  font-size 1.6rem
+  font-weight 600
+  // height 4rem
+  padding .8rem 2rem
+  text-decoration none
+  transition filter .4s
+  &--primary
+    background $primary
+    color #fff
+    &:hover
+      background $primary - 8%
+      filter: drop-shadow(0 8px 8px rgba($primary, .3))
+    &.btn--solid
+      border 1px solid $primary
+      background transparent
+      color $primary
+      &:hover
+        background $primary
+        color #fff
+        filter: none
+  input[type="file"]
+    display none
+  &--secondary
+    &.btn--solid
+      border 1px solid $secondary
+      background transparent
+      color $secondary
+      span
+        vertical-align middle
+      &:hover
+        filter: none
+        .reload
+          transform rotate(90deg)
+
+
+
+.tabs
+  &__header
+    border-bottom 1px solid $light-gray
+    display flex
+    flex-basis auto
+    justify-content space-between
+    margin-bottom 2rem
+  &__link
+    color $gray
+    cursor pointer
+    display block
+    flex-basis 100%
+    line-height 2.4
+    padding 0 2rem
+    text-align center
+    &--active
+      color $main
+      border-bottom 3px solid $primary
+  &__content
+    display none
+    &--active
+      display block
+  &--type-2
+    .tabs
+      &__header
+        border-bottom 0
+      &__link
+        padding 0
+        &--active
+          border-bottom 0
+          span
+            display inline-block
+            position relative
+            // min-width 17rem
+            z-index 1
+            &:before
+              background url('../../img/selected.png') 50% no-repeat
+              background-size contain
+              content ''
+              left 0
+              height 2rem
+              // padding 0 5rem
+              position absolute
+              // top -9px
+              size(3.5rem, 120%)
+              z-index -1
+
+
+.accordion
+  &__body
+    display none

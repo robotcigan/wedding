@@ -1,21 +1,18 @@
 @import 'helpers/variables.styl'
 @import 'helpers/mixins.styl'
 @import 'base/base.styl'
+@import 'base/typography.styl'
+@import 'base/icons.styl'
+
+@import 'pages/inner.styl'
+@import 'pages/form.styl'
+@import 'pages/specialist.styl'
+
 
 
 .grid--container
   max-width 1216px
 
-.link
-  &--primary
-    color $primary
-    text-decoration none
-
-.h1
-  font-size 3.2rem
-  font-weight 600
-  margin-bottom 3.2rem
-  margin-top 0
 
 .empty
   display block
@@ -191,25 +188,16 @@
     font-weight 400
     margin 0
 
-.btn
+
+.ava
   display inline-block
-  border-radius 24px
-  cursor pointer
-  font-weight 600
-  padding .8rem 2rem
-  text-decoration none
-  transition all .5s
-  &--primary
-    background $primary
-    color #fff
-    &:hover
-      background $primary - 8%
-      filter: drop-shadow(0 6px 10px rgba($primary, .5))
-  &--empty
-    border 2px solid $secondary
-    color $secondary
-    font-weight 600
-    font-size 1.8rem
+  background-size cover !important
+  border-radius 50%
+  circle(9.6rem)
+  vertical-align middle
+  & + .btn
+    margin-left 1em
+
 
 .sitebar
   border $border
@@ -275,15 +263,60 @@
     font-size 1.2rem
     font-weight 600
     text-transform uppercase
+  &--big
+    .specialist__photo
+      height 38rem
 
 
+.phone
+  margin-bottom 1rem
+  .fa
+    color $gray
+    display inline-block
+    font-size 1.6rem
+    margin-right 1rem
+  &__number
+    display inline-block
+    margin-right .5rem
+  &__show
+    color $secondary
+    cursor pointer
+    display inline-block
+    font-size 1.2rem
+    font-weight 600
+    letter-spacing 1px
+    text-transform uppercase
 
+
+.mail
+  .fa
+    color $gray
+    margin-right 1rem
+
+.show-more
+  border-bottom 2px dashed $secondary
+  color $secondary
+  cursor pointer
+  font-weight 600
+  display inline-block
+
+
+.masonry
+  margin-bottom 8rem
+  clearfix()
+  &__column
+    margin-bottom 1.4rem
+    width 33.33%
+    img
+      display inline-block
+      max-width 100%
+
+.viewed
+  margin-top 10rem
 
 
 .main-footer
   margin-top 10rem
-
-
 
 
 

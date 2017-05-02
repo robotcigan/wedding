@@ -1,0 +1,53 @@
+.comment
+  display flex
+  margin-bottom 3rem
+  &-form
+    margin-bottom 5rem
+  &__left
+    margin-right 2rem
+  &__right
+    width 100%
+  &__photo
+    border-radius 50%
+    display inline-block
+    overflow hidden
+    text-align center
+    circle(5.6rem)
+    img
+      display inline-block
+      max-width 100%
+    &.nophoto
+      background url("../../img/nophoto.jpg") no-repeat 50%
+      background-size cover
+      cursor pointer
+      input
+        opacity 0
+        visibility hidden
+  &__name
+    font-weight 600
+    display inline-block
+    margin-bottom .4rem
+  &__date
+    color $gray
+    display inline-block
+    font-size 1.4rem
+    margin-left 1rem
+  &__textarea
+    border 1px solid $light-gray
+    border-radius 4px
+    font-family $font
+    height 8rem
+    margin-bottom 1rem
+    padding 1.5rem
+    width 100%
+
+
+.dashed
+  border 2px dashed $secondary
+  margin-bottom 2rem
+  padding 1rem 2rem
+  &__header
+    font-weight 600
+  &__date
+    color $gray
+    margin-bottom .5rem

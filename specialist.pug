@@ -1,0 +1,165 @@
+extends layout.pug
+
+block content
+  .grig.grid--container
+    .row
+      .col.col--sm-12
+        .breadcrumbs
+          nav.breadcrumbs__nav
+            a(href="").breadcrumbs__link Главная
+            a(href="").breadcrumbs__link Каталог
+            a(href="").breadcrumbs__link Ведущие
+            a(href="").breadcrumbs__link.breadcrumbs__link--active Анна Веретина 
+
+    .row
+      .col.col--sm-3
+        .specialist.specialist--big
+          .specialist__photo(style="background-image: url(img/specialist.jpg)")
+            .specialist__plate Акция!
+        .text--center
+          a(href="").btn.btn--primary Редактировать профиль
+      .col.col--sm-6
+        h1.h1.without-offset Анна Веретина
+        .specialist__role Ведущая
+
+
+        .tabs.tabs--type-2
+          nav.tabs__header
+            li.tabs__link.tabs__link--active
+              span Общая информация
+            li.tabs__link
+              span Акции
+            li.tabs__link
+              span Награды и сертификаты
+
+          .tabs__content
+
+            .row
+              .col.col--sm-4
+                strong Цена за час
+              .col.col--sm-8
+                span 5 000
+                i.ruble
+              .col.col--sm-4
+                strong Цена за мероприятие
+              .col.col--sm-8
+                span 17 000
+                i.ruble
+
+
+            p Шоу-мен, актёр, профессиональный ведущий, организатор. Профессионально провожу праздничные мероприятия любого формата, во время каждого мероприятия, я действительно вкладываю свою душу, умею слушать Вас и чувствую настроение каждого из гостей.
+            p Моя харизматичность и безудержная энергетика не даст заскучать Вам. Всегда забочусь о том, чтобы всем гостям было комфортно, весело и интересно.
+            p Для каждого своего торжества я составляю уникальный сценарий, уважаю качественный юмор и индивидуальный подход.
+
+
+            .accordion
+              .accordion__body
+                p dsfgsd
+              .accordion__btn.show-more Показать полностью
+
+          .tabs__content.tabs__content--active
+            -for(var x = 0; x < 2; x++)
+              .dashed
+                .dashed__header Love story в подарок! Фотосъемка свадебного дня со скидкой 30%
+                .dashed__date с 25 декабря по 15 марта
+                .dashed__content Купон предоставляет возможность приобрести пакет «Love story в подарок! Фотосъемка свадебного дня» -30%
+            
+            .center
+              .btn.btn--secondary.btn--solid
+                span Показать еще
+                i.reload
+
+
+
+
+      .col.col--sm-3.specialist-aside
+        h3.h3 Контакты
+        .phone
+          i.fa.fa-phone
+          span.phone__number + 7 918 XXX XXXX
+          .phone__show Показать
+        .phone
+          i.fa.fa-phone
+          span.phone__number + 7 918 XXX XXXX
+          .phone__show Показать
+        .mail
+          i.fa.fa-envelope
+          span disneyka.krd@mail.ru
+        h3.h3 Соц. сети
+        .specialist-socials
+          a(href="")
+            i.fa.fa-vk
+          a(href="")
+            i.fa.fa-odnoklassniki
+          a(href="")
+            i.fa.fa-facebook
+          a(href="")
+            i.fa.fa-twitter
+          a(href="")
+            i.fa.fa-instagram
+          a(href="")
+            i.fa.fa-youtube-play
+          a(href="")
+            i.fa.fa-vimeo
+          a(href="")
+            i.fa.fa-myworld
+        h3.h3 Адрес
+        p.specialist-adress г. Краснодар, ул. Красная, д.23
+        .specialist-map
+          iframe(src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d90140.36064485228!2d38.95759305000001!3d45.08809935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1493724942535" frameborder="0" style="border:0" allowfullscreen)
+
+
+    h2.h1 Портфолио
+    .tabs.tabs--type-2
+      nav.tabs__header
+        li.tabs__link.tabs__link--active
+          span Фото
+        li.tabs__link
+          span Видео
+        li.tabs__link
+          span Аудио
+        li.tabs__link
+          span Отзывы
+
+      .tabs__content.tabs__content--active
+        .masonry
+          -for(var i = 1; i < 10; i++)
+            .masonry__column
+              img(src="img/masonry/" + i + ".jpg", alt="")
+
+        .center
+          .btn.btn--secondary.btn--solid
+            span Показать еще
+            i.reload
+
+      .tabs__content
+        .row
+          -for(var x = 0; x < 7; x++)
+            .col.col--sm-4
+              .video
+                img(src="img/video.jpg", alt="")
+
+      .tabs__content
+        p sdgdf
+
+      .tabs__content
+        form.comment.comment-form
+          .comment__left
+            label.comment__photo.nophoto(for="nophoto")
+              input#nophoto(type="file")
+          .comment__right
+            .comment__name Александр Романов
+            textarea.comment__textarea(placeholder="Ваш отзыв")
+            button.btn.btn--primary.btn--solid Отправить
+        -for(var y = 0; y < 5; y++)
+          .comment
+            .comment__left
+              .comment__photo
+                img(src="img/user.jpg" alt="")
+            .comment__right
+              .comment__name Александр Романов
+              .comment__date 3 марта 2017
+              .comment-text Не следует, однако забывать, что укрепление и развитие структуры влечет за собой процесс внедрения и модернизации соответствующий условий активизации. С другой стороны постоянное информационно - пропагандистское обеспечение нашей деятельности обеспечивает широкому кругу (специалистов) участие в формировании модели развития. Идейные соображения высшего порядка, а также дальнейшее развитие различных форм деятельности влечет за собой процесс внедрения и модернизации соответствующий условий активизации. Равным образом реализация намеченных плановых заданий влечет за собой процесс внедрения
+
+
+  include viewed.pug

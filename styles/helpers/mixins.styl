@@ -1,9 +1,31 @@
-size($size)
+size($height, $width)
+  height $height
+  width $width
+
+
+circle($size)
   height $size
   width $size
+
 
 debug()
   *
     outline 1px solid teal
     & *
       outline 1px solid lightblue
+
+
+clearfix()
+  &:after
+    content ""
+    display table
+    clear both
+
+
+center()
+  bottom 0
+  left 0
+  margin auto
+  position absolute
+  right 0
+  top 0
