@@ -54,10 +54,10 @@ block content
 
             .accordion
               .accordion__body
-                p dsfgsd
+                  p dfsg
               .accordion__btn.show-more Показать полностью
 
-          .tabs__content.tabs__content--active
+          .tabs__content
             -for(var x = 0; x < 2; x++)
               .dashed
                 .dashed__header Love story в подарок! Фотосъемка свадебного дня со скидкой 30%
@@ -65,7 +65,19 @@ block content
                 .dashed__content Купон предоставляет возможность приобрести пакет «Love story в подарок! Фотосъемка свадебного дня» -30%
             
             .center
-              .btn.btn--secondary.btn--solid
+              .btn.btn--secondary.btn--solid.btn--small
+                span Показать еще
+                i.reload
+
+          .tabs__content.tabs__content--active
+            .masonry.documents-gallery
+              -for(var y = 1; y < 6; y++)
+                .masonry__column
+                  a(href="img/documents/" + y + ".jpg")
+                    img(src="img/documents/" + y + ".jpg", alt="")
+
+            .center
+              .btn.btn--secondary.btn--solid.btn--small
                 span Показать еще
                 i.reload
 
@@ -122,10 +134,11 @@ block content
           span Отзывы
 
       .tabs__content.tabs__content--active
-        .masonry
+        .masonry.masonry--offset.portfolio-gallery
           -for(var i = 1; i < 10; i++)
             .masonry__column
-              img(src="img/masonry/" + i + ".jpg", alt="")
+              a(href="img/masonry/" + i + ".jpg")
+                img(src="img/masonry/" + i + ".jpg", alt="")
 
         .center
           .btn.btn--secondary.btn--solid

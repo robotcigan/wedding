@@ -1,0 +1,72 @@
+.registration-action
+  background-image url('../../img/registration-specialist.jpg')
+  background-repeat no-repeat
+  background-size cover
+  height calc(100vh - 13rem)
+  transition background-image 1s
+  position relative
+  &:before
+    background linear-gradient(to top, #000, transparent)
+    bottom 0
+    content ''
+    height 30rem
+    position absolute
+    width 100%
+  &:hover
+    background-image url('../../img/registration-user.jpg')
+
+
+.registration-bg
+  background-color #f6fafb
+
+
+.registration
+  background #fff url('../../img/form-bg.jpg') 50% repeat
+  box-shadow 0 14px 17px rgba(#999, .2)
+  margin 5rem auto
+  margin-bottom 8rem
+  position relative
+  width 67rem
+  z-index 2
+  &:before
+    content ''
+    background url('../../img/bg-candy.jpg') no-repeat
+    background-size contain
+    left -42rem
+    position absolute
+    top -5rem
+    size(28rem, 42rem)
+  &:after
+    background url('../../img/registration-flower-2.png') no-repeat
+    background-size contain
+    content ''
+    position absolute
+    top 0
+    right 0
+    size(12rem, 16rem)
+    z-index -1
+  &__form
+    padding 4rem 6rem
+
+  &__flower
+    background url('../../img/registration-flower.png') no-repeat
+    background-size cover
+    size(17rem, 100%)
+  &__links
+    align-items center
+    display flex
+    justify-content space-between
+    margin-bottom 4rem
+  &__link
+    border 1px dashed $gray
+    border-radius 10px
+    color $gray
+    display inline-block
+    padding 1rem 4rem
+    text-decoration none
+    &--active
+      color #fff
+      background $secondary
+      font-weight 600
+  &__or
+    color $main

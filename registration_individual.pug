@@ -1,0 +1,144 @@
+extends layout.pug
+
+block content
+  .registration-bg
+    .grig.grid--container
+      .row
+        .col.col--sm-8.col--sm-offset-2
+          .registration
+            form.registration__form
+              h1.h1 Я предлагаю услуги для праздника
+              .registration__links
+                a(href="").registration__link.registration__link--active Физическое лицо
+                .registration__or или
+                a(href="").registration__link Юридическое лицо
+              h3.h3 Персональные данные
+              .form-control
+                input(type="text" pattern="/^$|\s+/")
+                label Фамилия
+              .form-control
+                input(type="text" pattern="/^$|\s+/")
+                label Имя
+              .form-control
+                input(type="text" pattern="/^$|\s+/")
+                label Отчество
+              .form-control
+                input(type="email" pattern="/^$|\s+/")
+                label E-mail
+                i.form-control__icon.fa.fa-envelope
+              .form-control
+                input(type="text" pattern="/^$|\s+/")
+                label Дата рождения
+                i.form-control__icon.fa.fa-calendar-o
+              .form-control
+                select(pattern="/^$|\s+/").custom-select
+                  option Город
+                  option Краснодар
+                label Дата рождения
+                i.form-control__icon.fa.fa-angle-down
+              .form-control
+                input(type="text" pattern="/^$|\s+/")
+                label Пароль
+                i.form-control__icon.fa.fa-lock
+              .form-control
+                input(type="text" pattern="/^$|\s+/")
+                label Повторите пароль
+                i.form-control__icon.fa.fa-lock
+              h3.h3 Контактная информация
+              .form-control
+                input(type="text" pattern="/^$|\s+/")
+                label Номер телефона
+                i.form-control__icon.fa.fa-phone
+              .form-control
+                input(type="text" pattern="/^$|\s+/")
+                label Второй номер телефона (если есть)
+                i.form-control__icon.fa.fa-phone
+              h3.h3 Информация об организации
+              .form-control
+                input(type="text" pattern="/^$|\s+/")
+                label ИНН
+              .row
+                .col.col--sm-6
+                  .form-control
+                    input(type="text" pattern="/^$|\s+/")
+                    label Адрес (если есть)
+                .col.col--sm-6
+                  .form-control
+                    input(type="text" pattern="/^$|\s+/")
+                    label Номер офиса
+              .form-control
+                input(type="text" pattern="/^$|\s+/")
+                label Название организации (если есть)
+              h3.h3 Данные об исполнителе
+              .form-control
+                select(pattern="/^$|\s+/").custom-select
+                  option Город
+                  option Краснодар
+                label Дата рождения
+                i.form-control__icon.fa.fa-angle-down
+              .form-control
+                input(type="text" pattern="/^$|\s+/")
+                label Сайт
+              .row
+                .col.col--sm-6
+                  .form-control
+                    input(type="text" pattern="/^$|\s+/")
+                    label Стоимость за час
+                .col.col--sm-6
+                  .form-control
+                    input(type="text" pattern="/^$|\s+/")
+                    label За мероприятие
+              .form-control
+                textarea(pattern="/^$|\s+/")
+                label Информация о мероприятии
+                .form-control__words 0/1000
+              h3.h3 Аватар или логотип
+              .ava.ava--small.nophoto
+              label(for="file-upload").btn.btn--primary.btn--solid Изменить фото
+                input(type="file" id="file-upload")
+              h3.h3 Социальные сети
+              .row
+                .col.col--sm-6
+                  .form-control
+                    input(type="text" pattern="/^$|\s+/")
+                    label Vk
+                    i.form-control__icon.fa.fa-vk
+                  .form-control
+                    input(type="text" pattern="/^$|\s+/")
+                    label Instagram
+                    i.form-control__icon.fa.fa-instagram
+                  .form-control
+                    input(type="text" pattern="/^$|\s+/")
+                    label Facebook
+                    i.form-control__icon.fa.fa-facebook
+                  .form-control
+                    input(type="text" pattern="/^$|\s+/")
+                    label Youtube
+                    i.form-control__icon.fa.fa-youtube-play
+                .col.col--sm-6
+                  .form-control
+                    input(type="text" pattern="/^$|\s+/")
+                    label Одноклассники
+                    i.form-control__icon.fa.fa-odnoklassniki
+                  .form-control
+                    input(type="text" pattern="/^$|\s+/")
+                    label Twitter
+                    i.form-control__icon.fa.fa-twitter
+                  .form-control
+                    input(type="text" pattern="/^$|\s+/")
+                    label Vimeo
+                    i.form-control__icon.fa.fa-vimeo
+                  .form-control
+                    input(type="text" pattern="/^$|\s+/")
+                    label Мой мир
+                    i.form-control__icon.myworld
+              h3.h3 Тарифный план
+              .form-control
+                select(pattern="/^$|\s+/").custom-select
+                  option Город
+                  option Краснодар
+                label Дата рождения
+                i.form-control__icon.fa.fa-angle-down
+              .center
+                button.btn.btn--primary Зарегистрироваться
+            .registration__flower

@@ -7,6 +7,7 @@
 @import 'pages/inner.styl'
 @import 'pages/form.styl'
 @import 'pages/specialist.styl'
+@import 'pages/registration.styl'
 
 
 
@@ -16,24 +17,29 @@
 
 .empty
   display block
-  height 10rem
+  height 9rem
 
 .offset
   margin-bottom 8rem
 
 .main-header
   background-color #fff
+  border-bottom 1px solid $light-gray
   max-height 10rem
-  padding-bottom 2rem
-  padding-top 2rem
+  padding-bottom 1.5rem
+  padding-top 1.5rem
   position fixed
   top 0
+  transition box-shadow .2s
   width 100%
   z-index 100
   &__right
     text-align right
   .link--primary
     margin-right 2rem
+  &--scroll
+    box-shadow 0 8px 20px 5px rgba($gray, .1)
+    
 
 .header-nav
   li
@@ -195,6 +201,10 @@
   border-radius 50%
   circle(9.6rem)
   vertical-align middle
+  &--small
+    circle(6.4rem)
+  &.nophoto
+    background url('../../img/nophoto.jpg') 50% no-repeat
   & + .btn
     margin-left 1em
 
@@ -302,7 +312,6 @@
 
 
 .masonry
-  margin-bottom 8rem
   clearfix()
   &__column
     margin-bottom 1.4rem
@@ -310,6 +319,8 @@
     img
       display inline-block
       max-width 100%
+  &--offset
+    margin-bottom 4rem
 
 .viewed
   margin-top 10rem
