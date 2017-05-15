@@ -1,5 +1,5 @@
-.registration-action
-  background-image url('../../img/registration-specialist.jpg')
+.reg-action
+  background-image url('../../img/registration-choice.jpg')
   background-repeat no-repeat
   background-size cover
   height calc(100vh - 13rem)
@@ -12,8 +12,37 @@
     height 30rem
     position absolute
     width 100%
-  &:hover
-    background-image url('../../img/registration-user.jpg')
+  // &:hover
+  //   background-image url('../../img/registration-user.jpg')
+  &__container
+    align-items center
+    display flex
+    color #fff
+    float left
+    justify-content center
+    padding 5rem 0
+    position absolute
+    text-align center
+    text-decoration none
+    size(100%, 50%)
+    &:hover
+      .reg-action__link
+        bottom 5rem
+    &--second
+      right 0
+  &__link
+    bottom 50%
+    position absolute
+    transition all .7s
+  p
+    font-size 4rem
+    font-weight 600
+    letter-spacing 1px
+    line-height 1
+    margin 0
+    text-transform uppercase
+  span
+    margin 0
 
 
 .registration-bg
@@ -70,3 +99,5 @@
       font-weight 600
   &__or
     color $main
+
+

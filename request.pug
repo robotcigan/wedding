@@ -1,0 +1,43 @@
+extends layout.pug
+
+block content
+  .grig.grid--container
+    .row
+      .col.col--sm-12
+        section.section
+          h1.h1.without-offset Размещение заявки
+          p Укажите данные для связи с вами и дату мероприятия
+          .row
+            .col.col--sm-6
+              form.form.offset
+                .form-control
+                  select(pattern="/^$|\s+/" data-placeholder="Город").custom-select
+                    option
+                    option Крым
+                    option Краснодар
+                  i.form-control__icon.fa.fa-angle-down
+                .form-control
+                  input(type="text" pattern="/^$|\s+/")
+                  label Имя
+                .form-control
+                  input(type="text" pattern="/^$|\s+/").datepicker-inline-date
+                  label Дата мероприятия
+                  i.form-control__icon.fa.fa-calendar-o
+                .form-control
+                  input(type="text" pattern="/^$|\s+/")
+                  label Номер телефона
+                  i.form-control__icon.fa.fa-phone
+                .form-control
+                  textarea(pattern="/^$|\s+/")
+                  label Информация о мероприятии
+                  .form-control__words 0/1000
+                label.checkbox
+                  input(type="checkbox" id="checkbox-1")
+                  label(for="checkbox-1")
+                  span Я согласен с условиями 
+                  a(href="").link пользовательского соглашения
+            .col.col--sm-6.text--xs-center
+              .datepicker-inline
+        
+      .center
+        .btn.btn--primary Оставить заявку

@@ -57,4 +57,40 @@ $(document).ready(function () {
     }
   });
 
+  $('.reg-action__container--first').mouseenter(function() {
+    $('.reg-action').css("background-image", "url('../img/registration-specialist.jpg')")
+  })
+  $('.reg-action__container--second').mouseenter(function() {
+    $('.reg-action').css("background-image", "url('../img/registration-user.jpg')")
+  })
+
+
+  // Датапикер
+  $('.datepicker').flatpickr({
+    dateFormat: "d.m.Y",
+    altInput: true
+  });
+  
+  $('.datepicker-inline').flatpickr({
+    inline: true,
+    dateFormat: "d.m.Y",
+    altInput: true,
+    onChange: function(selectedDates, dateStr, instance) {
+      $('.datepicker-inline-date').val(dateStr);
+    }
+  });
+
+    // Кастомный селект
+  $('.custom-select').select2({
+    minimumResultsForSearch: Infinity
+  });
+
+  $('.ya-share2__icon').after('<span class="ya-share2__text">Поделиться</span>');
+
+  $('.ya-share2__link').each(function() {
+    if ( $(this).attr('title') === 'Twitter' ) {
+      $(this).find('.ya-share2__text').text('Твитнуть')
+    }
+  })
+
 })

@@ -1,0 +1,107 @@
+.article-main-img
+  margin-bottom 4rem
+  margin-top 2rem
+  img
+    width 100%
+
+.article-img
+  border 1px solid $light-gray
+  margin-bottom 1rem
+  margin-top 2rem
+  img
+    display block
+    width 100%
+
+.blockquote
+  background #f9fafc
+  margin 3rem 0
+  margin-bottom 5rem
+  padding 2rem 10.5rem
+
+.quote
+  display flex
+
+blockquote
+  color $gray - 40%
+  display inline-block
+  margin 0
+  margin-bottom 2rem
+  margin-left 2rem
+
+.mark
+  background transparent
+  border 2px dashed $primary
+  display block
+  margin 4rem 0
+  padding 2rem 4rem
+  mark
+    background transparent
+
+small
+  color $gray - 20%
+  display inline-block
+  font-size 1.4rem
+  line-height 1.4
+  margin-bottom 2rem
+
+.article-link
+  background-color rgba($blue, .05)
+  display block
+  margin-top 3rem
+  margin-bottom 4rem
+  padding 1.5rem 4rem
+  position relative
+  text-decoration none
+  &:after
+    color $blue
+    font-family 'FontAwesome'
+    font-size 5.6rem
+    position absolute
+    top .5rem
+  &--left
+    padding-left 10.5rem
+    &:after
+      content '\f104'
+      left 2.4rem
+  &--right
+    padding-left 4rem
+    padding-right 10.5rem
+    &:after
+      content '\f105'
+      right 2.4rem
+  span
+    border-bottom 1px solid rgba($blue, .3)
+    color $blue
+    display inline
+    line-height 1
+  time
+    color $gray
+    display block
+    font-size 1.2rem
+    margin-top .5rem
+
+
+.ya-share2__list
+  display flex !important
+  justify-content space-between
+
+.ya-share2
+  margin-top 2rem
+  margin-bottom 5rem
+  &__badge
+    border-radius 26px !important
+    padding .8rem 1rem
+    width 18rem
+  &__counter
+    vertical-align middle !important
+    margin-left .8rem
+    &:before
+      display none !important
+  &__icon
+    margin-right .5rem
+    vertical-align middle !important
+  &__text
+    font-family $font
+    font-size 1.6rem
+    font-weight 600
+    vertical-align middle

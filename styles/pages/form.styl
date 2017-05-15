@@ -1,3 +1,47 @@
+.select2
+  &-dropdown
+    border-color $light-gray
+
+.select2-dropdown.select2-dropdown--below
+  animation fadeUp .3s forwards
+
+.select2-container--open .select2-dropdown--below
+  box-shadow $shadow
+
+.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b
+  transform rotate(180deg)
+
+.select2-container--default
+  max-width 100% !important
+  width 100% !important
+  .select2-selection--single
+    border none
+    border-radius 0
+    height 3.4rem
+    .select2-selection__rendered
+      line-height 3.2rem
+    .select2-selection__arrow b
+      border none
+      // background url('../../img/arrows.png') no-repeat
+      content url("\f087")
+      font-family 'FontAwesome'
+      height 5px
+      margin-left -10px
+      margin-top 1px
+      transition transform .2s
+      width 10px
+  .select2-search--dropdown
+    .select2-search__field
+      border-color $light-gray
+  .select2-results__option
+    &--highlighted[aria-selected]
+      background-color rgba($primary, .1)
+      color $main
+    &[aria-selected=true]
+      background-color $primary
+      color #fff
+      font-weight 500
+
 .form-control
   min-height 5rem
   margin-bottom 1.6 rem
@@ -7,7 +51,7 @@
     position absolute
     right .5rem
     top 1rem
-    transition color .2s
+    transition all .2s
   &__words
     bottom 2rem
     font-size 1.2rem
@@ -28,7 +72,8 @@
   input[type="date"],
   input[type="email"],
   input[type="number"],
-  select
+  select,
+  .select2-selection--single
     background transparent
     border 0
     border-bottom 2px solid $light-gray
@@ -38,6 +83,7 @@
     font-size 1.6rem
     transition border-color .2s
     position relative
+    resize vertical
     width 100%
     z-index 2
     -webkit-appearance none
@@ -46,6 +92,8 @@
         color $gray
         font-size 1.2rem
         top -12px
+    &:hover
+      border-color rgba($gray, .45)
     &:focus
       border-color $primary
       & + label
@@ -70,10 +118,14 @@
     -webkit-appearance none
     & + label
       top 0
+    &:hover
+      border-color rgba($gray, .45)
     &:focus
       border-color $primary
       & + label
         color $primary
+  .select2-container--open + .form-control__icon
+      transform rotate(180deg)
 
 
 .btn
@@ -183,3 +235,40 @@
 .accordion
   &__body
     display none
+
+.checkbox
+  cursor pointer
+  display block
+  margin-bottom 1rem
+  label
+    background transparent
+    border-radius $radius
+    border 2px solid $primary
+    cursor pointer
+    display inline-block
+    height 4rem
+    margin-right 1rem
+    position relative
+    vertical-align middle
+    width 4rem
+    &:after
+      color $primary
+      content "\f00c"
+      display none
+      font-family 'FontAwesome'
+      font-size 2rem
+      left 9px
+      position absolute
+      top 2px
+  input
+    display none
+  input:checked + label:after
+    display block
+  span
+    color $main
+
+.datepicker-inline.flatpickr-input.form-control
+  display none !important
+
+
+

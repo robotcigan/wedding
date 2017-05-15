@@ -42,6 +42,56 @@
       </div>
     </div>
     <main>
+      <div class="grig grid--container">
+        <div class="row">
+          <div class="col col--sm-12">
+            <section class="section">
+              <h1 class="h1 without-offset">Размещение заявки</h1>
+              <p>Укажите данные для связи с вами и дату мероприятия</p>
+              <div class="row">
+                <div class="col col--sm-6">
+                  <form class="form offset">
+                    <div class="form-control">
+                      <select class="custom-select" pattern="/^$|s+/" data-placeholder="Город">
+                        <option></option>
+                        <option>Крым</option>
+                        <option>Краснодар</option>
+                      </select><i class="form-control__icon fa fa-angle-down"></i>
+                    </div>
+                    <div class="form-control">
+                      <input type="text" pattern="/^$|s+/">
+                      <label>Имя</label>
+                    </div>
+                    <div class="form-control">
+                      <input class="datepicker-inline-date" type="text" pattern="/^$|s+/">
+                      <label>Дата мероприятия</label><i class="form-control__icon fa fa-calendar-o"></i>
+                    </div>
+                    <div class="form-control">
+                      <input type="text" pattern="/^$|s+/">
+                      <label>Номер телефона</label><i class="form-control__icon fa fa-phone"></i>
+                    </div>
+                    <div class="form-control">
+                      <textarea pattern="/^$|s+/"></textarea>
+                      <label>Информация о мероприятии</label>
+                      <div class="form-control__words">0/1000</div>
+                    </div>
+                    <label class="checkbox">
+                      <input type="checkbox" id="checkbox-1">
+                      <label for="checkbox-1"></label><span>Я согласен с условиями </span><a class="link" href="">пользовательского соглашения</a>
+                    </label>
+                  </form>
+                </div>
+                <div class="col col--sm-6 text--xs-center">
+                  <div class="datepicker-inline"></div>
+                </div>
+              </div>
+            </section>
+          </div>
+          <div class="center">
+            <div class="btn btn--primary">Оставить заявку</div>
+          </div>
+        </div>
+      </div>
     </main>
     <footer class="main-footer">
       <div class="grid grid--container">

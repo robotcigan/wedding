@@ -41,14 +41,13 @@ block content
                     label E-mail
                     i.form-control__icon.fa.fa-envelope
                   .form-control
-                    input(type="text" pattern="/^$|\s+/")
+                    input(type="text" pattern="/^$|\s+/").datepicker
                     label Дата рождения
                     i.form-control__icon.fa.fa-calendar-o
                   .form-control
                     select(pattern="/^$|\s+/").custom-select
                       option Город
                       option Краснодар
-                    label Дата рождения
                     i.form-control__icon.fa.fa-angle-down
                   .form-control
                     input(type="text" pattern="/^$|\s+/")
@@ -119,10 +118,10 @@ block content
                     i.form-control__icon
                   h3.h3 Данные об исполнителе
                   .form-control
-                    select(pattern="/^$|\s+/").custom-select
-                      option Город
+                    select(pattern="/^$|\s+/" data-placeholder="Город").custom-select
+                      option
                       option Краснодар
-                    label Дата рождения
+                      option Сочи
                     i.form-control__icon.fa.fa-angle-down
                   .form-control
                     input(type="text" pattern="/^$|\s+/")

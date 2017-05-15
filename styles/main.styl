@@ -3,11 +3,14 @@
 @import 'base/base.styl'
 @import 'base/typography.styl'
 @import 'base/icons.styl'
+@import 'helpers/animations.styl'
 
 @import 'pages/inner.styl'
 @import 'pages/form.styl'
 @import 'pages/specialist.styl'
 @import 'pages/registration.styl'
+@import 'pages/articles.styl'
+@import 'pages/tenders.styl'
 
 
 
@@ -19,8 +22,25 @@
   display block
   height 9rem
 
+.section
+  margin-top 4rem
+
 .offset
   margin-bottom 8rem
+
+.link
+  display inline-block
+  color $blue
+  border-bottom 1px solid rgba($blue, .3)
+  line-height 1.2
+  text-decoration none
+  transition all .2s
+  &:hover
+    border-color rgba($blue, .7)
+    color $blue - 10%
+  &--primary
+    border none
+    color $primary
 
 .main-header
   background-color #fff
@@ -171,7 +191,7 @@
 
 .breadcrumbs
   border-bottom 1px dashed rgba($main, .2)
-  margin-bottom 3.2rem
+  margin-bottom 4rem
   padding 1.2rem 0
   &__link
     color $main
@@ -321,6 +341,35 @@
       max-width 100%
   &--offset
     margin-bottom 4rem
+
+.user
+  display inline-block
+  .ava
+    display block
+    float left
+  &__info
+    display block
+    margin-top 1.5rem
+    margin-left 7.5rem
+    width 100%
+  &__name
+    display block
+    font-weight 600
+    line-height 1
+  &__role
+    display block
+    font-size 1.2rem
+
+.info
+  color $gray
+
+.date,
+.view-count,
+.comment-count
+  display inline-block
+  margin-right 1.5rem
+  .fa
+    margin-right .5rem
 
 .viewed
   margin-top 10rem
