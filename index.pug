@@ -34,11 +34,8 @@ html(lang="ru")
     .hero
       .hero__align
         .hero__content
-          .grid.grid--container
-            .row
-              .col.col--sm-10.col--sm-offset-1
-                h1.hero__header Добро пожаловать в наш праздничный офис!
-                .hero__subheader Мы собрали для Вас проверенных временем и имеющих отличные рекомендации  специалистов и организации, предоставляющие свадебные услуги в Краснодаре.
+          h1.hero__header Добро пожаловать в наш праздничный офис!
+          .hero__subheader Мы собрали для Вас проверенных временем и имеющих отличные рекомендации  специалистов и организации, предоставляющие свадебные услуги в Краснодаре.
     
     .grid.grid--no-gutters.banners
       .row.row--no-gutters
@@ -53,8 +50,8 @@ html(lang="ru")
 
     main
       .grid.grid--container
-        h1.h1 Все для подготовки к свадьбе в Краснодаре
-        .row
+        h2.h2 Все для подготовки к свадьбе в Краснодаре
+        .row.offset
           .col.col--sm-9
             .row.index-category
               .col.col--sm-3
@@ -88,6 +85,67 @@ html(lang="ru")
             img(src="img/ring.jpg", alt="").index-category__img
         
         include viewed.pug
+        
+      .index-events.offset
+        .grid.grid--container
+          h2.h2 Мероприятия в Краснодаре
+          .row
+            .col.col--sm-6
+              img(src="img/event.jpg", alt="")
+            .col.col--sm-6
+              h3.h3 Ежегодная встреча шоуменов
+              p Равным образом дальнейшее развитие различных форм деятельности в значительной степени обуславливает создание направлений прогрессивного развития. Разнообразный и богатый опыт консультация с широким активом требуют определения и уточнения систем массового участия.
+              p Новая модель организационной деятельности обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия.
+              .btn.btn--primary Узнать подробности
+                .btn__arrow
+                  i.fa.fa-angle-right
+
+      .grid.grid--container
+        .commercial.offset
+          h2.h2 Рекламные слайды
+          .commercial-slider
+            img(src="img/commercial.jpg", alt="")
+
+        .index-news.offset
+          h2.h2 Последние новости
+          .slider.news-slider.row
+            -for(var i = 0; i < 4; i++)
+              .col.col--sm-3.slide
+                img(src="img/news.jpg", alt="")
+                .slide__title Новый специалист в категории «ведущие» - Стас Коновка
+                .info
+                  time.date 14 марта 2017
+                  .view-count
+                    i.fa.fa-eye
+                    span 312
+                  .comment-count
+                    i.fa.fa-comments
+                    span 24
+
+      .app-ad.offset
+        .grid.grid--container
+          .row
+            .col.col--sm-7
+              .app-ad__title Скачайте мобильное приложение
+              .app-ad__subtitle Идейные соображения высшего порядка, а также реализация намеченных плановых заданий позволяет оценить значение позиций, занимаемых участниками в отношении.
+              .app-ad__img.apple
+                img(src="img/apple.png", alt="")
+              .app-ad__img.google
+                img(src="img/google.png", alt="")
+
+      .contacts
+        iframe(src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d90194.86944892893!2d39.01605595!3d45.053548!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1494861378249" frameborder="0" style="border:0" allowfullscreen)
+        .grid.grid--container
+          .contacts__left.left
+            h2.h2 Контакты
+            .left__label телефон
+            .left__header +7 (861) 218-73-53
+            .left__label e-mail
+            .left__header info@wedding-office.ru
+            .left__label адрес
+            .left__header г. Краснодар, ул. Северная, 65
+
+
 
     footer.main-footer
       .grid.grid--container
@@ -99,6 +157,7 @@ html(lang="ru")
               span Copyright © 2017
 
 
-  script(src="js/jquery.min.js")
-  script(src="js/slick.min.js")
-  script(src="js/main.js")
+  //- script(src="js/jquery.min.js")
+  //- script(src="js/slick.min.js")
+  //- script(src="js/main.js")
+  include layout-libs.pug

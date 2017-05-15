@@ -171,6 +171,21 @@
     font-weight 400
     height 3.2rem
     padding .2rem 2rem
+  &__arrow
+    background rgba(#fff, .5)
+    border-radius 50%
+    circle(1.6rem)
+    display inline-block
+    margin-left 1rem
+    text-align center
+    vertical-align middle
+    .fa
+      color rgba($primary, .5)
+      display inline-block
+      font-size 1.4rem
+      line-height 1
+      vertical-align top
+      transform translateY(1px)
 
 
 
@@ -269,6 +284,10 @@
 
 .datepicker-inline.flatpickr-input.form-control
   display none !important
+
+.datepicker-inline--max-width + .flatpickr-calendar
+  max-width 100% !important
+  margin-top 1rem
 
 
 

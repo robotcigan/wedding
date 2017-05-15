@@ -1,0 +1,85 @@
+.index-events
+  background-color #f7f9fb
+  padding 4rem 0
+  .h3
+    margin-bottom 1rem
+  p + .btn
+    margin-top 1rem
+
+.news-slider
+  .slide
+    &__title
+      font-size 2.4rem
+      font-weight 600
+      line-height 1.2
+      margin-bottom 1rem
+      margin-top 2rem
+
+.app-ad
+  background-color $light-gray + 50%
+  margin-top 24rem
+  padding-top 8rem
+  .grid--container
+    position relative
+    &:after
+      background url('../../img/hand.png') no-repeat
+      background-size contain
+      bottom 0
+      content ''
+      size(44.5rem, 49rem)
+      position absolute
+      right 0
+  &__title
+    font-size 3rem
+    font-weight 600
+  &__subtitle
+    margin-bottom 2rem
+  &__img
+    display inline-block
+    margin-bottom 8rem
+    margin-right 2rem
+
+
+.contacts
+  height 35rem
+  position relative
+  .grid--container
+    height 100%
+    left 0
+    position absolute
+    right 0
+    top 0
+  &__left.left
+    background rgba($main, .9)
+    height 100%
+    padding 5rem 0
+    position relative
+    width 35rem
+    &:before
+      background rgba($main, .9)
+      content ''
+      height 100%
+      margin-right 35rem
+      position absolute
+      right 0
+      top 0
+      width 100vw
+    .h2
+      color #fff
+    .left
+      &__label
+        color $primary
+        font-size 1.2rem
+        font-weight 600
+        letter-spacing 1px
+        line-height 1
+        text-transform uppercase
+      &__header
+        color #fff
+        font-weight 600
+        &:not(:last-child)
+          margin-bottom 2rem
+  iframe
+    filter: grayscale(100%)
+    height 100%
+    width 100%

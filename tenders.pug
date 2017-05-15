@@ -1,11 +1,16 @@
 extends layout.pug
 
 block content
+  .tender-bg
+    .tender-bg__text.text
+      .text__title Тендеры помогают  найти лучших специалистов
+      .text__subtitle Разнообразный и богатый опыт постоянный количественный рост и сфера нашей активности играет важную роль в формировании направлений прогрессивного развития.
+      .btn.btn--primary Разместить заявку
   .grig.grid--container
     .row
       .col.col--sm-3
         h2.h2 Календарь событий
-        .datepicker-inline
+        .datepicker-inline.datepicker-inline--max-width
       .col.col--sm-9
         .tenders
           -for(var i = 0; i < 5; i++)
@@ -16,7 +21,7 @@ block content
                     .tender__number 25
                     .tender__month апреля
                 .col.col--sm-8
-                  .tender__title Ведущий на 25.08.2017, Краснодар
+                  a(href="").tender__title Ведущий на 25.08.2017, Краснодар
                   .tender__anons
                     p У нас запланирована свадьба зимой. Гостей 10 – 30 человек.
                     p Если вы свободны 03 Февраля 2017, пятница - ждем ваши предложения и информацию по ценам на услуги в этой заявке. Спасибо!

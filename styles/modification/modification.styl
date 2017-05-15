@@ -1,0 +1,19 @@
+.slick
+  &-prev,
+  &-next
+    top 40%
+    &:before
+      font-size 3.2rem
+      color $main
+      transition color .2s
+    &:hover
+      &:before
+        color $primary
+  &-prev
+    &:before
+      content '\f104'
+      font-family 'FontAwesome'
+  &-next
+    &:before
+      content '\f105'
+      font-family 'FontAwesome'

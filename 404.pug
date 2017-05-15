@@ -1,0 +1,17 @@
+extends layout.pug
+
+block content
+  .grig.grid--container
+    .row
+      .col.col--sm-10.col--sm-offset-1
+        .error-page.row
+          .col.col--sm-6
+            .error-page__number 404
+            .error-page__sorry.sorry
+              .sorry__title страница не найдена
+                span :(
+              .sorry__subtitle Не расстраивайтесь, перейдите 
+                a(href="").link на главную
+          .col.col--sm-6
+            .error-page__img
+              img(src="img/crying.jpg", alt="")
