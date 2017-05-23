@@ -1,0 +1,60 @@
+.posts .post
+  &__img
+    display block
+    margin-bottom 1rem
+    max-width 100%
+    overflow hidden
+  &__title
+    color $main
+    display inline-block
+    font-size 2.4rem
+    font-weight 600
+    line-height 1.2
+    margin-bottom .5rem
+    text-decoration none
+  &__anons
+    margin-top 1rem
+  &--type-2
+    .post
+      &__img
+        shadow()
+        height 58rem
+      &__container
+        bottom 2.4rem
+        padding 3.6rem
+        position absolute
+      &__title
+        color #fff
+        font-size 3.2rem
+        font-weight 600
+        line-height 1.1
+      &__anons
+        color #fff
+    .info
+      color rgba(#fff, .7)
+
+.sorting
+  margin-bottom 2rem
+  &__item
+    // border-bottom 1px dashed $gray
+    border 1px solid $light-gray
+    cursor pointer
+    display inline-block
+    border-radius 3.2rem
+    padding .4rem 1.3rem
+    &:not(:last-child)
+      margin-right .8rem
+    &:hover
+      color $primary
+    &--active
+      background rgba($primary, .15)
+      border none
+      color $primary
+
+.header-with-select
+  margin-bottom 2rem
+  .h1
+    display inline-block
+    margin-right 1rem
+    margin-bottom 0
+    vertical-align middle

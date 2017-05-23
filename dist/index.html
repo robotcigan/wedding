@@ -10,25 +10,24 @@
     <link rel="stylesheet" href="styles/css/main.css">
   </head>
   <body>
-    <header class="main-header">
+    <header class="main-header main-header--transparent">
       <div class="grid grid--container">
         <div class="row row--sm-center">
-          <div class="col col--sm-2"><a class="logo" href="/pages.html"></a></div>
-          <div class="col col--sm-6">
+          <div class="col col--sm-8"><a class="logo" href="/pages.html"></a>
             <nav class="header-nav">
-              <li><a class="header-nav__link" href="">Каталог</a></li>
-              <li><a class="header-nav__link" href="">Тендеры</a></li>
-              <li><a class="header-nav__link" href="">Новости</a></li>
-              <li><a class="header-nav__link" href="">Статьи</a></li>
-              <li><a class="header-nav__link" href="">Cвадебный консультант</a></li>
-              <li><a class="header-nav__link" href="">О проекте</a></li>
+              <li><a class="header-nav__link" href="catalog.html">Каталог</a></li>
+              <li><a class="header-nav__link" href="tenders.html">Тендеры</a></li>
+              <li><a class="header-nav__link" href="news.html">Новости</a></li>
+              <li><a class="header-nav__link" href="articles.html">Статьи</a></li>
+              <li><a class="header-nav__link" href="consulatnt.html">Cвадебный консультант</a></li>
+              <li><a class="header-nav__link" href="about.html">О проекте</a></li>
             </nav>
           </div>
           <div class="col col--sm-4 main-header__right">
             <div class="city">
               <div class="city__icon"></div>
               <div class="city__name">Краснодар</div>
-            </div><a class="link link--primary" href="">Войти</a><a class="btn btn--primary" href="">Разместить заявку</a>
+            </div><a class="link link--primary modal-open" href="#modal">Войти</a><a class="btn btn--primary" href="">Разместить заявку</a>
           </div>
         </div>
       </div>
@@ -118,37 +117,55 @@
       <div class="grid grid--container">
         <div class="commercial offset">
           <h2 class="h2">Рекламные слайды</h2>
-          <div class="commercial-slider"><img src="img/commercial.jpg" alt=""></div>
+          <div class="commercial-slider"><img src="img/commercial.jpg" alt=""><img src="img/commercial.jpg" alt=""><img src="img/commercial.jpg" alt="">
+          </div>
         </div>
+      </div>
+      <div class="email-block offset">
+        <div class="grid grid--container">
+          <div class="row">
+            <div class="col col--sm-6 col--sm-offset-3">
+              <div class="email-block__container row row--sm-center">
+                <div class="col col--sm-6">
+                  <div class="email-block__title"><span>Будь в курсе</span> новостей нашего проекта</div>
+                </div>
+                <div class="col col--sm-6">
+                  <div class="form-control without-margin">
+                    <input type="text" pattern="/^$|s+/">
+                    <label>Ваш email</label><i class="form-control__icon arrow"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grid grid--container">
         <div class="index-news offset">
           <h2 class="h2">Последние новости</h2>
           <div class="slider news-slider row">
-            <div class="col col--sm-3 slide"><img src="img/news.jpg" alt="">
-              <div class="slide__title">Новый специалист в категории «ведущие» - Стас Коновка</div>
+            <div class="col col--sm-3 slide"><a href=""><img src="img/news.jpg" alt=""></a><a class="slide__title" href="">Новый специалист в категории «ведущие» - Стас Коновка</a>
               <div class="info">
                 <time class="date">14 марта 2017</time>
                 <div class="view-count"><i class="fa fa-eye"></i><span>312</span></div>
                 <div class="comment-count"><i class="fa fa-comments"></i><span>24</span></div>
               </div>
             </div>
-            <div class="col col--sm-3 slide"><img src="img/news.jpg" alt="">
-              <div class="slide__title">Новый специалист в категории «ведущие» - Стас Коновка</div>
+            <div class="col col--sm-3 slide"><a href=""><img src="img/news.jpg" alt=""></a><a class="slide__title" href="">Новый специалист в категории «ведущие» - Стас Коновка</a>
               <div class="info">
                 <time class="date">14 марта 2017</time>
                 <div class="view-count"><i class="fa fa-eye"></i><span>312</span></div>
                 <div class="comment-count"><i class="fa fa-comments"></i><span>24</span></div>
               </div>
             </div>
-            <div class="col col--sm-3 slide"><img src="img/news.jpg" alt="">
-              <div class="slide__title">Новый специалист в категории «ведущие» - Стас Коновка</div>
+            <div class="col col--sm-3 slide"><a href=""><img src="img/news.jpg" alt=""></a><a class="slide__title" href="">Новый специалист в категории «ведущие» - Стас Коновка</a>
               <div class="info">
                 <time class="date">14 марта 2017</time>
                 <div class="view-count"><i class="fa fa-eye"></i><span>312</span></div>
                 <div class="comment-count"><i class="fa fa-comments"></i><span>24</span></div>
               </div>
             </div>
-            <div class="col col--sm-3 slide"><img src="img/news.jpg" alt="">
-              <div class="slide__title">Новый специалист в категории «ведущие» - Стас Коновка</div>
+            <div class="col col--sm-3 slide"><a href=""><img src="img/news.jpg" alt=""></a><a class="slide__title" href="">Новый специалист в категории «ведущие» - Стас Коновка</a>
               <div class="info">
                 <time class="date">14 марта 2017</time>
                 <div class="view-count"><i class="fa fa-eye"></i><span>312</span></div>
@@ -188,7 +205,10 @@
     <footer class="main-footer">
       <div class="grid grid--container">
         <div class="row">
-          <div class="col col--sm-8">
+          <div class="col col--sm-2">
+            <div class="logo"></div>
+          </div>
+          <div class="col col--sm-6">
             <p>Проект "Свадебные штучки" не несёт ответственность за текстовые, фото-, видео-, и аудиоматериалы, предоставляемые специалистами и организациями, размещёнными на сайте www.wedding-office.ru.</p>
           </div>
           <div class="col col--sm-4">
@@ -197,8 +217,42 @@
         </div>
       </div>
     </footer>
+    <div class="modal" id="modal">
+      <div class="modal__title">Войти</div>
+      <form class="form">
+        <div class="form-control form-control--error">
+          <input type="email" pattern="/^$|s+/">
+          <label>E-mail</label><i class="form-control__icon fa fa-envelope"></i>
+        </div>
+        <div class="form-control">
+          <input type="password" pattern="/^$|s+/">
+          <label>Пароль</label><i class="form-control__icon fa fa-lock"></i>
+        </div>
+        <div class="row">
+          <div class="col col--sm-7">
+            <label class="checkbox">
+              <input type="checkbox" id="checkbox-1">
+              <label for="checkbox-1"></label><span>Запомнить пароль</span>
+            </label>
+          </div>
+          <div class="col col--sm-5 text-right"><a class="link" href="">Забыли пароль</a></div>
+        </div>
+        <p class="text-error">Неверное имя пользователя или пароль. Проверьте правильность введенных данных.
+          <div class="col col--sm-8 col--sm-offset-2">
+            <div class="center">
+              <div class="btn btn--primary btn--full-width">Войти</div>
+              <div class="modal__label modal__label--type-2">или через</div>
+              <div class="socials-type-2 justify"><a href=""><i class="fa fa-vk"></i></a><a href=""><i class="fa fa-odnoklassniki"></i></a><a href=""><i class="fa fa-facebook"></i></a><a href=""><i class="fa fa-twitter"></i></a></div>
+              <div class="modal__label">Впервые на сайте?</div>
+              <div class="btn btn--primary btn--full-width btn--solid">Зарегистрировтаься</div>
+            </div>
+          </div>
+        </p>
+      </form>
+    </div>
   </body>
   <script src="js/jquery.min.js"></script>
+  <script src="js/wow.min.js"></script>
   <script src="js/slick.min.js"></script>
   <script src="js/isotope.pkgd.min.js"></script>
   <script src="js/jquery.magnific-popup.min.js"></script>

@@ -8,7 +8,6 @@ html(lang="ru")
     meta(name="format-detection" content="telephone=no")
     link(rel="stylesheet", href="styles/css/vendor.css")
     link(rel="stylesheet", href="styles/css/main.css")
-
   body
     
     section.empty
@@ -48,11 +47,32 @@ html(lang="ru")
     footer.main-footer
       .grid.grid--container
         .row
-          .col.col--sm-8
-            p Проект "Свадебные штучки" не несёт ответственность за текстовые, фото-, видео-, и аудиоматериалы, предоставляемые специалистами и организациями, размещёнными на сайте www.wedding-office.ru.
+          .col.col--sm-2
+            .logo
+          .col.col--sm-6
+            p Проект &laquo;Свадебные штучки&raquo; не несёт ответственность за текстовые, фото-, видео-, и аудиоматериалы, предоставляемые специалистами и организациями, размещёнными на сайте www.wedding-office.ru.
           .col.col--sm-4
-            .copyright
-              span Copyright © 2017
+            .main-footer__socials.socials.right
+              a(href="").socials__item
+                i.fa.fa-vk
+              a(href="").socials__item
+                i.fa.fa-instagram
+              a(href="").socials__item
+                i.fa.fa-twitter
+              a(href="").socials__item
+                i.fa.fa-facebook
+
+      .main-footer__bottom
+        .grid.grid--container
+          .row.row--sm-center
+            .col.col--sm-8
+              .copyright
+                span &copy; 2017 ООО &laquo;Бизнес Медиа Групп&raquo;. Информационный портал «Свадебные штучки»
+            .col.col--sm-4
+              .webformula
+                img(src="img/wf.png", alt="")
+                span &mdash; разработка сайта 
+                a(href="").link Webformula
 
 
-  include layout-libs.pug
+  include components\layout-libs.pug

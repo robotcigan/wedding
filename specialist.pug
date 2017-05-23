@@ -9,7 +9,16 @@ block content
             a(href="").breadcrumbs__link Главная
             a(href="").breadcrumbs__link Каталог
             a(href="").breadcrumbs__link Ведущие
-            a(href="").breadcrumbs__link.breadcrumbs__link--active Анна Веретина 
+            a(href="").breadcrumbs__link.breadcrumbs__link--active Анна Веретина
+
+
+    .dashed.dashed--big.dashed--primary
+      .grid.grid--container
+        .row
+          .col.col--sm-8.col--sm-offset-2
+            .center Внимание! Публикация Вашего профиля в каталоге приостановлена. Пожалуйста, 
+              a(href="").link пополните баланс
+              | .
 
     .row
       .col.col--sm-3
@@ -98,7 +107,7 @@ block content
           i.fa.fa-envelope
           span disneyka.krd@mail.ru
         h3.h3 Соц. сети
-        .specialist-socials
+        .socials-type-2
           a(href="")
             i.fa.fa-vk
           a(href="")
@@ -114,7 +123,7 @@ block content
           a(href="")
             i.fa.fa-vimeo
           a(href="")
-            i.fa.fa-myworld
+            i.myworld.myworld--color
         h3.h3 Адрес
         p.specialist-adress г. Краснодар, ул. Красная, д.23
         .specialist-map
@@ -153,7 +162,9 @@ block content
                 img(src="img/video.jpg", alt="")
 
       .tabs__content
-        p sdgdf
+        -for(var y = 0; y < 5; y++)
+          div
+            audio(src="audio/horse.mp3" type="audio/mp3" controls="controls")
 
       .tabs__content
         form.comment.comment-form

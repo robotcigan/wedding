@@ -1,0 +1,66 @@
+.team
+  &__item.item
+    display block
+    padding-bottom 4rem
+    margin-bottom 4rem
+    &:not(:last-child)
+      dashed()
+    .item
+      &__img
+        background-size cover
+        border-radius 50%
+        display block
+        overflow hidden
+        circle(21rem)
+      &__container
+        margin-left 1rem
+        padding-left 8rem
+        position relative
+        &:before
+          background-color $primary
+          bottom 0
+          content ''
+          left 0
+          height 3px
+          margin auto
+          position absolute
+          top 8px
+          width 22rem
+      &__name
+        color $main
+        font-size 2.4rem
+        font-weight 700
+        letter-spacing 2px
+        line-height 1
+        margin-bottom 2.4rem
+        text-transform uppercase
+      &__role
+        line-height 1
+
+.friends
+  clearfix()
+  .friend
+    clearfix()
+    margin-bottom 5rem
+    &__img
+      float left
+      margin-right 2rem
+      &--solid
+        border 2px solid $secondary
+    &__title
+      color $main
+      font-size 2.4rem
+      font-weight 600
+      margin-top 1rem
+      text-decoration none
+    &__subtitle
+      color $gray
+    &__container
+      overflow hidden
+
+.document-img
+  margin-bottom 2.4rem
+  img
+    max-width 100%
+  &--solid
+    border 3px solid $secondary

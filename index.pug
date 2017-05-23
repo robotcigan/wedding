@@ -11,24 +11,23 @@ html(lang="ru")
 
   body
 
-    header.main-header
+    header.main-header.main-header--transparent
       .grid.grid--container
         .row.row--sm-center
-          .col.col--sm-2
+          .col.col--sm-8
             a(href="/pages.html").logo
-          .col.col--sm-6
             nav.header-nav
-              li: a(href="").header-nav__link Каталог
-              li: a(href="").header-nav__link Тендеры
-              li: a(href="").header-nav__link Новости
-              li: a(href="").header-nav__link Статьи
-              li: a(href="").header-nav__link Cвадебный консультант
-              li: a(href="").header-nav__link О проекте
+              li: a(href="catalog.html").header-nav__link Каталог
+              li: a(href="tenders.html").header-nav__link Тендеры
+              li: a(href="news.html").header-nav__link Новости
+              li: a(href="articles.html").header-nav__link Статьи
+              li: a(href="consulatnt.html").header-nav__link Cвадебный консультант
+              li: a(href="about.html").header-nav__link О проекте
           .col.col--sm-4.main-header__right
             .city
               .city__icon
               .city__name Краснодар
-            a(href="").link.link--primary Войти
+            a(href="#modal").link.link--primary.modal-open Войти
             a(href="").btn.btn--primary Разместить заявку
 
     .hero
@@ -104,15 +103,34 @@ html(lang="ru")
         .commercial.offset
           h2.h2 Рекламные слайды
           .commercial-slider
-            img(src="img/commercial.jpg", alt="")
+            -for(var i = 0; i < 3; i++)
+              img(src="img/commercial.jpg", alt="")
 
+      .email-block.offset
+        .grid.grid--container
+          .row
+            .col.col--sm-6.col--sm-offset-3
+              .email-block__container.row.row--sm-center
+                .col.col--sm-6
+                  .email-block__title
+                    span Будь в курсе
+                    |  новостей нашего проекта
+                .col.col--sm-6
+                  .form-control.without-margin
+                    input(type="text" pattern="/^$|\s+/")
+                    label Ваш email
+                    i.form-control__icon.arrow
+
+
+      .grid.grid--container
         .index-news.offset
           h2.h2 Последние новости
           .slider.news-slider.row
             -for(var i = 0; i < 4; i++)
               .col.col--sm-3.slide
-                img(src="img/news.jpg", alt="")
-                .slide__title Новый специалист в категории «ведущие» - Стас Коновка
+                a(href="")
+                  img(src="img/news.jpg", alt="")
+                a(href="").slide__title Новый специалист в категории «ведущие» - Стас Коновка
                 .info
                   time.date 14 марта 2017
                   .view-count
@@ -150,14 +168,49 @@ html(lang="ru")
     footer.main-footer
       .grid.grid--container
         .row
-          .col.col--sm-8
+          .col.col--sm-2
+            .logo
+          .col.col--sm-6
             p Проект "Свадебные штучки" не несёт ответственность за текстовые, фото-, видео-, и аудиоматериалы, предоставляемые специалистами и организациями, размещёнными на сайте www.wedding-office.ru.
           .col.col--sm-4
             .copyright
               span Copyright © 2017
 
+  
+    #modal.modal
+      .modal__title Войти
+      form.form
+        .form-control.form-control--error
+          input(type="email" pattern="/^$|\s+/")
+          label E-mail
+          i.form-control__icon.fa.fa-envelope
+        .form-control
+          input(type="password" pattern="/^$|\s+/")
+          label Пароль
+          i.form-control__icon.fa.fa-lock
+        .row
+          .col.col--sm-7
+            label.checkbox
+              input(type="checkbox" id="checkbox-1")
+              label(for="checkbox-1")
+              span Запомнить пароль
+          .col.col--sm-5.text-right
+            a(href="").link Забыли пароль
+        p.text-error Неверное имя пользователя или пароль. Проверьте правильность введенных данных.
+          .col.col--sm-8.col--sm-offset-2
+            .center
+              .btn.btn--primary.btn--full-width Войти
+              .modal__label.modal__label--type-2 или через
+              .socials-type-2.justify
+                a(href="")
+                  i.fa.fa-vk
+                a(href="")
+                  i.fa.fa-odnoklassniki
+                a(href="")
+                  i.fa.fa-facebook
+                a(href="")
+                  i.fa.fa-twitter
+              .modal__label Впервые на сайте?
+              .btn.btn--primary.btn--full-width.btn--solid Зарегистрировтаься
 
-  //- script(src="js/jquery.min.js")
-  //- script(src="js/slick.min.js")
-  //- script(src="js/main.js")
-  include layout-libs.pug
+  include components\layout-libs.pug

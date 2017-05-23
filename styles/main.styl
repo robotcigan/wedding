@@ -2,8 +2,8 @@
 @import 'helpers/mixins.styl'
 @import 'base/base.styl'
 @import 'base/typography.styl'
+@import 'base/animations.styl'
 @import 'base/icons.styl'
-@import 'helpers/animations.styl'
 @import 'modification/modification.styl'
 
 @import 'pages/index.styl'
@@ -14,12 +14,16 @@
 @import 'pages/articles.styl'
 @import 'pages/tenders.styl'
 @import 'pages/error-page.styl'
+@import 'pages/posts.styl'
+@import 'pages/about.styl'
 
 
 
 .grid--container
   max-width 1216px
 
+.without-margin
+  margin 0
 
 .empty
   display block
@@ -29,7 +33,7 @@
   margin-top 4rem
 
 .offset
-  margin-bottom 8rem
+  margin-bottom 12rem
   & + .viewed
     margin-top 0
 
@@ -47,24 +51,12 @@
     border none
     color $primary
 
-.main-header
-  background-color #fff
-  border-bottom 1px solid $light-gray
-  max-height 10rem
-  padding-bottom 1.5rem
-  padding-top 1.5rem
-  position fixed
-  top 0
-  transition box-shadow .2s
-  width 100%
-  z-index 100
-  &__right
-    text-align right
-  .link--primary
-    margin-right 2rem
-  &--scroll
-    box-shadow 0 8px 20px 5px rgba($gray, .1)
-    
+.right
+  float right
+
+.justify
+  display flex
+  justify-content space-between
 
 .header-nav
   li
@@ -82,7 +74,7 @@
 .logo
   display inline-block
   background url('../../img/logo.png') no-repeat
-  background-size contain
+  // background-size contain
   height 6rem
   float left
   margin-right 2rem
@@ -92,8 +84,9 @@
   display inline-block
   margin-right 2rem
   &__icon
-    background url('../../img/location.png') no-repeat
-    background-size contain
+    background-image url('../../img/location.png')
+    background-repeat no-repeat
+    background-size 100%
     display inline-block
     height 2rem
     margin-right .4rem
@@ -102,6 +95,66 @@
   &__name
     display inline-block
     vertical-align middle
+
+
+
+.main-header
+  background-color #fff
+  // border-bottom 1px solid $light-gray
+  max-height 10rem
+  padding-bottom 1.5rem
+  padding-top 1.5rem
+  position fixed
+  top 0
+  transition all .4s
+  width 100%
+  z-index 100
+  chromefix()
+  &__right
+    text-align right
+  .link--primary
+    margin-right 2rem
+  &--transparent
+    background-color transparent
+    border-bottom none
+    .logo
+      background-image url('../../img/logo-white.png')
+    .header-nav
+      &__link
+        color #fff
+        &:hover
+          color $primary
+    .btn
+      border 1px solid #fff
+      background-color transparent
+      transition all .2s
+      &:hover
+        background-color $primary
+        border-color $primary
+    .link
+      color #fff
+    .city__name
+      color #fff
+  &--scroll
+    background-color #fff
+    box-shadow 0 8px 20px 5px rgba($gray, .1)
+    border-bottom none
+    .logo
+      background-image url('../../img/logo.png')
+    .header-nav
+      &__link
+        color $main
+        &:hover
+          color $primary
+    .btn
+      border none
+      background-color $primary
+    .link
+      color $primary
+    .city__name
+      color $main
+
+
 
 .banners
   .banner
@@ -134,72 +187,15 @@
         background url('../../img/pattern-icon-2.png') no-repeat
         width 5rem
 
-.hero
-  background url('../../img/bg.jpg') 50% no-repeat
-  background-size cover
-  display block
-  height 100vh
-  // height calc(100vh - 4.8rem)
-  height 56rem
-  margin 0
-  position relative
-  width 100%
-  &:before
-    content ''
-    background-color rgba(#0b0b1b, .6)
-    height 100%
-    position absolute
-    width 100%
-    z-index 0
-  &__align
-    align-items center
-    display flex
-    flex-wrap wrap
-    height 100%
-    justify-content center
-    padding 0 9rem
-  &__content
-    color #fff
-    // margin 0 auto
-    text-align center
-    position relative
-    z-index 50
-    // width 75%
-  &__header
-    font-size 4.8rem
-    font-weight 700
-    letter-spacing 1px
-    line-height 1
-    margin 0
-    margin-bottom 2rem
-  &__subheader
-    font-size 2.4rem
-    line-height 1.2
-    margin 0
-    font-weight 300
-  &__time
-    font-size 3rem
-    font-weight 600
-  & + .banners
-    margin-bottom 8rem
 
-.index-category
-  &__link
-    color $blue
-    display block
-    margin-bottom .4rem
-    text-decoration none
-    &:hover
-      color $primary
-  &__img
-    max-width 100%
 
 .center
   text-align center
   width 100%
 
 .breadcrumbs
-  border-bottom 1px dashed rgba($main, .2)
+  // border-bottom 1px dashed rgba($main, .2)
+  dashed()
   margin-bottom 4rem
   padding 1.2rem 0
   &__link
@@ -297,6 +293,8 @@
     font-size 1.8rem
     font-weight 600
     text-decoration none
+    &:hover
+      color $primary
   &__role
     color $primary
     font-size 1.2rem
@@ -344,9 +342,12 @@
 
 
 .masonry
+  margin-left -1.6rem
+  margin-right -1.6rem
   clearfix()
   &__column
     margin-bottom 1.4rem
+    padding 1.6rem
     width 33.33%
     img
       display inline-block
@@ -368,6 +369,8 @@
     display block
     font-weight 600
     line-height 1
+    & + .phone
+      margin-top .5rem
   &__role
     display block
     font-size 1.2rem
@@ -383,6 +386,31 @@
   .fa
     margin-right .5rem
 
+.dashed
+  border 2px dashed $secondary
+  margin-bottom 2rem
+  padding 2.4rem
+  &__header
+    font-weight 600
+  &__date
+    color $gray
+    margin-bottom .5rem
+  &--big
+    font-size 2.4rem
+    font-weight 600
+    line-height 1.2
+    margin-bottom 6.4rem
+    padding 2.4rem 0
+  &--primary
+    border-color $primary
+  // &__link
+  //   color $main
+  //   display inline-block
+  //   font-size 2.4rem
+  //   font-weight 600
+  //   line-height 1.2
+  //   margin-bottom 1rem
+  //   text-decoration none
 
 
 .viewed
@@ -392,9 +420,150 @@
     margin-bottom 0
 
 
+.socials
+  &__item
+    display inline-block
+    text-align center
+    text-decoration none
+    vertical-align middle
+    &:not(:last-child)
+      margin-right 1.5rem
+    .fa
+      border 1px solid $light-gray
+      border-radius 50%
+      circle(4.8rem)
+      color $gray
+      display table-cell
+      font-size 2rem
+      vertical-align middle
+      &.fa-vk
+        color $vk
+        &:hover
+          border-color $vk
+      &.fa-instagram
+        color $insta
+        &:hover
+          border-color $insta
+      &.fa-twitter
+        color $twitter
+        &:hover
+          border-color $twitter
+      &.fa-odnoklassniki
+        color $ok
+        &:hover
+          border-color $ok
+      &.fa-facebook
+        color $facebook
+        &:hover
+          border-color $facebook
+      &.fa-vimeo
+        color $vimeo
+        &:hover
+          border-color $vimeo
+      &.fa-youtube-play
+        color $youtube
+        &:hover
+          border-color $youtube
+
+
+.socials-type-2
+  .fa
+    font-size 2.4rem
+  a
+    vertical-align middle
+    &:not(:last-child)
+      margin-right 1.5rem
+  i
+    vertical-align middle
+  .fa-vk
+    color $vk
+  .fa-odnoklassniki
+    color $ok
+  .fa-facebook
+    color $facebook
+  .fa-twitter
+    color $twitter
+  .fa-instagram
+    color $insta
+  .fa-youtube-play
+    color $youtube
+  .fa-vimeo
+    color $vimeo
+
+
+
+.modal
+  animation bigFadeUp .3s forwards ease
+  background #fff
+  box-shadow 0 1rem 2rem rgba($main, .1)
+  border-radius $radius
+  display none
+  margin 0 auto
+  max-width 40rem
+  padding 2.4rem
+  position relative
+  width auto
+  &__title
+    font-size 2.4rem
+    font-weight 600
+    margin-bottom 2rem
+  &__label
+    color $gray
+    margin .5rem 0
+    &--type-2
+      margin 2.4rem 0
+      position relative
+      &:before,
+      &:after
+        background-color $light-gray
+        content ''
+        height 1px
+        position absolute
+        top 45%
+        width 25%
+      &:before
+        left 0
+      &:after
+        right 0
+  .socials-type-2
+    margin 2rem 0
+  .center
+    margin-top 1.6rem
+
+.mfp-ready .modal
+  display block
+
+.mfp-close,
+.mfp-close:active
+  top 1.5rem
+  right 1rem
+
+.mfp-gallery
+  .mfp-close,
+  .mfp-close:active
+    opacity 1
+    top 2.4rem
+    right -4rem
+  .mfp-close:hover
+    color $primary
+    cursor pointer
+
+.webformula
+  float right
+  img
+    display inline-block
+    margin-right 1rem
+    vertical-align middle
+    max-width 4.8rem
+  .link
+    vertical-align middle
+
 .main-footer
   margin-top 10rem
-
+  &__bottom
+    background-color #f7f7f7
+    margin-top 2rem
+    padding 2rem 0
 
 
 @import 'base/media.styl'

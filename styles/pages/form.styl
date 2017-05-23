@@ -1,9 +1,10 @@
 .select2
   &-dropdown
     border-color $light-gray
+    border none
 
 .select2-dropdown.select2-dropdown--below
-  animation fadeUp .3s forwards
+  animation smallFadeUp .3s forwards
 
 .select2-container--open .select2-dropdown--below
   box-shadow $shadow
@@ -12,8 +13,8 @@
   transform rotate(180deg)
 
 .select2-container--default
-  max-width 100% !important
-  width 100% !important
+  // max-width 100% !important
+  // width 100% !important
   .select2-selection--single
     border none
     border-radius 0
@@ -33,6 +34,7 @@
   .select2-search--dropdown
     .select2-search__field
       border-color $light-gray
+        // border none
   .select2-results__option
     &--highlighted[aria-selected]
       background-color rgba($primary, .1)
@@ -126,7 +128,27 @@
         color $primary
   .select2-container--open + .form-control__icon
       transform rotate(180deg)
+  &--error
+    input[type="text"],
+    input[type="password"],
+    input[type="date"],
+    input[type="email"],
+    input[type="number"],
+    select,
+    .select2-selection--single
+      border-color $error
+    label
+      color $error
+    .form-control__icon
+      color $error
 
+.custom-select-type-2
+  display inline-block
+  padding-right 2rem
+  vertical-align middle
+
+.select2-container .select2-selection--single .select2-selection__rendered
+  padding-right 1rem
 
 .btn
   border 0
@@ -171,6 +193,9 @@
     font-weight 400
     height 3.2rem
     padding .2rem 2rem
+  &--full-width
+    text-align center
+    width 100%
   &__arrow
     background rgba(#fff, .5)
     border-radius 50%
@@ -260,27 +285,27 @@
     border-radius $radius
     border 2px solid $primary
     cursor pointer
+    circle(2.4rem)
     display inline-block
-    height 4rem
     margin-right 1rem
     position relative
     vertical-align middle
-    width 4rem
     &:after
       color $primary
       content "\f00c"
       display none
       font-family 'FontAwesome'
-      font-size 2rem
-      left 9px
+      font-size 1.5rem
+      left 3px
       position absolute
-      top 2px
+      top -2px
   input
     display none
   input:checked + label:after
     display block
   span
     color $main
+    vertical-align middle
 
 .datepicker-inline.flatpickr-input.form-control
   display none !important

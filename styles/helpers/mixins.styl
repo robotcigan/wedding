@@ -29,3 +29,23 @@ center()
   position absolute
   right 0
   top 0
+
+chromefix()
+  -webkit-transform translateZ(0)
+
+shadow()
+  position relative
+  &:before
+    bottom 0
+    background linear-gradient(to top, rgba($main, .5) 30%, transparent)
+    circle(100%)
+    content ''
+    left 0
+    position absolute
+    top 0
+
+dashed()
+  background-image linear-gradient(to right, $gray 33%, transparent 0%)
+  background-position bottom
+  background-size 8px 1px
+  background-repeat repeat-x
