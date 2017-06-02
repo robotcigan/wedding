@@ -181,4 +181,25 @@ $(document).ready(function () {
       enabled: true
     }
   });
+
+  // Мобильное меню
+  // $('.mobile-menu-toggle').on('click', function () {
+  //   $('.page').toggleClass('page--active');
+  //   $('.mobile-header').toggleClass('mobile-header--active');
+  //   $(this).toggleClass('mobile-menu-toggle--active');
+  //   $('.mobile-menu').toggleClass('mobile-menu--active');
+  // });
+
+  var slideout = new Slideout({
+    'panel': document.getElementById('page'),
+    'menu': document.getElementById('mobile-menu'),
+    'padding': 290,
+    'tolerance': 70,
+    'side': 'right',
+    'easing': 'cubic-bezier(.32,2,.55,.27)'
+  });
+
+  $('.mobile-menu-toggle').on('click', function () {
+    slideout.toggle();
+  });
 });

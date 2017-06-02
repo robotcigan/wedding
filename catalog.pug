@@ -12,37 +12,40 @@ block content
         .col.col--sm-9
           h1 Ведущие в Краснодаре
     .row
-      .col.col--sm-3
-        nav.sitebar
-          li: a(href="").sitebar__link.sitebar__link--special Эксклюзивные предложения
-          li: a(href="").sitebar__link.sitebar__link--active Ведущие
-          li: a(href="").sitebar__link Аниматоры
-          li: a(href="").sitebar__link Популярные артисты и актеры
-          li: a(href="").sitebar__link Музыкальное оформление
-          li: a(href="").sitebar__link Шоу-программы
-          li: a(href="").sitebar__link Танцевальные программы
-          li: a(href="").sitebar__link Фото
-          li: a(href="").sitebar__link Видео
-          li: a(href="").sitebar__link Транспорт
-          li: a(href="").sitebar__link Обеспечение мероприятий
-          li: a(href="").sitebar__link Производство
-          li: a(href="").sitebar__link Оформление и декор
-          li: a(href="").sitebar__link Агентства и организаторы
-          li: a(href="").sitebar__link Образ и красота
-          li: a(href="").sitebar__link Стиль и имидж
-          li: a(href="").sitebar__link Кейтеринг
-          li: a(href="").sitebar__link Кафе, рестораны
-          li: a(href="").sitebar__link Отели и гостиницы
-          li: a(href="").sitebar__link Ювелирные изделия
-          li: a(href="").sitebar__link Кондитеры
-          li: a(href="").sitebar__link Фейерверки и салюты
-          li: a(href="").sitebar__link Изделия ручной работы
-      .col.col--sm-9
+      .col.col--md-3
+        nav.sidebar
+          li: a(href="").sidebar__link.sitebar__link--special Эксклюзивные предложения
+          li: a(href="").sidebar__link.sitebar__link--active Ведущие
+          li: a(href="").sidebar__link Аниматоры
+          li: a(href="").sidebar__link Популярные артисты и актеры
+          li: a(href="").sidebar__link Музыкальное оформление
+          li: a(href="").sidebar__link Шоу-программы
+          li: a(href="").sidebar__link Танцевальные программы
+          li: a(href="").sidebar__link Фото
+          li: a(href="").sidebar__link Видео
+          li: a(href="").sidebar__link Транспорт
+          li: a(href="").sidebar__link Обеспечение мероприятий
+          li: a(href="").sidebar__link Производство
+          li: a(href="").sidebar__link Оформление и декор
+          li: a(href="").sidebar__link Агентства и организаторы
+          li: a(href="").sidebar__link Образ и красота
+          li: a(href="").sidebar__link Стиль и имидж
+          li: a(href="").sidebar__link Кейтеринг
+          li: a(href="").sidebar__link Кафе, рестораны
+          li: a(href="").sidebar__link Отели и гостиницы
+          li: a(href="").sidebar__link Ювелирные изделия
+          li: a(href="").sidebar__link Кондитеры
+          li: a(href="").sidebar__link Фейерверки и салюты
+          li: a(href="").sidebar__link Изделия ручной работы
+      .col.col--md-9
         .row.catalog
           -for(var i = 0; i < 16; i++)
             .col.col--xl-3.col--lg-4.col--md-6
               .specialist
-                a(href="" style="background-image: url(img/specialist.jpg)").specialist__photo
+                //- a(href="" style="background-image: url(img/specialist.jpg)").specialist__photo
+                  .specialist__plate Акция!
+                a(href="").specialist__photo
+                  img(src="img/specialist.jpg", alt="")
                   .specialist__plate Акция!
                 a(href="").specialist__name Анна Веретина
                 .specialist__role Ведущая

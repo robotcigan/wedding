@@ -9,70 +9,96 @@ html(lang="ru")
     link(rel="stylesheet", href="styles/css/vendor.css")
     link(rel="stylesheet", href="styles/css/main.css")
   body
-    
-    section.empty
-    header.main-header
-      .grid.grid--container
-        .row.row--sm-center
-          .col.col--sm-8
-            a(href="/pages.html").logo
-            nav.header-nav
-              li: a(href="catalog.html").header-nav__link Каталог
-              li: a(href="tenders.html").header-nav__link Тендеры
-              li: a(href="news.html").header-nav__link Новости
-              li: a(href="articles.html").header-nav__link Статьи
-              li: a(href="consulatnt.html").header-nav__link Cвадебный консультант
-              li: a(href="about.html").header-nav__link О проекте
-          .col.col--sm-4.main-header__right
-            .city
-              .city__icon
-              .city__name Краснодар
-            a(href="").link.link--primary Войти
-            a(href="").btn.btn--primary Разместить заявку
-    
-    .grid.grid--no-gutters.banners
-      .row.row--no-gutters
-        .col.col--sm-6.col--no-gutters
-          a(href="").banner.banner--type-1
-            i.banner__icon.banner__icon--microphone
-            .banner__title Ежегодная встреча шоуменов
-        .col.col--sm-6.col--no-gutters
-          a(href="").banner.banner--type-2
-            i.banner__icon.banner__icon--thing
-            .banner__title Премия «Золотая штучка»
 
-    main
-      block content
-
-    footer.main-footer
-      .grid.grid--container
-        .row
-          .col.col--sm-2
-            .logo
-          .col.col--sm-6
-            p Проект &laquo;Свадебные штучки&raquo; не несёт ответственность за текстовые, фото-, видео-, и аудиоматериалы, предоставляемые специалистами и организациями, размещёнными на сайте www.wedding-office.ru.
-          .col.col--sm-4
-            .main-footer__socials.socials.right
-              a(href="").socials__item
-                i.fa.fa-vk
-              a(href="").socials__item
-                i.fa.fa-instagram
-              a(href="").socials__item
-                i.fa.fa-twitter
-              a(href="").socials__item
-                i.fa.fa-facebook
-
-      .main-footer__bottom
+    #mobile-menu.mobile-menu
+      .mobile-nav.nav
+        li: a(href="catalog.html").header-nav__link Каталог
+        li: a(href="tenders.html").header-nav__link Тендеры
+        li: a(href="news.html").header-nav__link Новости
+        li: a(href="articles.html").header-nav__link Статьи
+        li: a(href="consulatnt.html").header-nav__link Cвадебный консультант
+        li: a(href="about.html").header-nav__link О проекте
+      .mobile-menu__bottom
+        .socials
+          a(href="").socials__item
+            i.fa.fa-vk
+          a(href="").socials__item
+            i.fa.fa-instagram
+          a(href="").socials__item
+            i.fa.fa-twitter
+          a(href="").socials__item
+            i.fa.fa-facebook
+        a(href="").btn.btn--primary Разместить заявку 
+    #page.page
+      section.empty
+      header.main-header
         .grid.grid--container
           .row.row--sm-center
             .col.col--sm-8
-              .copyright
-                span &copy; 2017 ООО &laquo;Бизнес Медиа Групп&raquo;. Информационный портал «Свадебные штучки»
+              a(href="/pages.html").logo
+              nav.header-nav
+                li: a(href="catalog.html").header-nav__link Каталог
+                li: a(href="tenders.html").header-nav__link Тендеры
+                li: a(href="news.html").header-nav__link Новости
+                li: a(href="articles.html").header-nav__link Статьи
+                li: a(href="consulatnt.html").header-nav__link Cвадебный консультант
+                li: a(href="about.html").header-nav__link О проекте
+            .col.col--sm-4.main-header__right
+              .city
+                .city__icon
+                .city__name Краснодар
+              a(href="").link.link--primary Войти
+              a(href="").btn.btn--primary Разместить заявку
+              .mobile-menu-toggle
+                span
+                span
+                span
+
+      
+      
+      .grid.grid--no-gutters.banners
+        .row.row--no-gutters
+          .col.col--sm-6.col--no-gutters
+            a(href="").banner.banner--type-1
+              i.banner__icon.banner__icon--microphone
+              .banner__title Ежегодная встреча шоуменов
+          .col.col--sm-6.col--no-gutters
+            a(href="").banner.banner--type-2
+              i.banner__icon.banner__icon--thing
+              .banner__title Премия «Золотая штучка»
+
+      main
+        block content
+
+      footer.main-footer
+        .grid.grid--container
+          .row
+            .col.col--sm-2
+              .logo
+            .col.col--sm-6
+              p Проект &laquo;Свадебные штучки&raquo; не несёт ответственность за текстовые, фото-, видео-, и аудиоматериалы, предоставляемые специалистами и организациями, размещёнными на сайте www.wedding-office.ru.
             .col.col--sm-4
-              .webformula
-                img(src="img/wf.png", alt="")
-                span &mdash; разработка сайта 
-                a(href="").link Webformula
+              .main-footer__socials.socials
+                a(href="").socials__item
+                  i.fa.fa-vk
+                a(href="").socials__item
+                  i.fa.fa-instagram
+                a(href="").socials__item
+                  i.fa.fa-twitter
+                a(href="").socials__item
+                  i.fa.fa-facebook
+
+        .main-footer__bottom
+          .grid.grid--container
+            .row.row--sm-center
+              .col.col--sm-8
+                .copyright
+                  span &copy; 2017 ООО &laquo;Бизнес Медиа Групп&raquo;. Информационный портал «Свадебные штучки»
+              .col.col--sm-4
+                .webformula
+                  img(src="img/wf.png", alt="")
+                  span &mdash; разработка сайта 
+                  a(href="").link Webformula
 
 
-  include components\layout-libs.pug
+  include components/layoutlibs.pug

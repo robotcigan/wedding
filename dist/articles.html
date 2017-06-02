@@ -10,180 +10,196 @@
     <link rel="stylesheet" href="styles/css/main.css">
   </head>
   <body>
-    <section class="empty"></section>
-    <header class="main-header">
-      <div class="grid grid--container">
-        <div class="row row--sm-center">
-          <div class="col col--sm-8"><a class="logo" href="/pages.html"></a>
-            <nav class="header-nav">
-              <li><a class="header-nav__link" href="catalog.html">Каталог</a></li>
-              <li><a class="header-nav__link" href="tenders.html">Тендеры</a></li>
-              <li><a class="header-nav__link" href="news.html">Новости</a></li>
-              <li><a class="header-nav__link" href="articles.html">Статьи</a></li>
-              <li><a class="header-nav__link" href="consulatnt.html">Cвадебный консультант</a></li>
-              <li><a class="header-nav__link" href="about.html">О проекте</a></li>
-            </nav>
-          </div>
-          <div class="col col--sm-4 main-header__right">
-            <div class="city">
-              <div class="city__icon"></div>
-              <div class="city__name">Краснодар</div>
-            </div><a class="link link--primary" href="">Войти</a><a class="btn btn--primary" href="">Разместить заявку</a>
-          </div>
-        </div>
+    <div class="mobile-menu" id="mobile-menu">
+      <div class="mobile-nav nav">
+        <li><a class="header-nav__link" href="catalog.html">Каталог</a></li>
+        <li><a class="header-nav__link" href="tenders.html">Тендеры</a></li>
+        <li><a class="header-nav__link" href="news.html">Новости</a></li>
+        <li><a class="header-nav__link" href="articles.html">Статьи</a></li>
+        <li><a class="header-nav__link" href="consulatnt.html">Cвадебный консультант</a></li>
+        <li><a class="header-nav__link" href="about.html">О проекте</a></li>
       </div>
-    </header>
-    <div class="grid grid--no-gutters banners">
-      <div class="row row--no-gutters">
-        <div class="col col--sm-6 col--no-gutters"><a class="banner banner--type-1" href=""><i class="banner__icon banner__icon--microphone"></i>
-            <div class="banner__title">Ежегодная встреча шоуменов</div></a></div>
-        <div class="col col--sm-6 col--no-gutters"><a class="banner banner--type-2" href=""><i class="banner__icon banner__icon--thing"></i>
-            <div class="banner__title">Премия «Золотая штучка»</div></a></div>
+      <div class="mobile-menu__bottom">
+        <div class="socials"><a class="socials__item" href=""><i class="fa fa-vk"></i></a><a class="socials__item" href=""><i class="fa fa-instagram"></i></a><a class="socials__item" href=""><i class="fa fa-twitter"></i></a><a class="socials__item" href=""><i class="fa fa-facebook"></i></a></div><a class="btn btn--primary" href="">Разместить заявку </a>
       </div>
     </div>
-    <main>
-      <div class="grig grid--container">
-        <div class="breadcrumbs">
-          <div class="row row--sm-center">
-            <div class="col col--sm-12">
-              <nav class="breadcrumbs__nav"><a class="breadcrumbs__link" href="">Главная</a><a class="breadcrumbs__link" href="">Каталог</a><a class="breadcrumbs__link breadcrumbs__link--active" href="">Выходи за меня: 20 необычных идей, как услышать заветное «ДА»</a></nav>
-            </div>
-          </div>
-        </div>
-        <div class="header-with-select">
-          <h1 class="h1">Статьи</h1>
-          <div class="custom-select-type-2">
-            <select class="custom-select" pattern="/^$|s+/" data-placeholder="Город">
-              <option></option>
-              <option>Ростов-на-Дону</option>
-              <option>Краснодар</option>
-              <option>Варкута</option>
-            </select><i class="fa fa-angle-down"></i>
-          </div>
-        </div>
-        <div class="sorting">
-          <div class="sorting__item sorting__item--active">Весь год</div>
-          <div class="sorting__item">Январь</div>
-          <div class="sorting__item">Февраль</div>
-          <div class="sorting__item">Март</div>
-        </div>
-        <div class="masonry posts">
-          <div class="masonry__column">
-            <div class="post post--type-1"><a class="post__img" href=""><img src="img/post.jpg" alt=""></a><a class="post__title" href="">Свадьба вне времени или что кроется за современными концепциями</a>
-              <div class="info">
-                <time class="date">14 марта 2017</time>
-                <div class="view-count"><i class="fa fa-eye"></i><span>312</span></div>
-                <div class="comment-count"><i class="fa fa-comments-o"></i><span>24</span></div>
-              </div>
-              <div class="post__anons">Сегодня принято делать свадьбу непременно с идеей и стилизацией. Фильмы, книги, эпохи ложатся в основу сценария&hellip;</div>
-            </div>
-          </div>
-          <div class="masonry__column">
-            <div class="post post--type-2"><a class="post__img" href="" style="background-image: url('img/post-2.jpg');"></a>
-              <div class="post__container">
-                <div class="post__title">Как выбрать свадебное агентство, 5 золотых правил</div>
-                <div class="info">
-                  <time class="date">14 марта 2017</time>
-                  <div class="view-count"><i class="fa fa-eye"></i><span>312</span></div>
-                  <div class="comment-count"><i class="fa fa-comments-o"></i><span>24</span></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="masonry__column">
-            <div class="post post--type-1"><a class="post__img" href=""><img src="img/post.jpg" alt=""></a><a class="post__title" href="">Суеверная русская душа или почему влюбленные выбирают апрель для женитьбы?</a>
-              <div class="info">
-                <time class="date">14 марта 2017</time>
-                <div class="view-count"><i class="fa fa-eye"></i><span>312</span></div>
-                <div class="comment-count"><i class="fa fa-comments-o"></i><span>24</span></div>
-              </div>
-              <div class="post__anons">Сегодня принято делать свадьбу непременно с идеей и стилизацией. Фильмы, книги, эпохи ложатся в основу сценария&hellip;</div>
-            </div>
-          </div>
-          <div class="masonry__column">
-            <div class="post post--type-4">
-              <div class="dashed"><a class="post__title" href="">Свадебный сайт вместо бумажных пригласительных — тренд 2017 года</a>
-                <div class="info">
-                  <time class="date">14 марта 2017</time>
-                  <div class="view-count"><i class="fa fa-eye"></i><span>312</span></div>
-                  <div class="comment-count"><i class="fa fa-comments"></i><span>24</span></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="masonry__column">
-            <div class="post post--type-1"><a class="post__img" href=""><img src="img/post.jpg" alt=""></a><a class="post__title" href="">10 способов уделить внимание каждому гостю на свадьбе</a>
-              <div class="info">
-                <time class="date">14 марта 2017</time>
-                <div class="view-count"><i class="fa fa-eye"></i><span>312</span></div>
-                <div class="comment-count"><i class="fa fa-comments-o"></i><span>24</span></div>
-              </div>
-              <div class="post__anons">Сегодня принято делать свадьбу непременно с идеей и стилизацией. Фильмы, книги, эпохи ложатся в основу сценария&hellip;</div>
-            </div>
-          </div>
-          <div class="masonry__column">
-            <div class="post post--type-3">
-              <div class="dashed dashed--primary"><a class="post__title" href="">10 high-tech идей для Вашей свадьбы</a>
-                <div class="info">
-                  <time class="date">14 марта 2017</time>
-                  <div class="view-count"><i class="fa fa-eye"></i><span>312</span></div>
-                  <div class="comment-count"><i class="fa fa-comments"></i><span>24</span></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="masonry__column">
-            <div class="post post--type-2"><a class="post__img" href="" style="background-image: url('img/post-2.jpg');"></a>
-              <div class="post__container">
-                <div class="post__title">Как выбрать свадебное агентство, 5 золотых правил</div>
-                <div class="info">
-                  <time class="date">14 марта 2017</time>
-                  <div class="view-count"><i class="fa fa-eye"></i><span>312</span></div>
-                  <div class="comment-count"><i class="fa fa-comments-o"></i><span>24</span></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="masonry__column">
-            <div class="post post--type-1"><a class="post__img" href=""><img src="img/post.jpg" alt=""></a><a class="post__title" href="">10 способов уделить внимание каждому гостю на свадьбе</a>
-              <div class="info">
-                <time class="date">14 марта 2017</time>
-                <div class="view-count"><i class="fa fa-eye"></i><span>312</span></div>
-                <div class="comment-count"><i class="fa fa-comments-o"></i><span>24</span></div>
-              </div>
-              <div class="post__anons">Сегодня принято делать свадьбу непременно с идеей и стилизацией. Фильмы, книги, эпохи ложатся в основу сценария&hellip;</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </main>
-    <footer class="main-footer">
-      <div class="grid grid--container">
-        <div class="row">
-          <div class="col col--sm-2">
-            <div class="logo"></div>
-          </div>
-          <div class="col col--sm-6">
-            <p>Проект &laquo;Свадебные штучки&raquo; не несёт ответственность за текстовые, фото-, видео-, и аудиоматериалы, предоставляемые специалистами и организациями, размещёнными на сайте www.wedding-office.ru.</p>
-          </div>
-          <div class="col col--sm-4">
-            <div class="main-footer__socials socials right"><a class="socials__item" href=""><i class="fa fa-vk"></i></a><a class="socials__item" href=""><i class="fa fa-instagram"></i></a><a class="socials__item" href=""><i class="fa fa-twitter"></i></a><a class="socials__item" href=""><i class="fa fa-facebook"></i></a></div>
-          </div>
-        </div>
-      </div>
-      <div class="main-footer__bottom">
+    <div class="page" id="page">
+      <section class="empty"></section>
+      <header class="main-header">
         <div class="grid grid--container">
           <div class="row row--sm-center">
-            <div class="col col--sm-8">
-              <div class="copyright"><span>&copy; 2017 ООО &laquo;Бизнес Медиа Групп&raquo;. Информационный портал «Свадебные штучки»</span></div>
+            <div class="col col--sm-8"><a class="logo" href="/pages.html"></a>
+              <nav class="header-nav">
+                <li><a class="header-nav__link" href="catalog.html">Каталог</a></li>
+                <li><a class="header-nav__link" href="tenders.html">Тендеры</a></li>
+                <li><a class="header-nav__link" href="news.html">Новости</a></li>
+                <li><a class="header-nav__link" href="articles.html">Статьи</a></li>
+                <li><a class="header-nav__link" href="consulatnt.html">Cвадебный консультант</a></li>
+                <li><a class="header-nav__link" href="about.html">О проекте</a></li>
+              </nav>
             </div>
-            <div class="col col--sm-4">
-              <div class="webformula"><img src="img/wf.png" alt=""><span>&mdash; разработка сайта </span><a class="link" href="">Webformula</a></div>
+            <div class="col col--sm-4 main-header__right">
+              <div class="city">
+                <div class="city__icon"></div>
+                <div class="city__name">Краснодар</div>
+              </div><a class="link link--primary" href="">Войти</a><a class="btn btn--primary" href="">Разместить заявку</a>
+              <div class="mobile-menu-toggle"><span></span><span></span><span></span></div>
             </div>
           </div>
         </div>
+      </header>
+      <div class="grid grid--no-gutters banners">
+        <div class="row row--no-gutters">
+          <div class="col col--sm-6 col--no-gutters"><a class="banner banner--type-1" href=""><i class="banner__icon banner__icon--microphone"></i>
+              <div class="banner__title">Ежегодная встреча шоуменов</div></a></div>
+          <div class="col col--sm-6 col--no-gutters"><a class="banner banner--type-2" href=""><i class="banner__icon banner__icon--thing"></i>
+              <div class="banner__title">Премия «Золотая штучка»</div></a></div>
+        </div>
       </div>
-    </footer>
+      <main>
+        <div class="grig grid--container">
+          <div class="breadcrumbs">
+            <div class="row row--sm-center">
+              <div class="col col--sm-12">
+                <nav class="breadcrumbs__nav"><a class="breadcrumbs__link" href="">Главная</a><a class="breadcrumbs__link" href="">Каталог</a><a class="breadcrumbs__link breadcrumbs__link--active" href="">Выходи за меня: 20 необычных идей, как услышать заветное «ДА»</a></nav>
+              </div>
+            </div>
+          </div>
+          <div class="header-with-select">
+            <h1 class="h1">Статьи</h1>
+            <div class="custom-select-type-2">
+              <select class="custom-select" pattern="/^$|s+/" data-placeholder="Город">
+                <option></option>
+                <option>Ростов-на-Дону</option>
+                <option>Краснодар</option>
+                <option>Варкута</option>
+              </select><i class="fa fa-angle-down"></i>
+            </div>
+          </div>
+          <div class="sorting">
+            <div class="sorting__item sorting__item--active">Весь год</div>
+            <div class="sorting__item">Январь</div>
+            <div class="sorting__item">Февраль</div>
+            <div class="sorting__item">Март</div>
+          </div>
+          <div class="masonry posts">
+            <div class="masonry__column">
+              <div class="post post--type-1"><a class="post__img" href=""><img src="img/post.jpg" alt=""></a><a class="post__title" href="">Свадьба вне времени или что кроется за современными концепциями</a>
+                <div class="info">
+                  <time class="date">14 марта 2017</time>
+                  <div class="view-count"><i class="fa fa-eye"></i><span>312</span></div>
+                  <div class="comment-count"><i class="fa fa-comments-o"></i><span>24</span></div>
+                </div>
+                <div class="post__anons">Сегодня принято делать свадьбу непременно с идеей и стилизацией. Фильмы, книги, эпохи ложатся в основу сценария&hellip;</div>
+              </div>
+            </div>
+            <div class="masonry__column">
+              <div class="post post--type-2"><a class="post__img" href="" style="background-image: url('img/post-2.jpg');"></a>
+                <div class="post__container">
+                  <div class="post__title">Как выбрать свадебное агентство, 5 золотых правил</div>
+                  <div class="info">
+                    <time class="date">14 марта 2017</time>
+                    <div class="view-count"><i class="fa fa-eye"></i><span>312</span></div>
+                    <div class="comment-count"><i class="fa fa-comments-o"></i><span>24</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="masonry__column">
+              <div class="post post--type-1"><a class="post__img" href=""><img src="img/post.jpg" alt=""></a><a class="post__title" href="">Суеверная русская душа или почему влюбленные выбирают апрель для женитьбы?</a>
+                <div class="info">
+                  <time class="date">14 марта 2017</time>
+                  <div class="view-count"><i class="fa fa-eye"></i><span>312</span></div>
+                  <div class="comment-count"><i class="fa fa-comments-o"></i><span>24</span></div>
+                </div>
+                <div class="post__anons">Сегодня принято делать свадьбу непременно с идеей и стилизацией. Фильмы, книги, эпохи ложатся в основу сценария&hellip;</div>
+              </div>
+            </div>
+            <div class="masonry__column">
+              <div class="post post--type-4">
+                <div class="dashed"><a class="post__title" href="">Свадебный сайт вместо бумажных пригласительных — тренд 2017 года</a>
+                  <div class="info">
+                    <time class="date">14 марта 2017</time>
+                    <div class="view-count"><i class="fa fa-eye"></i><span>312</span></div>
+                    <div class="comment-count"><i class="fa fa-comments"></i><span>24</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="masonry__column">
+              <div class="post post--type-1"><a class="post__img" href=""><img src="img/post.jpg" alt=""></a><a class="post__title" href="">10 способов уделить внимание каждому гостю на свадьбе</a>
+                <div class="info">
+                  <time class="date">14 марта 2017</time>
+                  <div class="view-count"><i class="fa fa-eye"></i><span>312</span></div>
+                  <div class="comment-count"><i class="fa fa-comments-o"></i><span>24</span></div>
+                </div>
+                <div class="post__anons">Сегодня принято делать свадьбу непременно с идеей и стилизацией. Фильмы, книги, эпохи ложатся в основу сценария&hellip;</div>
+              </div>
+            </div>
+            <div class="masonry__column">
+              <div class="post post--type-3">
+                <div class="dashed dashed--primary"><a class="post__title" href="">10 high-tech идей для Вашей свадьбы</a>
+                  <div class="info">
+                    <time class="date">14 марта 2017</time>
+                    <div class="view-count"><i class="fa fa-eye"></i><span>312</span></div>
+                    <div class="comment-count"><i class="fa fa-comments"></i><span>24</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="masonry__column">
+              <div class="post post--type-2"><a class="post__img" href="" style="background-image: url('img/post-2.jpg');"></a>
+                <div class="post__container">
+                  <div class="post__title">Как выбрать свадебное агентство, 5 золотых правил</div>
+                  <div class="info">
+                    <time class="date">14 марта 2017</time>
+                    <div class="view-count"><i class="fa fa-eye"></i><span>312</span></div>
+                    <div class="comment-count"><i class="fa fa-comments-o"></i><span>24</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="masonry__column">
+              <div class="post post--type-1"><a class="post__img" href=""><img src="img/post.jpg" alt=""></a><a class="post__title" href="">10 способов уделить внимание каждому гостю на свадьбе</a>
+                <div class="info">
+                  <time class="date">14 марта 2017</time>
+                  <div class="view-count"><i class="fa fa-eye"></i><span>312</span></div>
+                  <div class="comment-count"><i class="fa fa-comments-o"></i><span>24</span></div>
+                </div>
+                <div class="post__anons">Сегодня принято делать свадьбу непременно с идеей и стилизацией. Фильмы, книги, эпохи ложатся в основу сценария&hellip;</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="main-footer">
+        <div class="grid grid--container">
+          <div class="row">
+            <div class="col col--sm-2">
+              <div class="logo"></div>
+            </div>
+            <div class="col col--sm-6">
+              <p>Проект &laquo;Свадебные штучки&raquo; не несёт ответственность за текстовые, фото-, видео-, и аудиоматериалы, предоставляемые специалистами и организациями, размещёнными на сайте www.wedding-office.ru.</p>
+            </div>
+            <div class="col col--sm-4">
+              <div class="main-footer__socials socials"><a class="socials__item" href=""><i class="fa fa-vk"></i></a><a class="socials__item" href=""><i class="fa fa-instagram"></i></a><a class="socials__item" href=""><i class="fa fa-twitter"></i></a><a class="socials__item" href=""><i class="fa fa-facebook"></i></a></div>
+            </div>
+          </div>
+        </div>
+        <div class="main-footer__bottom">
+          <div class="grid grid--container">
+            <div class="row row--sm-center">
+              <div class="col col--sm-8">
+                <div class="copyright"><span>&copy; 2017 ООО &laquo;Бизнес Медиа Групп&raquo;. Информационный портал «Свадебные штучки»</span></div>
+              </div>
+              <div class="col col--sm-4">
+                <div class="webformula"><img src="img/wf.png" alt=""><span>&mdash; разработка сайта </span><a class="link" href="">Webformula</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
   </body>
   <script src="js/jquery.min.js"></script>
   <script src="js/wow.min.js"></script>
@@ -192,6 +208,7 @@
   <script src="js/jquery.magnific-popup.min.js"></script>
   <script src="js/flatpickr.min.js"></script>
   <script src="js/select2.min.js"></script>
+  <script src="js/slideout.min.js"></script>
   <script src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
   <script src="//yastatic.net/share2/share.js"></script>
   <script src="js/main.js"></script>

@@ -58,6 +58,9 @@
   display flex
   justify-content space-between
 
+.page
+  transition transform .4s .1s ease
+
 .header-nav
   li
     display inline-block
@@ -234,7 +237,7 @@
     margin-left 1em
 
 
-.sitebar
+.sidebar
   border $border
   border-radius $radius
   padding 0
@@ -242,7 +245,9 @@
     color $main
     display block
     border-bottom $border
-    line-height 4rem
+    // line-height 4rem
+    line-height 1
+    padding 1.5rem 0
     padding-left 1rem
     text-decoration none
     &:hover
@@ -259,15 +264,15 @@
 
 .catalog
   margin-bottom 3rem
-  .specialist
-    &__photo
-      height 28rem
+  // .specialist
+  //   &__photo
+  //     height 28rem
 
 .specialist
   display block
   margin-bottom 2.5rem
   &__photo
-    background-position 50%
+    background-position top center
     background-size cover !important
     display block
     height 24rem
@@ -275,6 +280,8 @@
     overflow hidden
     position relative
     text-align center
+    img
+      max-width 100%
   &__plate
     background $primary
     color #fff
@@ -561,9 +568,11 @@
 .main-footer
   margin-top 10rem
   &__bottom
-    background-color #f7f7f7
+    background-color #fbfbfb
     margin-top 2rem
     padding 2rem 0
+  .socials
+    float right
 
 
 @import 'base/media.styl'

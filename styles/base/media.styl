@@ -1,13 +1,172 @@
+// @keyframes fadeInleft
+//   0%
+//     transform translateX(100%)
+//   100%
+//     transform none
+
+// @keyframes fadeInRight
+//   0%
+//     transform none
+//   100%
+//     transform translateX(100%)
+
+// .page
+//   &--active
+//     transform translateX(-29rem)
+
+
+.mobile-menu
+  // animation fadeInRight .4s .1s ease
+  background-color rgba(#fff, 1)
+  // display none
+  // height 110vh
+  padding-left 3rem
+  // position absolute
+  // top 0
+  // right 0
+  // transform translateX(100%)
+  // transition transform .4s ease
+  width 29rem
+  // z-index 50
+  .socials
+    margin-bottom 3rem
+    margin-top 1rem
+  .social__item
+    .fa
+      circle(4rem)
+      color $main
+      font-size 1.8rem
+      &.fa-instagram
+        border-color $insta
+        color $insta
+      &.fa-vk
+        border-color $vk
+        color $vk
+      &.fa-odnoklassniki
+        border-color $ok
+        color $ok
+      &.fa-facebook
+        border-color $facebook
+        color $facebook
+
+
+.mobile-nav.nav
+  margin-top 3rem
+  li
+    list-style-type none
+  a
+    color $main
+    display inline-block
+    font-size 2rem
+    line-height 1
+    margin-bottom 3rem
+    text-decoration none
+    vertical-align text-top
+    &:hover
+      color $primary
+
+.mobile-menu-toggle
+  cursor pointer
+  display none
+  position absolute
+  right 4rem
+  top 3.5rem
+  size(12px, 15px)
+  transition transform .4s ease
+  &:before
+    // background-color rgba(#fff, .97)
+    content ''
+    left -2.4rem
+    position absolute
+    top -3rem
+    circle(8rem)
+  span
+    // background-color $primary
+    background-color $main
+    display block
+    height 2px
+    position absolute
+    top 0
+    transition transform .3s
+    width 3rem
+    &:nth-child(2)
+      top 8px
+    &:nth-child(3)
+      top 16px
+  &--active
+    span
+      &:nth-child(1)
+        transform rotate(45deg)
+        top 5px
+      &:nth-child(2)
+        opacity 0
+      &:nth-child(3)
+        transform rotate(-45deg)
+        top 5px
+
+
 @media(min-width 1900px)
   // .grid--container
   //   max-width 1400px
   .tender-bg
     height 45rem
 
-
-@media(max-width 1200px)
+@media(max-width 1300px)
+  .grid--container
+    max-width 98%
   .header-nav
     display none
-  .specialist
-    &__photo
-      height 45rem
+  .mobile-menu-toggle
+    display block
+  .main-header
+    .city
+      display none
+    .btn.btn--primary
+      display none
+    .link.link--primary
+      display none
+
+// @media(max-width 1200px)
+//   .specialist
+//     &__photo
+//       height 45rem
+@media(max-width 1000px)
+  .masonry
+    &__column
+      width 50%
+
+@media(max-width 767px)
+  .sidebar
+    margin-bottom 6rem
+  .contacts
+    &__left.left
+      width 50%
+
+@media(max-width 500px)
+  .main-footer
+    .logo
+      margin-bottom 1rem
+    .socials
+      float none
+    .webformula
+      float none
+      margin-top 1rem
+  .masonry
+    &__column
+      width 100%
+  .sorting
+    &__item
+      margin-bottom 1rem
+  .contacts
+    margin-bottom 40rem
+    &__left.left
+      background-color $main
+      padding-left 2%
+      width 100%
+      &:before
+        display none
+    .grid--container
+      padding 0
+      position initial
+      max-width 100%
+
