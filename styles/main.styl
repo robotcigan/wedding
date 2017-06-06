@@ -4,11 +4,11 @@
 @import 'base/typography.styl'
 @import 'base/animations.styl'
 @import 'base/icons.styl'
+@import 'base/form.styl'
 @import 'modification/modification.styl'
 
 @import 'pages/index.styl'
 @import 'pages/inner.styl'
-@import 'pages/form.styl'
 @import 'pages/specialist.styl'
 @import 'pages/registration.styl'
 @import 'pages/articles.styl'
@@ -180,7 +180,7 @@
       line-height 4.8rem
       vertical-align middle
     &--type-1
-      background $secondary url('../../img/pattern1.png')
+      background $secondary url('../../img/pattern1.png') repeat
       .banner__icon
         background url('../../img/pattern-icon-1.png') no-repeat
         width 3.2rem
@@ -241,11 +241,12 @@
   border $border
   border-radius $radius
   padding 0
+  li
+    &:not(:last-child)
+      border-bottom $border
   &__link
     color $main
     display block
-    border-bottom $border
-    // line-height 4rem
     line-height 1
     padding 1.5rem 0
     padding-left 1rem
@@ -279,7 +280,7 @@
     margin-bottom .5rem
     overflow hidden
     position relative
-    text-align center
+    // text-align center
     img
       max-width 100%
   &__plate
@@ -362,6 +363,34 @@
   &--offset
     margin-bottom 4rem
 
+.audio
+  &__title
+    margin-bottom .5rem
+  audio
+    display block
+    width 100%
+
+.portfolio-gallery
+  &--with-remove
+    .masonry
+      &__column
+        position relative
+    .remove
+      background-color #000
+      border-radius 50%
+      circle(2.5rem)
+      content ''
+      cursor pointer
+      display inline-block
+      right 2.5rem
+      position absolute
+      top 2.5rem
+      text-align center
+      .fa
+        color #fff
+        font-size 1.4rem
+        line-height 1
+
 .user
   display inline-block
   .ava
@@ -410,6 +439,16 @@
     padding 2.4rem 0
   &--primary
     border-color $primary
+  &--gray
+    border-color $gray
+    display block
+    font-size 2.4rem
+    font-weight 600
+    margin-bottom 4rem
+    text-align center
+    width 100%
+    input
+      display none
   // &__link
   //   color $main
   //   display inline-block

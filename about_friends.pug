@@ -1,7 +1,7 @@
 extends layout.pug
 
 block content
-  .grig.grid--container
+  .grid.grid--container
     .breadcrumbs
       .row.row--sm-center
         .col.col--sm
@@ -10,31 +10,28 @@ block content
             a(href="").breadcrumbs__link О проекте
             a(href="").breadcrumbs__link.breadcrumbs__link--active Общая информация
     .row.offset
-      .col.col--md-3
-        nav.sidebar
-          li: a(href="").sidebar__link Общая информация
-          li: a(href="").sidebar__link Как это работает?
-          li: a(href="").sidebar__link Команда "Свадебные штучки"
-          li: a(href="").sidebar__link.sitebar__link--active Партнеры и друзья
-          li: a(href="").sidebar__link Нормативные документы
-          li: a(href="").sidebar__link Отзывы о проекте
+      include ./components/about_nav.pug
       .col.col--md-9
         h1.h1 Команда &laquo;Свадебные штучки&raquo;
         .friends
           -for(var i = 0; i < 5; i++)
-            .friend
-              .friend__img
-                img(src="img/friends/1.jpg", alt="")
-              .friend__container
-                .friend__title &laquo;Золотая сотка&raquo;
-                .friend__subtitle Международный клуб ведущих и организаторов праздников
-                .friend___about Международный Клуб "Золотая Сотка" дает возможность всем его членам развиваться и совершенствоваться в профессии, а также обучает тех кто делает первые шаги на этом поприще. Клуб "Золотая Сотка" - это команда профессионалов Международного уровня!
-            .friend
-              .friend__img.friend__img--solid
-                img(src="img/friends/2.jpg", alt="")
-              .friend__container
-                .friend__title &laquo;Резиденция лета&raquo;
-                .friend__subtitle Индустрия праздников и специальных событий
-                .friend___about &laquo;Резиденция лета&raquo; - это команда профессионалов по созданию незабываемого Праздника и Шоу! Мы предоставляем услуги для корпоративных и частных клиентов, а также организуем уникальные события в городе Краснодаре и крае.
+            .friend.row
+              .col.col--md-3
+                .friend__img
+                  img(src="img/friends/1.jpg", alt="")
+              .col.col--md-9
+                .friend__container
+                  .friend__title &laquo;Золотая сотка&raquo;
+                  .friend__subtitle Международный клуб ведущих и организаторов праздников
+                  .friend___about Международный Клуб "Золотая Сотка" дает возможность всем его членам развиваться и совершенствоваться в профессии, а также обучает тех кто делает первые шаги на этом поприще. Клуб "Золотая Сотка" - это команда профессионалов Международного уровня!
+            .friend.row
+              .col.col--md-3
+                .friend__img.friend__img--solid
+                  img(src="img/friends/2.jpg", alt="")
+              .col.col--md-9
+                .friend__container
+                  .friend__title &laquo;Резиденция лета&raquo;
+                  .friend__subtitle Индустрия праздников и специальных событий
+                  .friend___about &laquo;Резиденция лета&raquo; - это команда профессионалов по созданию незабываемого Праздника и Шоу! Мы предоставляем услуги для корпоративных и частных клиентов, а также организуем уникальные события в городе Краснодаре и крае.
 
     include viewed.pug

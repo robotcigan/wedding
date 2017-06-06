@@ -44,7 +44,9 @@
     margin-bottom 5rem
     &__img
       float left
-      margin-right 2rem
+      // margin-right 2rem
+      img
+        max-width 100%
       &--solid
         border 2px solid $secondary
     &__title
@@ -65,3 +67,29 @@
     max-width 100%
   &--solid
     border 3px solid $secondary
+    
+
+@media(max-width 600px)
+  .team
+    &__item.item
+      .item
+        &__img
+          circle(40vw)
+        &__container
+          padding-left 0
+          &:before
+            display none
+        &__name
+          font-size 2rem
+          margin-bottom 1rem
+          
+@media(max-width 500px)
+  .friends
+    .friend
+      &__img
+        float none
+        text-align center
+        img
+          width 100%
+
+

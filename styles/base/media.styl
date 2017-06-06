@@ -14,6 +14,8 @@
 //   &--active
 //     transform translateX(-29rem)
 
+// body
+//   debug()
 
 .mobile-menu
   // animation fadeInRight .4s .1s ease
@@ -113,7 +115,7 @@
 
 @media(max-width 1300px)
   .grid--container
-    max-width 98%
+    max-width 96%
   .header-nav
     display none
   .mobile-menu-toggle
@@ -126,10 +128,10 @@
     .link.link--primary
       display none
 
-// @media(max-width 1200px)
-//   .specialist
-//     &__photo
-//       height 45rem
+@media(max-width 1200px)
+  .specialist
+    &__photo
+      height 38rem
 @media(max-width 1000px)
   .masonry
     &__column
@@ -170,3 +172,8 @@
       position initial
       max-width 100%
 
+@media(max-width 350px)
+  .specialist
+    &__photo
+      img
+        width 100%

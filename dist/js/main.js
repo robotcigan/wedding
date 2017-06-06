@@ -26,8 +26,9 @@ $(document).ready(function () {
     var parent = $(this).closest('.tabs');
     parent.find('.tabs__link').removeClass('tabs__link--active');
     $(this).addClass('tabs__link--active');
-    parent.find('.tabs__content').hide();
-    parent.find('.tabs__content').eq(index).show();
+    parent.find('.tabs__content').removeClass('tabs__content--active');
+    parent.find('.tabs__content').eq(index).addClass('tabs__content--active');
+    $('.masonry').isotope({ filter: '*' });
   });
 
   $('.accordion .accordion__btn').on('click', function () {
@@ -64,6 +65,10 @@ $(document).ready(function () {
     gallery: {
       enabled: true
     }
+  });
+
+  $('.remove').on('click', function () {
+    confirm("Удалить работу?");
   });
 
   $('.documents-gallery').magnificPopup({
@@ -193,7 +198,7 @@ $(document).ready(function () {
   var slideout = new Slideout({
     'panel': document.getElementById('page'),
     'menu': document.getElementById('mobile-menu'),
-    'padding': 290,
+    'padding': 270,
     'tolerance': 70,
     'side': 'right',
     'easing': 'cubic-bezier(.32,2,.55,.27)'

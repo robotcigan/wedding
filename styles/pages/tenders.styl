@@ -37,13 +37,13 @@
     margin-bottom 2rem
 
 .tender-bg
+  align-items center
   background url('../../img/tender.jpg') no-repeat
   background-size cover
   display flex
   height 35rem
   margin-bottom 8rem
   justify-content center
-  padding-top 9rem
   &__text.text
     max-width 70rem
     padding-left 2rem
@@ -51,21 +51,49 @@
       &__title
         font-size 3rem
         font-weight 600
+        line-height 1.2
         margin-bottom .5rem
       &__subtitle
         color #777
         line-height 1.2
         margin-bottom 3rem
 
+@media(max-width 1200px)
+  .tender-bg
+    background none
+    height initial
+    margin-bottom 2rem
+    padding 4rem 0
 
+@media(max-width 992px)
+  .datepicker-container
+    &--catalog
+      margin-bottom 4rem
 
-@media(max-width 500px)
+@media(max-width 960px)
   .tender
     &__date
       border 0
       circle(6rem)
-      margin-bottom 1rem
       margin-top -3rem
+      margin-bottom 1rem
       text-align left
+
+@media(max-width 767px)
+  .tender
+    &--closed
+      &:after
+        circle(7rem)
+        top 1rem
+  .tender-bg
+    &__text.text
+      .text
+        &__title
+          margin-bottom 1.5rem
+
+// @media(max-width 500px)
+//   .tender
+//     &__date
+      
 
 

@@ -110,3 +110,37 @@ small
     font-size 1.6rem
     font-weight 600
     vertical-align middle
+
+
+@media(max-width 960px)
+  .ya-share2
+    &__list
+      display initial !important
+    &__item
+      margin-right 2rem !important
+    &__badge
+      border-radius 50%
+      circle(4rem !important)
+      padding 0
+      text-align center
+      width initial
+    &__icon
+      margin 0
+      margin-top .7rem
+    &__text
+      display none
+    &__counter
+      display none !important
+  .blockquote
+    padding 2rem 7rem
+  .article-link
+    &--left
+      padding-left 4rem
+      padding-right 2rem
+      &:after
+        left 1rem
+    &--right
+      padding-left 2rem
+      padding-right 4rem
+      &:after
+        right 1rem
