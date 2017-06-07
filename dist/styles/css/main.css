@@ -398,7 +398,11 @@ p {
   vertical-align: middle;
 }
 .select2-container .select2-selection--single .select2-selection__rendered {
+  padding-left: 0;
   padding-right: 1rem;
+}
+.select2-container--default .select2-selection--single .select2-selection__placeholder {
+  color: #111;
 }
 .btn {
   background: transparent;
@@ -410,7 +414,7 @@ p {
   font-size: 1.6rem;
   font-weight: 600;
   line-height: 1;
-  padding: 1.4rem 2rem;
+  padding: 1.3rem 2rem;
   text-decoration: none;
   transition: all 0.4s;
 }
@@ -593,6 +597,21 @@ p {
 .checkbox span {
   color: #111;
   vertical-align: middle;
+}
+.checkbox--big label {
+  height: 4rem;
+  width: 4rem;
+  float: left;
+}
+.checkbox--big label:after {
+  font-size: 2rem;
+  left: 0.8rem;
+  top: 0.2rem;
+}
+.checkbox--big span {
+  height: 2rem;
+  line-height: 1;
+  vertical-align: top;
 }
 .datepicker-inline.flatpickr-input.form-control {
   display: none !important;
@@ -977,6 +996,7 @@ p {
 }
 .registration-bg {
   background-color: #f6fafb;
+  overflow: hidden;
 }
 .registration {
   background: #fff url("../../img/form-bg.jpg") 50% repeat;
@@ -984,7 +1004,7 @@ p {
   margin: 5rem auto;
   margin-bottom: 8rem;
   position: relative;
-  width: 67rem;
+  max-width: 67rem;
   z-index: 2;
 }
 .registration:before {
@@ -1027,9 +1047,15 @@ p {
   border: 1px dashed #bbb;
   border-radius: 10px;
   color: #bbb;
+  cursor: pointer;
   display: inline-block;
   padding: 1rem 4rem;
   text-decoration: none;
+  transition: all 0.2s;
+}
+.registration__link:hover {
+  border-color: #b8c949;
+  border-style: solid;
 }
 .registration__link--active {
   color: #fff;
@@ -1038,6 +1064,43 @@ p {
 }
 .registration__or {
   color: #111;
+}
+.registration__box {
+  background: url("../../img/registration-box.png") no-repeat;
+  background-size: contain;
+  height: 25rem;
+  width: 25rem;
+  position: absolute;
+  right: -25rem;
+  top: 120rem;
+  transform: translateX(13.88888888888889vw);
+}
+.registration__form .checkbox {
+  margin-bottom: 4rem;
+  margin-top: 2rem;
+}
+@media (max-width: 650px) {
+  .registration__form {
+    padding: 4rem 5%;
+  }
+  .registration__link {
+    padding: 1rem 4%;
+  }
+}
+@media (max-width: 450px) {
+  .registration__links {
+    flex-direction: column;
+  }
+  .registration:before {
+    display: none;
+  }
+  .registration__link {
+    text-align: center;
+    width: 100%;
+  }
+  .registration__or {
+    margin: 1rem 0;
+  }
 }
 .article .h2 {
   font-size: 2.4rem;
@@ -1207,6 +1270,20 @@ small {
     right: 1rem;
   }
 }
+@media (max-width: 500px) {
+  .mark {
+    padding: 2rem;
+  }
+  .blockquote {
+    padding: 2rem;
+  }
+  .blockquote .quote-icon {
+    display: none;
+  }
+  .blockquote .quote blockquote {
+    margin-left: 0;
+  }
+}
 .tender {
   border: 1px solid #eee;
   border-radius: 4px;
@@ -1260,7 +1337,7 @@ small {
   background-size: cover;
   display: flex;
   height: 35rem;
-  margin-bottom: 8rem;
+  margin-bottom: 1.5rem;
   justify-content: center;
 }
 .tender-bg__text.text {
@@ -1277,6 +1354,13 @@ small {
   color: #777;
   line-height: 1.2;
   margin-bottom: 3rem;
+}
+.tender-bg + .hr {
+  margin-bottom: 8rem;
+}
+.tender-calendar-title {
+  margin-bottom: 1rem;
+  margin-top: 0;
 }
 @media (max-width: 1200px) {
   .tender-bg {
@@ -1384,7 +1468,7 @@ small {
 .posts .post--type-2 .post__title {
   color: #fff;
   font-size: 3.2rem;
-  font-weight: 600;
+  font-weight: 800;
   line-height: 1.1;
 }
 .posts .post--type-2 .post__anons {
@@ -1419,7 +1503,7 @@ small {
 }
 .header-with-select .h1 {
   display: inline-block;
-  margin-right: 1rem;
+  margin-right: 3rem;
   margin-bottom: 0;
   vertical-align: middle;
 }
@@ -1515,7 +1599,7 @@ small {
 .document-img--solid {
   border: 3px solid #b8c949;
 }
-@media (max-width: 600px) {
+@media (max-width: 500px) {
   .team__item.item .item__img {
     height: 40vw;
     width: 40vw;
@@ -1558,6 +1642,12 @@ small {
 }
 .offset + .viewed {
   margin-top: 0;
+}
+hr.hr {
+  border: none;
+  border: 1px solid #eee;
+  margin-bottom: 4rem;
+  margin-top: 1rem;
 }
 .link {
   display: inline-block;
@@ -2001,10 +2091,15 @@ small {
 }
 .dashed__header {
   font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 0.5rem;
 }
 .dashed__date {
   color: #bbb;
   margin-bottom: 0.5rem;
+}
+.dashed__btn-group {
+  margin-top: 1rem;
 }
 .dashed--big {
   font-size: 2.4rem;
@@ -2218,6 +2313,7 @@ small {
 }
 .mobile-menu {
   background-color: #fff;
+  display: none;
   padding-left: 3rem;
   width: 29rem;
 }
@@ -2246,6 +2342,9 @@ small {
 .mobile-menu .social__item .fa.fa-facebook {
   border-color: #3b5998;
   color: #3b5998;
+}
+.mobile-menu .btn--primary {
+  margin-bottom: 1rem;
 }
 .mobile-nav.nav {
   margin-top: 3rem;
@@ -2323,6 +2422,9 @@ small {
   }
   .mobile-menu-toggle {
     display: block;
+  }
+  .main-header {
+    position: absolute;
   }
   .main-header .city {
     display: none;

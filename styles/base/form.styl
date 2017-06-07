@@ -148,7 +148,11 @@
   vertical-align middle
 
 .select2-container .select2-selection--single .select2-selection__rendered
+  padding-left 0
   padding-right 1rem
+
+.select2-container--default .select2-selection--single .select2-selection__placeholder
+  color $main
 
 .btn
   background transparent
@@ -161,7 +165,7 @@
   font-weight 600
   line-height 1
   // height 4rem
-  padding 1.4rem 2rem
+  padding 1.3rem 2rem
   text-decoration none
   transition all .4s
   &--primary
@@ -318,6 +322,18 @@
   span
     color $main
     vertical-align middle
+  &--big
+    label
+      circle(4rem)
+      float left
+      &:after
+        font-size 2rem
+        left .8rem
+        top .2rem
+    span
+      height 2rem
+      line-height 1
+      vertical-align top
 
 .datepicker-inline.flatpickr-input.form-control
   display none !important

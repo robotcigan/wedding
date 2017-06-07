@@ -10,7 +10,7 @@ block content
             a(href="").breadcrumbs__link.breadcrumbs__link--active Личный кабинет
 
     .row
-      .col.col--sm-8.col--sm-offset-2
+      .col.col--lg-8.col--lg-offset-2.col--md-10.col--md-offset-1.col--sm-12
         .tabs
           nav.tabs__header
             li.tabs__link.tabs__link--active Профиль
@@ -18,192 +18,228 @@ block content
             li.tabs__link Акции
             li.tabs__link Баланс
 
-          .tabs__content.tabs__content--active
-            form.form
-              h3.h3 Аватар или логотип
-              .ava(style="background: url(img/ava.jpg)")
-              label(for="file-upload").btn.btn--primary.btn--solid Изменить фото
-                input(type="file" id="file-upload")
+          .tabs__contents
+
+            .tabs__content
+              form.form
+                h3.h3 Аватар или логотип
+                .ava(style="background: url(img/ava.jpg)")
+                label(for="file-upload").btn.btn--primary.btn--solid Изменить фото
+                  input(type="file" id="file-upload")
+                .row
+                  .col.col--sm-6
+                    h3.h3 Персональные данные
+                    .form-control
+                      input(type="text" pattern="/^$|\s+/")
+                      label Фамилия
+                    .form-control
+                      input(type="text" pattern="/^$|\s+/")
+                      label Имя
+                    .form-control
+                      input(type="text" pattern="/^$|\s+/")
+                      label Отчество
+                    .form-control
+                      input(type="email" pattern="/^$|\s+/")
+                      label E-mail
+                      i.form-control__icon.fa.fa-envelope
+                    .form-control
+                      input(type="text" pattern="/^$|\s+/").datepicker
+                      label Дата рождения
+                      i.form-control__icon.fa.fa-calendar-o
+                    .form-control
+                      select(pattern="/^$|\s+/").custom-select
+                        option Город
+                        option Краснодар
+                      i.form-control__icon.fa.fa-angle-down
+                    .form-control
+                      input(type="text" pattern="/^$|\s+/")
+                      label Пароль
+                      i.form-control__icon.fa.fa-lock
+                    .form-control
+                      input(type="text" pattern="/^$|\s+/")
+                      label Повторите пароль
+                      i.form-control__icon.fa.fa-lock
+                    h3.h3 Контактная информация
+                    .form-control
+                      input(type="text" pattern="/^$|\s+/")
+                      label Номер телефона
+                      i.form-control__icon.fa.fa-phone
+                    .form-control
+                      input(type="text" pattern="/^$|\s+/")
+                      label Второй номер телефона (если есть)
+                      i.form-control__icon.fa.fa-phone
+                    h3.h3 Информация об организации
+                    .form-control
+                      input(type="text" pattern="/^$|\s+/")
+                      label ИНН
+                    .row
+                      .col.col--sm-6
+                        .form-control
+                          input(type="text" pattern="/^$|\s+/")
+                          label Адрес (если есть)
+                      .col.col--sm-6
+                        .form-control
+                          input(type="text" pattern="/^$|\s+/")
+                          label Номер офиса
+                    .form-control
+                      input(type="text" pattern="/^$|\s+/")
+                      label Название организации (если есть)
+                  .col.col--sm-6
+                    h3.h3 Социальные сети
+                    .form-control
+                      input(type="text" pattern="/^$|\s+/")
+                      label Vk
+                      i.form-control__icon.fa.fa-vk
+                    .form-control
+                      input(type="text" pattern="/^$|\s+/")
+                      label Instagram
+                      i.form-control__icon.fa.fa-instagram
+                    .form-control
+                      input(type="text" pattern="/^$|\s+/")
+                      label Facebook
+                      i.form-control__icon.fa.fa-facebook
+                    .form-control
+                      input(type="text" pattern="/^$|\s+/")
+                      label Youtube
+                      i.form-control__icon.fa.fa-youtube
+                    .form-control
+                      input(type="text" pattern="/^$|\s+/")
+                      label Одноклассники
+                      i.form-control__icon.fa.fa-odnoklassniki
+                    .form-control
+                      input(type="text" pattern="/^$|\s+/")
+                      label Twitter
+                      i.form-control__icon.fa.fa-twitter
+                    .form-control
+                      input(type="text" pattern="/^$|\s+/")
+                      label Vimeo
+                      i.form-control__icon.fa.fa-vimeo
+                    .form-control
+                      input(type="text" pattern="/^$|\s+/")
+                      label Мой мир
+                      i.form-control__icon
+                    h3.h3 Данные об исполнителе
+                    .form-control
+                      select(pattern="/^$|\s+/" data-placeholder="Город").custom-select
+                        option
+                        option Краснодар
+                        option Сочи
+                      i.form-control__icon.fa.fa-angle-down
+                    .form-control
+                      input(type="text" pattern="/^$|\s+/")
+                      label Сайт
+                    .row
+                      .col.col--sm-6
+                        .form-control
+                          input(type="text" pattern="/^$|\s+/")
+                          label Стоимость за час
+                      .col.col--sm-6
+                        .form-control
+                          input(type="text" pattern="/^$|\s+/")
+                          label За мероприятие
+                    .form-control
+                      textarea(pattern="/^$|\s+/")
+                      label Информация о мероприятии
+                      .form-control__words 0/1000
+                  
+                  .col.col--lg-12
+                    .text--sm-center
+                      button.btn.btn--primary Сохранить изменения
+
+
+            .tabs__content
+              h2.h2 Портфолио
+              .tabs.tabs--type-2
+                nav.tabs__header
+                  li.tabs__link.tabs__link--active
+                    span Фото
+                  li.tabs__link
+                    span Видео
+                  li.tabs__link
+                    span Аудио
+                  li.tabs__link
+                    span Награды и сертификаты
+
+                label.dashed.dashed--gray
+                  span Поместите файлы сюда
+                  input(type="file" multiple)
+
+                .tabs__contents
+                  .tabs__content.tabs__content--active
+                    .masonry.masonry--offset.portfolio-gallery.portfolio-gallery--with-remove
+                      -for(var i = 1; i < 10; i++)
+                        .masonry__column
+                          span.remove
+                            i.fa.fa-close
+                          a(href="img/masonry/" + i + ".jpg")
+                            img(src="img/masonry/" + i + ".jpg", alt="")
+
+                  .tabs__content
+                    .row
+                      -for(var x = 0; x < 7; x++)
+                        .col.col--sm-4
+                          .video
+                            img(src="img/video.jpg", alt="")
+
+                  .tabs__content
+                    -for(var y = 0; y < 5; y++)
+                      .audio.row.row--sm-bottom
+                        .col.col--sm-7
+                          .audio__title Группа «Фрукты» - Свадебный переполох
+                          audio(src="audio/horse.mp3" type="audio/mp3" controls="controls")
+                        .col.col--sm-5
+                          .btn.btn--primary.btn--solid.btn--small Редактировать
+                          .btn.btn--black.btn--solid.btn--small.remove Удалить
+
+                  .tabs__content
+                    .masonry.documents-gallery
+                      -for(var y = 1; y < 6; y++)
+                        .masonry__column
+                          a(href="img/documents/" + y + ".jpg")
+                            img(src="img/documents/" + y + ".jpg", alt="")
+
+            .tabs__content.tabs__content--active
               .row
                 .col.col--sm-6
-                  h3.h3 Персональные данные
-                  .form-control
-                    input(type="text" pattern="/^$|\s+/")
-                    label Фамилия
-                  .form-control
-                    input(type="text" pattern="/^$|\s+/")
-                    label Имя
-                  .form-control
-                    input(type="text" pattern="/^$|\s+/")
-                    label Отчество
-                  .form-control
-                    input(type="email" pattern="/^$|\s+/")
-                    label E-mail
-                    i.form-control__icon.fa.fa-envelope
-                  .form-control
-                    input(type="text" pattern="/^$|\s+/").datepicker
-                    label Дата рождения
-                    i.form-control__icon.fa.fa-calendar-o
-                  .form-control
-                    select(pattern="/^$|\s+/").custom-select
-                      option Город
-                      option Краснодар
-                    i.form-control__icon.fa.fa-angle-down
-                  .form-control
-                    input(type="text" pattern="/^$|\s+/")
-                    label Пароль
-                    i.form-control__icon.fa.fa-lock
-                  .form-control
-                    input(type="text" pattern="/^$|\s+/")
-                    label Повторите пароль
-                    i.form-control__icon.fa.fa-lock
-                  h3.h3 Контактная информация
-                  .form-control
-                    input(type="text" pattern="/^$|\s+/")
-                    label Номер телефона
-                    i.form-control__icon.fa.fa-phone
-                  .form-control
-                    input(type="text" pattern="/^$|\s+/")
-                    label Второй номер телефона (если есть)
-                    i.form-control__icon.fa.fa-phone
-                  h3.h3 Информация об организации
-                  .form-control
-                    input(type="text" pattern="/^$|\s+/")
-                    label ИНН
-                  .row
-                    .col.col--sm-6
-                      .form-control
-                        input(type="text" pattern="/^$|\s+/")
-                        label Адрес (если есть)
-                    .col.col--sm-6
-                      .form-control
-                        input(type="text" pattern="/^$|\s+/")
-                        label Номер офиса
-                  .form-control
-                    input(type="text" pattern="/^$|\s+/")
-                    label Название организации (если есть)
+                  form.form
+                    .form-control
+                      input(type="text" pattern="/^$|\s+/")
+                      label Название акции
+                    h4 Срок действия акции
+                    .row
+                      .col.col--sm-6
+                        .form-control
+                          input(type="text" pattern="/^$|\s+/").datepicker
+                          label C
+                          i.form-control__icon.fa.fa-calendar-o
+                      .col.col--sm-6
+                        .form-control
+                          input(type="text" pattern="/^$|\s+/").datepicker
+                          label По
+                          i.form-control__icon.fa.fa-calendar-o
+                    .form-control
+                      textarea(pattern="/^$|\s+/")
+                      label Информация
+                      .form-control__words 0/1000
+                    button.btn.btn--primary Добавить
                 .col.col--sm-6
-                  h3.h3 Социальные сети
-                  .form-control
-                    input(type="text" pattern="/^$|\s+/")
-                    label Vk
-                    i.form-control__icon.fa.fa-vk
-                  .form-control
-                    input(type="text" pattern="/^$|\s+/")
-                    label Instagram
-                    i.form-control__icon.fa.fa-instagram
-                  .form-control
-                    input(type="text" pattern="/^$|\s+/")
-                    label Facebook
-                    i.form-control__icon.fa.fa-facebook
-                  .form-control
-                    input(type="text" pattern="/^$|\s+/")
-                    label Youtube
-                    i.form-control__icon.fa.fa-youtube
-                  .form-control
-                    input(type="text" pattern="/^$|\s+/")
-                    label Одноклассники
-                    i.form-control__icon.fa.fa-odnoklassniki
-                  .form-control
-                    input(type="text" pattern="/^$|\s+/")
-                    label Twitter
-                    i.form-control__icon.fa.fa-twitter
-                  .form-control
-                    input(type="text" pattern="/^$|\s+/")
-                    label Vimeo
-                    i.form-control__icon.fa.fa-vimeo
-                  .form-control
-                    input(type="text" pattern="/^$|\s+/")
-                    label Мой мир
-                    i.form-control__icon
-                  h3.h3 Данные об исполнителе
-                  .form-control
-                    select(pattern="/^$|\s+/" data-placeholder="Город").custom-select
-                      option
-                      option Краснодар
-                      option Сочи
-                    i.form-control__icon.fa.fa-angle-down
-                  .form-control
-                    input(type="text" pattern="/^$|\s+/")
-                    label Сайт
-                  .row
-                    .col.col--sm-6
-                      .form-control
-                        input(type="text" pattern="/^$|\s+/")
-                        label Стоимость за час
-                    .col.col--sm-6
-                      .form-control
-                        input(type="text" pattern="/^$|\s+/")
-                        label За мероприятие
-                  .form-control
-                    textarea(pattern="/^$|\s+/")
-                    label Информация о мероприятии
-                    .form-control__words 0/1000
-                
-                .col.col--lg-12
-                  .text--sm-center
-                    button.btn.btn--primary Сохранить изменения
+                  -for(var i = 0; i < 4; i++)
+                    .dashed
+                      .dashed__header Love story в подарок! Фотосъемка свадебного дня со скидкой 30%
+                      .dashed__date с 25 декабря по 15 марта
+                      .dashed__content Купон предоставляет возможность приобрести пакет «Love story в подарок! Фотосъемка свадебного дня» -30%
+                      .dashed__btn-group
+                        .btn.btn--primary.btn--solid.btn--small Редактировать
+                        .btn.btn--black.btn--solid.btn--small.remove Удалить
 
-
-          .tabs__content
-            h2.h2 Портфолио
-            .tabs.tabs--type-2
-              nav.tabs__header
-                li.tabs__link.tabs__link--active
-                  span Фото
-                li.tabs__link
-                  span Видео
-                li.tabs__link
-                  span Аудио
-                li.tabs__link
-                  span Награды и сертификаты
-
-              label.dashed.dashed--gray
-                span Поместите файлы сюда
-                input(type="file" multiple)
-
-
-              .tabs__content.tabs__content--active
-                .masonry.masonry--offset.portfolio-gallery.portfolio-gallery--with-remove
-                  -for(var i = 1; i < 10; i++)
-                    .masonry__column
-                      span.remove
-                        i.fa.fa-close
-                      a(href="img/masonry/" + i + ".jpg")
-                        img(src="img/masonry/" + i + ".jpg", alt="")
-
-              .tabs__content
-                .row
-                  -for(var x = 0; x < 7; x++)
-                    .col.col--sm-4
-                      .video
-                        img(src="img/video.jpg", alt="")
-
-              .tabs__content
-                -for(var y = 0; y < 5; y++)
-                  .audio.row.row--sm-bottom
-                    .col.col--sm-7
-                      .audio__title Группа «Фрукты» - Свадебный переполох
-                      audio(src="audio/horse.mp3" type="audio/mp3" controls="controls")
-                    .col.col--sm-5
-                      .btn.btn--primary.btn--solid.btn--small Редактировать
-                      .btn.btn--black.btn--solid.btn--small.remove Удалить
-
-              .tabs__content
-                .masonry.documents-gallery
-                  -for(var y = 1; y < 6; y++)
-                    .masonry__column
-                      a(href="img/documents/" + y + ".jpg")
-                        img(src="img/documents/" + y + ".jpg", alt="")
-
-          .tabs__content
-            .row
-              .col.col--sm-8
-                h3.h3 Баланс:
-                p Платежи производятся через сервис Яндекс касса
-                p Аккаунт будет активен до 22 июня 2017
-              .col.col--sm-4
-                a(href="").btn.btn--primary Пополнить баланс
+            .tabs__content
+              .row
+                .col.col--sm-8
+                  h3.h3 Баланс:
+                  p Платежи производятся через сервис Яндекс касса
+                  p Аккаунт будет активен до 22 июня 2017
+                .col.col--sm-4
+                  a(href="").btn.btn--primary Пополнить баланс
 
 
   include viewed.pug

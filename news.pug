@@ -1,0 +1,150 @@
+extends layout.pug
+
+block content
+  .grig.grid--container
+    .breadcrumbs
+      .row.row--sm-center
+        .col.col--sm-12
+          nav.breadcrumbs__nav
+            a(href="").breadcrumbs__link Главная
+            a(href="").breadcrumbs__link Каталог
+            a(href="").breadcrumbs__link.breadcrumbs__link--active Выходи за меня: 20 необычных идей, как услышать заветное «ДА»
+
+
+    .header-with-select
+      h1.h1 Новости
+      .custom-select-type-2
+        select(pattern="/^$|\s+/" data-placeholder="Город").custom-select
+          option
+          option Ростов-на-Дону
+          option Краснодар
+          option Варкута
+        i.fa.fa-angle-down
+
+    .sorting
+      .sorting__item.sorting__item--active Весь год
+      .sorting__item Январь
+      .sorting__item Февраль
+      .sorting__item Март
+      //- .sorting__item Апрель
+      //- .sorting__item Май
+      //- .sorting__item Июнь
+      //- .sorting__item Июль
+      //- .sorting__item Август
+      //- .sorting__item Сентябрь
+      //- .sorting__item Октябрь
+      //- .sorting__item Ноябрь
+      //- .sorting__item Декабрь
+
+    .masonry.posts
+      .masonry__column
+        .post.post--type-1
+          a(href="").post__img
+            img(src="img/news-1.jpg", alt="")
+          a(href="").post__title Свадьба вне времени или что кроется за современными концепциями
+          .info
+            time.date 14 марта 2017
+            .view-count
+              i.fa.fa-eye
+              span 312
+            .comment-count
+              i.fa.fa-comments-o
+              span 24
+          .post__anons Сегодня принято делать свадьбу непременно с идеей и стилизацией. Фильмы, книги, эпохи ложатся в основу сценария&hellip;
+      .masonry__column
+        .post.post--type-2
+          a(href="" style="background-image: url('img/news-2.jpg')").post__img
+          .post__container
+            .post__title Как выбрать свадебное агентство, 5 золотых правил
+            .info
+              time.date 14 марта 2017
+              .view-count
+                i.fa.fa-eye
+                span 312
+              .comment-count
+                i.fa.fa-comments-o
+                span 24
+      .masonry__column
+        .post.post--type-1
+          a(href="").post__img
+            img(src="img/news-3.jpg", alt="")
+          a(href="").post__title Суеверная русская душа или почему влюбленные выбирают апрель для женитьбы?
+          .info
+            time.date 14 марта 2017
+            .view-count
+              i.fa.fa-eye
+              span 312
+            .comment-count
+              i.fa.fa-comments-o
+              span 24
+          .post__anons Сегодня принято делать свадьбу непременно с идеей и стилизацией. Фильмы, книги, эпохи ложатся в основу сценария&hellip;
+      .masonry__column
+        .post.post--type-4
+          .dashed
+            a(href="").post__title Свадебный сайт вместо бумажных пригласительных — тренд 2017 года
+            .info
+              time.date 14 марта 2017
+              .view-count
+                i.fa.fa-eye
+                span 312
+              .comment-count
+                i.fa.fa-comments
+                span 24
+      .masonry__column
+        .post.post--type-1
+          a(href="").post__img
+            img(src="img/news-5.jpg", alt="")
+          a(href="").post__title 10 способов уделить внимание каждому гостю на свадьбе
+          .info
+            time.date 14 марта 2017
+            .view-count
+              i.fa.fa-eye
+              span 312
+            .comment-count
+              i.fa.fa-comments-o
+              span 24
+          .post__anons Сегодня принято делать свадьбу непременно с идеей и стилизацией. Фильмы, книги, эпохи ложатся в основу сценария&hellip;
+      .masonry__column
+        .post.post--type-3
+          .dashed.dashed--primary
+            a(href="").post__title 10 high-tech идей для Вашей свадьбы
+            .info
+              time.date 14 марта 2017
+              .view-count
+                i.fa.fa-eye
+                span 312
+              .comment-count
+                i.fa.fa-comments
+                span 24
+      .masonry__column
+        .post.post--type-2
+          a(href="" style="background-image: url('img/news-4.jpg')").post__img
+          .post__container
+            .post__title Как выбрать свадебное агентство, 5 золотых правил
+            .info
+              time.date 14 марта 2017
+              .view-count
+                i.fa.fa-eye
+                span 312
+              .comment-count
+                i.fa.fa-comments-o
+                span 24
+      .masonry__column
+        .post.post--type-1
+          a(href="").post__img
+            img(src="img/news-5.jpg", alt="")
+          a(href="").post__title 10 способов уделить внимание каждому гостю на свадьбе
+          .info
+            time.date 14 марта 2017
+            .view-count
+              i.fa.fa-eye
+              span 312
+            .comment-count
+              i.fa.fa-comments-o
+              span 24
+          .post__anons Сегодня принято делать свадьбу непременно с идеей и стилизацией. Фильмы, книги, эпохи ложатся в основу сценария&hellip;
+
+      .center
+        .btn.btn--secondary.btn--solid.btn--small
+          span Показать еще
+          i.reload

@@ -47,6 +47,7 @@
 
 .registration-bg
   background-color #f6fafb
+  overflow hidden
 
 
 .registration
@@ -55,7 +56,7 @@
   margin 5rem auto
   margin-bottom 8rem
   position relative
-  width 67rem
+  max-width 67rem
   z-index 2
   &:before
     content ''
@@ -90,14 +91,52 @@
     border 1px dashed $gray
     border-radius 10px
     color $gray
+    cursor pointer
     display inline-block
     padding 1rem 4rem
     text-decoration none
+    transition all .2s
+    &:hover
+      border-color $secondary
+      border-style solid
     &--active
       color #fff
       background $secondary
       font-weight 600
   &__or
     color $main
+  &__box
+    background url('../../img/registration-box.png') no-repeat
+    background-size contain
+    circle(25rem)
+    position absolute
+    right -25rem
+    top 120rem
+    transform translateX((175 / 1260 * 100)vw)
+
+
+.registration__form
+  .checkbox
+    margin-bottom 4rem
+    margin-top 2rem
+
+@media(max-width 650px)
+  .registration
+    &__form
+      padding 4rem 5%
+    &__link
+      padding 1rem 4%
+
+@media(max-width 450px)
+  .registration__links
+    flex-direction column
+  .registration
+    &:before
+      display none
+    &__link
+      text-align center
+      width 100%
+    &__or
+      margin 1rem 0
 
 

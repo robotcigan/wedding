@@ -21,13 +21,17 @@ $(document).ready(function () {
 
   // Табы
   $('.tabs__header .tabs__link').on('click', function() {
-    var index = $(this).index();
-    var parent = $(this).closest('.tabs');
-    parent.find('.tabs__link').removeClass('tabs__link--active');
+    let index = $(this).index();
+    let parent = $(this).closest('.tabs');
+    let parentIndex = parent.index();
+    // console.log(parentIndex)
+    // console.log('index', parent.find('.tabs__content').index())
+    parent.find('.tabs__link--active').first().removeClass('tabs__link--active');
     $(this).addClass('tabs__link--active');
-    parent.find('.tabs__content').removeClass('tabs__content--active');
-    parent.find('.tabs__content').eq(index).addClass('tabs__content--active');
+    parent.children('.tabs__contents').toggleClass('fuck').find('.tabs__content').removeClass('tabs__content--active');
+    parent.children('.tabs__contents').find('.tabs__content').eq(index).addClass('tabs__content--active');
     $('.masonry').isotope({ filter: '*' });
+
   });
 
   $('.accordion .accordion__btn').on('click', function() {
@@ -107,7 +111,12 @@ $(document).ready(function () {
   $('.custom-select').select2({
     minimumResultsForSearch: Infinity,
     dropdownAutoWidth : true
-    // width: 'auto'
+  });
+
+  $('.custom-select-type-2 .custom-select').select2({
+    minimumResultsForSearch: Infinity,
+    dropdownAutoWidth : true,
+    width: 'auto'
   });
 
   $('.ya-share2__icon').after('<span class="ya-share2__text">Поделиться</span>');
@@ -211,7 +220,7 @@ $(document).ready(function () {
 
   $('.mobile-menu-toggle').on('click', function() {
     slideout.toggle();
-  });
+  }); 
   
 
 

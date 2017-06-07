@@ -6,13 +6,33 @@ block content
       .text__title Тендеры помогают  найти лучших специалистов
       .text__subtitle Разнообразный и богатый опыт постоянный количественный рост и сфера нашей активности играет важную роль в формировании направлений прогрессивного развития.
       .btn.btn--primary Разместить заявку
+  .grid.grid--container
+    .row
+      .col
+        .tender-filters
+          .custom-select-type-2
+            select(pattern="/^$|\s+/" data-placeholder="Ведущие").custom-select
+              option
+              option Ведущие
+              option Тамада
+              option Маг
+              option Сергей Дружко
+              option Звучит неплохо
+            i.fa.fa-angle-down
+          .custom-select-type-2
+            select(pattern="/^$|\s+/" data-placeholder="Актуальные").custom-select
+              option
+              option Актуальные
+              option Архивные
+            i.fa.fa-angle-down
+  hr.hr
   .grig.grid--container
     .row
-      .col.col--lg-3
-        h3.h3 Календарь событий
+      .col.col--xl-3.col--lg-4
+        h3.h3.tender-calendar-title Календарь событий
         .datepicker-container.datepicker-container--catalog
           .datepicker-inline.datepicker-inline--max-width
-      .col.col--lg-9
+      .col.col--xl-9.col--lg-8
         .tenders
           -for(var i = 0; i < 5; i++)
             .tender.tender--closed

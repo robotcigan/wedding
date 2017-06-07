@@ -28,6 +28,7 @@ html(lang="ru")
             i.fa.fa-twitter
           a(href="").socials__item
             i.fa.fa-facebook
+        a(href="#modal").btn.btn--primary.btn--solid.modal-open Войти
         a(href="").btn.btn--primary Разместить заявку 
     #page.page
       section.empty
@@ -47,7 +48,7 @@ html(lang="ru")
               .city
                 .city__icon
                 .city__name Краснодар
-              a(href="").link.link--primary Войти
+              a(href="#modal").link.link--primary.modal-open Войти
               a(href="").btn.btn--primary Разместить заявку
               .mobile-menu-toggle
                 span
@@ -100,5 +101,40 @@ html(lang="ru")
                   span &mdash; разработка сайта 
                   a(href="").link Webformula
 
+    #modal.modal
+      .modal__title Войти
+      form.form
+        .form-control.form-control--error
+          input(type="email" pattern="/^$|\s+/")
+          label E-mail
+          i.form-control__icon.fa.fa-envelope
+        .form-control
+          input(type="password" pattern="/^$|\s+/")
+          label Пароль
+          i.form-control__icon.fa.fa-lock
+        .row
+          .col.col--sm-7
+            label.checkbox
+              input(type="checkbox" id="checkbox-1")
+              label(for="checkbox-1")
+              span Запомнить пароль
+          .col.col--sm-5.text-right
+            a(href="").link Забыли пароль
+        p.text-error Неверное имя пользователя или пароль. Проверьте правильность введенных данных.
+          .col.col--sm-8.col--sm-offset-2
+            .center
+              .btn.btn--primary.btn--full-width Войти
+              .modal__label.modal__label--type-2 или через
+              .socials-type-2.justify
+                a(href="")
+                  i.fa.fa-vk
+                a(href="")
+                  i.fa.fa-odnoklassniki
+                a(href="")
+                  i.fa.fa-facebook
+                a(href="")
+                  i.fa.fa-twitter
+              .modal__label Впервые на сайте?
+              .btn.btn--primary.btn--full-width.btn--solid Зарегистрировтаься
 
   include components/layoutlibs.pug

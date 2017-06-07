@@ -20,7 +20,7 @@
         <li><a class="header-nav__link" href="about.html">О проекте</a></li>
       </div>
       <div class="mobile-menu__bottom">
-        <div class="socials"><a class="socials__item" href=""><i class="fa fa-vk"></i></a><a class="socials__item" href=""><i class="fa fa-instagram"></i></a><a class="socials__item" href=""><i class="fa fa-twitter"></i></a><a class="socials__item" href=""><i class="fa fa-facebook"></i></a></div><a class="btn btn--primary" href="">Разместить заявку </a>
+        <div class="socials"><a class="socials__item" href=""><i class="fa fa-vk"></i></a><a class="socials__item" href=""><i class="fa fa-instagram"></i></a><a class="socials__item" href=""><i class="fa fa-twitter"></i></a><a class="socials__item" href=""><i class="fa fa-facebook"></i></a></div><a class="btn btn--primary btn--solid modal-open" href="#modal">Войти</a><a class="btn btn--primary" href="">Разместить заявку </a>
       </div>
     </div>
     <div class="page" id="page">
@@ -42,7 +42,7 @@
               <div class="city">
                 <div class="city__icon"></div>
                 <div class="city__name">Краснодар</div>
-              </div><a class="link link--primary" href="">Войти</a><a class="btn btn--primary" href="">Разместить заявку</a>
+              </div><a class="link link--primary modal-open" href="#modal">Войти</a><a class="btn btn--primary" href="">Разместить заявку</a>
               <div class="mobile-menu-toggle"><span></span><span></span><span></span></div>
             </div>
           </div>
@@ -64,15 +64,41 @@
             <div class="btn btn--primary">Разместить заявку</div>
           </div>
         </div>
+        <div class="grid grid--container">
+          <div class="row">
+            <div class="col">
+              <div class="tender-filters">
+                <div class="custom-select-type-2">
+                  <select class="custom-select" pattern="/^$|s+/" data-placeholder="Ведущие">
+                    <option></option>
+                    <option>Ведущие</option>
+                    <option>Тамада</option>
+                    <option>Маг</option>
+                    <option>Сергей Дружко</option>
+                    <option>Звучит неплохо</option>
+                  </select><i class="fa fa-angle-down"></i>
+                </div>
+                <div class="custom-select-type-2">
+                  <select class="custom-select" pattern="/^$|s+/" data-placeholder="Актуальные">
+                    <option></option>
+                    <option>Актуальные</option>
+                    <option>Архивные</option>
+                  </select><i class="fa fa-angle-down"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr class="hr">
         <div class="grig grid--container">
           <div class="row">
-            <div class="col col--lg-3">
-              <h3 class="h3">Календарь событий</h3>
+            <div class="col col--xl-3 col--lg-4">
+              <h3 class="h3 tender-calendar-title">Календарь событий</h3>
               <div class="datepicker-container datepicker-container--catalog">
                 <div class="datepicker-inline datepicker-inline--max-width"></div>
               </div>
             </div>
-            <div class="col col--lg-9">
+            <div class="col col--xl-9 col--lg-8">
               <div class="tenders">
                 <div class="tender tender--closed">
                   <div class="row">
@@ -231,6 +257,39 @@
           </div>
         </div>
       </footer>
+    </div>
+    <div class="modal" id="modal">
+      <div class="modal__title">Войти</div>
+      <form class="form">
+        <div class="form-control form-control--error">
+          <input type="email" pattern="/^$|s+/">
+          <label>E-mail</label><i class="form-control__icon fa fa-envelope"></i>
+        </div>
+        <div class="form-control">
+          <input type="password" pattern="/^$|s+/">
+          <label>Пароль</label><i class="form-control__icon fa fa-lock"></i>
+        </div>
+        <div class="row">
+          <div class="col col--sm-7">
+            <label class="checkbox">
+              <input type="checkbox" id="checkbox-1">
+              <label for="checkbox-1"></label><span>Запомнить пароль</span>
+            </label>
+          </div>
+          <div class="col col--sm-5 text-right"><a class="link" href="">Забыли пароль</a></div>
+        </div>
+        <p class="text-error">Неверное имя пользователя или пароль. Проверьте правильность введенных данных.
+          <div class="col col--sm-8 col--sm-offset-2">
+            <div class="center">
+              <div class="btn btn--primary btn--full-width">Войти</div>
+              <div class="modal__label modal__label--type-2">или через</div>
+              <div class="socials-type-2 justify"><a href=""><i class="fa fa-vk"></i></a><a href=""><i class="fa fa-odnoklassniki"></i></a><a href=""><i class="fa fa-facebook"></i></a><a href=""><i class="fa fa-twitter"></i></a></div>
+              <div class="modal__label">Впервые на сайте?</div>
+              <div class="btn btn--primary btn--full-width btn--solid">Зарегистрировтаься</div>
+            </div>
+          </div>
+        </p>
+      </form>
     </div>
   </body>
   <script src="js/jquery.min.js"></script>

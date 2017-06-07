@@ -9,10 +9,10 @@ block content
             form.registration__form
               h1.h1 Я предлагаю услуги для праздника
               .registration__links
-                a(href="registration_individual.html").registration__link.registration__link--active Физическое лицо
+                a(href="registration_individual.html").registration__link Физическое лицо
                 .registration__or или
-                a(href="registration_organisation.html").registration__link Юридическое лицо
-              h3.h3 Персональные данные
+                a(href="registration_organisation.html").registration__link.registration__link--active Юридическое лицо
+              h3.h3 Контактное лицо
               .form-control
                 input(type="text" pattern="/^$|\s+/")
                 label Фамилия
@@ -56,19 +56,29 @@ block content
               h3.h3 Информация об организации
               .form-control
                 input(type="text" pattern="/^$|\s+/")
-                label ИНН
+                label ОГРН
+              .form-control
+                input(type="text" pattern="/^$|\s+/")
+                label Дата гос. регистрации
+                i.form-control__icon.fa.fa-calendar-o
               .row
                 .col.col--sm-6
                   .form-control
                     input(type="text" pattern="/^$|\s+/")
-                    label Адрес (если есть)
+                    label Юридический адрес
                 .col.col--sm-6
                   .form-control
                     input(type="text" pattern="/^$|\s+/")
                     label Номер офиса
               .form-control
                 input(type="text" pattern="/^$|\s+/")
-                label Название организации (если есть)
+                label Наименование  юр.лица
+              .form-control
+                input(type="text" pattern="/^$|\s+/")
+                label ФИО генерального директора
+              .form-control
+                input(type="text" pattern="/^$|\s+/")
+                label Название компании/коллектива/проекта
               h3.h3 Данные об исполнителе
               .form-control
                 select(pattern="/^$|\s+/" data-placeholder="Выберите категорию").custom-select
