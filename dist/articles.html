@@ -17,7 +17,7 @@
         <li><a class="header-nav__link" href="news.html">Новости</a></li>
         <li><a class="header-nav__link" href="articles.html">Статьи</a></li>
         <li><a class="header-nav__link" href="consulatnt.html">Cвадебный консультант</a></li>
-        <li><a class="header-nav__link" href="about.html">О проекте</a></li>
+        <li><a class="header-nav__link" href="about_info.html">О проекте</a></li>
       </div>
       <div class="mobile-menu__bottom">
         <div class="socials"><a class="socials__item" href=""><i class="fa fa-vk"></i></a><a class="socials__item" href=""><i class="fa fa-instagram"></i></a><a class="socials__item" href=""><i class="fa fa-twitter"></i></a><a class="socials__item" href=""><i class="fa fa-facebook"></i></a></div><a class="btn btn--primary btn--solid modal-open" href="#modal">Войти</a><a class="btn btn--primary" href="">Разместить заявку </a>
@@ -26,23 +26,41 @@
     <div class="page" id="page">
       <section class="empty"></section>
       <header class="main-header">
-        <div class="grid grid--container">
-          <div class="row row--sm-center">
-            <div class="col col--sm-8"><a class="logo" href="/pages.html"></a>
+        <div class="grid grid--container grid--no-gutters">
+          <div class="row row--sm-center row--no-gutters">
+            <div class="col col--xl-8 col--sm-7 col--no-gutters"><a class="logo" href="./pages.html"></a>
               <nav class="header-nav">
                 <li><a class="header-nav__link" href="catalog.html">Каталог</a></li>
                 <li><a class="header-nav__link" href="tenders.html">Тендеры</a></li>
                 <li><a class="header-nav__link" href="news.html">Новости</a></li>
                 <li><a class="header-nav__link" href="articles.html">Статьи</a></li>
                 <li><a class="header-nav__link" href="consulatnt.html">Cвадебный консультант</a></li>
-                <li><a class="header-nav__link" href="about.html">О проекте</a></li>
+                <li><a class="header-nav__link" href="about_info.html">О проекте</a></li>
               </nav>
             </div>
-            <div class="col col--sm-4 main-header__right">
+            <div class="col col--xl-4 col--sm-5 col--no-gutters main-header__right">
               <div class="city">
-                <div class="city__icon"></div>
-                <div class="city__name">Краснодар</div>
-              </div><a class="link link--primary modal-open" href="#modal">Войти</a><a class="btn btn--primary" href="">Разместить заявку</a>
+                <div class="city-selection">
+                  <div class="city-selection__city"><span>Краснодар</span>
+                    <div class="fa fa-angle-down"></div>
+                  </div>
+                  <div class="city-selection__body">
+                    <div class="city-selection__title">Выберите город</div>
+                    <div class="city-selection__close"></div>
+                    <div class="form-control">
+                      <input type="text">
+                      <label>Название города</label><i class="form-control__icon fa fa-search"></i>
+                    </div>
+                    <ul class="city-selection__list">
+                      <li><a class="link" href="">Краснодар</a></li>
+                      <li><a class="link" href="">Сочи</a></li>
+                      <li><a class="link" href="">Армавир</a></li>
+                      <li><a class="link" href="">Новороссийск</a></li>
+                      <li><a class="link" href="">Анапа</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div><a class="link link--primary modal-open open-enter-modal-desctop" href="#modal">Войти</a><a class="modal-open open-enter-modal-mobile" href="#modal"></a><a class="btn btn--primary btn--order-desc" href="">Разместить заявку</a><a class="btn btn--primary btn--order-mobile" href="">Заявка</a>
               <div class="mobile-menu-toggle"><span></span><span></span><span></span></div>
             </div>
           </div>
@@ -50,9 +68,9 @@
       </header>
       <div class="grid grid--no-gutters banners">
         <div class="row row--no-gutters">
-          <div class="col col--sm-6 col--no-gutters"><a class="banner banner--type-1" href=""><i class="banner__icon banner__icon--microphone"></i>
+          <div class="col col--sm-6 col--no-gutters"><a class="banner banner--type-1 banner--left" href=""><i class="banner__icon banner__icon--microphone"></i>
               <div class="banner__title">Ежегодная встреча шоуменов</div></a></div>
-          <div class="col col--sm-6 col--no-gutters"><a class="banner banner--type-2" href=""><i class="banner__icon banner__icon--thing"></i>
+          <div class="col col--sm-6 col--no-gutters"><a class="banner banner--type-2 banner-right" href=""><i class="banner__icon banner__icon--thing"></i>
               <div class="banner__title">Премия «Золотая штучка»</div></a></div>
         </div>
       </div>
@@ -68,11 +86,10 @@
           <div class="header-with-select">
             <h1 class="h1">Статьи</h1>
             <div class="custom-select-type-2">
-              <select class="custom-select" pattern="/^$|s+/" data-placeholder="Город">
+              <select class="custom-select" pattern="/^$|s+/" data-placeholder="2017 ">
                 <option></option>
-                <option>Ростов-на-Дону</option>
-                <option>Краснодар</option>
-                <option>Варкута</option>
+                <option>2016</option>
+                <option>2015</option>
               </select><i class="fa fa-angle-down"></i>
             </div>
           </div>
@@ -169,19 +186,22 @@
                 <div class="post__anons">Сегодня принято делать свадьбу непременно с идеей и стилизацией. Фильмы, книги, эпохи ложатся в основу сценария&hellip;</div>
               </div>
             </div>
+            <div class="center">
+              <div class="btn btn--secondary btn--solid"><span>Показать еще</span><i class="reload"></i></div>
+            </div>
           </div>
         </div>
       </main>
       <footer class="main-footer">
         <div class="grid grid--container">
           <div class="row">
-            <div class="col col--sm-2">
+            <div class="col col--lg-2 col--sm-3">
               <div class="logo"></div>
             </div>
-            <div class="col col--sm-6">
+            <div class="col col--lg-6 col--sm-6">
               <p>Проект &laquo;Свадебные штучки&raquo; не несёт ответственность за текстовые, фото-, видео-, и аудиоматериалы, предоставляемые специалистами и организациями, размещёнными на сайте www.wedding-office.ru.</p>
             </div>
-            <div class="col col--sm-4">
+            <div class="col col--lg-4 col--sm-3">
               <div class="main-footer__socials socials"><a class="socials__item" href=""><i class="fa fa-vk"></i></a><a class="socials__item" href=""><i class="fa fa-instagram"></i></a><a class="socials__item" href=""><i class="fa fa-twitter"></i></a><a class="socials__item" href=""><i class="fa fa-facebook"></i></a></div>
             </div>
           </div>
@@ -244,5 +264,6 @@
   <script src="js/select2.min.js"></script>
   <script src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
   <script src="//yastatic.net/share2/share.js"></script>
+  <script src="js/jquery.inputmask.bundle.min.js"></script>
   <script src="js/main.js"></script>
 </html>

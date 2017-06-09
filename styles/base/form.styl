@@ -1,3 +1,7 @@
+.form
+  .btn
+    margin-top 2rem
+
 .select2
   &-dropdown
     border-color $light-gray
@@ -44,9 +48,12 @@
       color #fff
       font-weight 500
 
+.consultant-form
+  margin-top 4rem
+
 .form-control
   min-height 5rem
-  margin-bottom 1.6 rem
+  margin-bottom 1.6rem
   position relative
   &__icon
     color #ddd
@@ -69,31 +76,39 @@
     // will-change font-size, top
     width 100%
     z-index 0
+    &.form-control__label--active
+      color $gray
+      font-size 1.2rem
+      top -12px
   input[type="text"],
   input[type="password"],
   input[type="date"],
   input[type="email"],
   input[type="number"],
+  input[type="tel"],
   select,
   .select2-selection--single
     background transparent
     border 0
     border-bottom 2px solid $light-gray
+    border-radius 0
     display block
     height 4rem
     font-family $font
     font-size 1.6rem
     transition border-color .2s
+    padding-left 0
+    padding-right 3rem
     position relative
     resize vertical
     width 100%
     z-index 2
     -webkit-appearance none
-    &:invalid
-      & + label
-        color $gray
-        font-size 1.2rem
-        top -12px
+    // &:invalid
+    //   & + label
+    //     color $gray
+    //     font-size 1.2rem
+    //     top -12px
     &:hover
       border-color rgba($gray, .45)
     &:focus
@@ -164,7 +179,6 @@
   font-size 1.6rem
   font-weight 600
   line-height 1
-  // height 4rem
   padding 1.3rem 2rem
   text-decoration none
   transition all .4s
@@ -212,7 +226,11 @@
   &--full-width
     text-align center
     width 100%
-  &__arrow
+  &--balance
+    .fa
+      font-size 1.2rem
+      transform translateY(-3px)
+  & &__arrow
     background rgba(#fff, .5)
     border-radius 50%
     circle(1.6rem)
@@ -225,8 +243,11 @@
       display inline-block
       font-size 1.4rem
       line-height 1
+      margin-left .3rem
       vertical-align top
       transform translateY(1px)
+  .fa
+    margin-left 1rem
 
 
 
@@ -256,8 +277,12 @@
     .tabs
       &__header
         border-bottom 0
+        display block
       &__link
+        display inline-block
+        margin-right 5rem
         padding 0
+        text-align left
         &--active
           border-bottom 0
           span
@@ -286,6 +311,13 @@
               position absolute
               size(2.8rem, 3rem)
               z-index -1
+  &__header
+    &--links
+      .tabs
+        &__link
+          color $main
+          text-decoration none
+          
 
 
 .accordion

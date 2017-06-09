@@ -5,6 +5,8 @@
 @import 'base/animations.styl'
 @import 'base/icons.styl'
 @import 'base/form.styl'
+@import 'base/city-selection.styl'
+
 @import 'modification/modification.styl'
 
 @import 'pages/index.styl'
@@ -105,8 +107,6 @@ hr.hr
     display inline-block
     vertical-align middle
 
-
-
 .main-header
   background-color #fff
   // border-bottom 1px solid $light-gray
@@ -133,6 +133,8 @@ hr.hr
         color #fff
         &:hover
           color $primary
+    .city-selection__city
+      color #fff
     .btn
       border 1px solid #fff
       background-color transparent
@@ -195,6 +197,10 @@ hr.hr
       .banner__icon
         background url('../../img/pattern-icon-2.png') no-repeat
         width 5rem
+    &--left
+      padding-left (175 / 1366 * 100)vw
+    &--right
+      padding-right (175 / 1366 * 100)vw
 
 
 
@@ -341,14 +347,27 @@ hr.hr
     letter-spacing 1px
     text-transform uppercase
 
+.specialist-info
+  margin-bottom 6rem
+
+.social-share-word
+  display block
+  margin-bottom .3rem
 
 .mail
   .fa
     color $gray
     margin-right 1rem
 
+.balance-title
+  font-size 2.4rem
+  font-weight 600
+  span
+    color $primary
+    margin-left .5rem
+
 .show-more
-  border-bottom 2px dashed $secondary
+  border-bottom 1px dashed $secondary
   color $secondary
   cursor pointer
   font-weight 600
@@ -370,6 +389,7 @@ hr.hr
     margin-bottom 4rem
 
 .audio
+  margin-bottom 2rem
   &__title
     margin-bottom .5rem
   audio

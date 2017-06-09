@@ -1,0 +1,73 @@
+extends layout.pug
+
+block content
+  .grig.grid--container
+    .row
+      .col.col--sm-12
+        .breadcrumbs
+          nav.breadcrumbs__nav
+            a(href="").breadcrumbs__link Главная
+            a(href="").breadcrumbs__link.breadcrumbs__link--active Личный кабинет
+
+    .row
+      .col.col--lg-8.col--lg-offset-2.col--md-10.col--md-offset-1.col--sm-12
+        .tabs
+          nav.tabs__header.tabs__header--links
+            a.tabs__link(href="./lk_specialist_edit_profile.html") Профиль
+            a.tabs__link.tabs__link--active(href="./lk_specialist_edit_portfolio.html") Портфолио
+            a.tabs__link(href="./lk_specialist_edit_sales.html") Акции
+            a.tabs__link(href="./lk_specialist_edit_balance.html") Баланс
+
+          .tabs__content.tabs__content--active
+            h2.h2 Портфолио
+            .tabs.tabs--type-2
+              nav.tabs__header
+                li.tabs__link.tabs__link--active
+                  span Фото
+                li.tabs__link
+                  span Видео
+                li.tabs__link
+                  span Аудио
+                li.tabs__link
+                  span Награды и сертификаты
+
+              label.dashed.dashed--gray
+                span Поместите файлы сюда
+                input(type="file" multiple)
+
+              .tabs__contents
+                .tabs__content.tabs__content--active
+                  .masonry.masonry--offset.portfolio-gallery.portfolio-gallery--with-remove
+                    -for(var i = 1; i < 10; i++)
+                      .masonry__column
+                        span.remove
+                          i.fa.fa-close
+                        a(href="img/masonry/" + i + ".jpg")
+                          img(src="img/masonry/" + i + ".jpg", alt="")
+
+                .tabs__content
+                  .row
+                    -for(var x = 0; x < 7; x++)
+                      .col.col--sm-4
+                        .video
+                          img(src="img/video.jpg", alt="")
+
+                .tabs__content
+                  -for(var y = 0; y < 5; y++)
+                    .audio.row.row--sm-bottom
+                      .col.col--sm-7
+                        .audio__title Группа «Фрукты» - Свадебный переполох
+                        audio(src="audio/horse.mp3" type="audio/mp3" controls="controls")
+                      .col.col--sm-5
+                        .btn.btn--primary.btn--solid.btn--small Редактировать
+                        .btn.btn--black.btn--solid.btn--small.remove Удалить
+
+                .tabs__content
+                  .masonry.documents-gallery
+                    -for(var y = 1; y < 6; y++)
+                      .masonry__column
+                        a(href="img/documents/" + y + ".jpg")
+                          img(src="img/documents/" + y + ".jpg", alt="")
+
+
+  include viewed.pug

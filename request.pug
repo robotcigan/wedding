@@ -9,24 +9,24 @@ block content
         .col.col--sm-6
           form.form.offset
             .form-control
-              select(pattern="/^$|\s+/" data-placeholder="Город").custom-select
+              select(data-placeholder="Город").custom-select
                 option
                 option Крым
                 option Краснодар
               i.form-control__icon.fa.fa-angle-down
             .form-control
-              input(type="text" pattern="/^$|\s+/")
+              input(type="text")
               label Имя
             .form-control
-              input(type="text" pattern="/^$|\s+/").datepicker-inline-date
+              input(type="text").datepicker-inline-date
               label Дата мероприятия
               i.form-control__icon.fa.fa-calendar-o
             .form-control
-              input(type="text" pattern="/^$|\s+/")
+              input(type="tel").phone-mask
               label Номер телефона
               i.form-control__icon.fa.fa-phone
             .form-control
-              textarea(pattern="/^$|\s+/")
+              textarea
               label Информация о мероприятии
               .form-control__words 0/1000
             label.checkbox

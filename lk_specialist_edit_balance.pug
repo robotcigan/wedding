@@ -1,0 +1,34 @@
+extends layout.pug
+
+block content
+  .grig.grid--container
+    .row
+      .col.col--sm-12
+        .breadcrumbs
+          nav.breadcrumbs__nav
+            a(href="").breadcrumbs__link Главная
+            a(href="").breadcrumbs__link.breadcrumbs__link--active Личный кабинет
+
+    .row
+      .col.col--lg-8.col--lg-offset-2.col--md-10.col--md-offset-1.col--sm-12
+        .tabs
+          nav.tabs__header.tabs__header--links
+            a.tabs__link(href="./lk_specialist_edit_profile.html") Профиль
+            a.tabs__link(href="./lk_specialist_edit_portfolio.html") Портфолио
+            a.tabs__link(href="./lk_specialist_edit_sales.html") Акции
+            a.tabs__link.tabs__link--active(href="./lk_specialist_edit_balance.html") Баланс
+
+          .tabs__content.tabs__content--active
+            .row
+              .col.col--sm-8
+                .balance-title Баланс:
+                  span 400 
+                p Платежи производятся через сервис Яндекс касса
+                p Аккаунт будет активен до 22 июня 2017
+              .col.col--sm-4
+                a(href="").btn.btn--primary.btn--balance
+                  span Пополнить баланс
+                  i.fa.fa-external-link
+
+
+  include viewed.pug

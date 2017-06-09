@@ -17,7 +17,7 @@ html(lang="ru")
         li: a(href="news.html").header-nav__link Новости
         li: a(href="articles.html").header-nav__link Статьи
         li: a(href="consulatnt.html").header-nav__link Cвадебный консультант
-        li: a(href="about.html").header-nav__link О проекте
+        li: a(href="about_info.html").header-nav__link О проекте
       .mobile-menu__bottom
         .socials
           a(href="").socials__item
@@ -33,23 +33,45 @@ html(lang="ru")
     #page.page
       section.empty
       header.main-header
-        .grid.grid--container
-          .row.row--sm-center
-            .col.col--sm-8
-              a(href="/pages.html").logo
+        .grid.grid--container.grid--no-gutters
+          .row.row--sm-center.row--no-gutters
+            .col.col--xl-8.col--sm-7.col--no-gutters
+              a(href="./pages.html").logo
               nav.header-nav
                 li: a(href="catalog.html").header-nav__link Каталог
                 li: a(href="tenders.html").header-nav__link Тендеры
                 li: a(href="news.html").header-nav__link Новости
                 li: a(href="articles.html").header-nav__link Статьи
                 li: a(href="consulatnt.html").header-nav__link Cвадебный консультант
-                li: a(href="about.html").header-nav__link О проекте
-            .col.col--sm-4.main-header__right
+                li: a(href="about_info.html").header-nav__link О проекте
+            .col.col--xl-4.col--sm-5.col--no-gutters.main-header__right
               .city
-                .city__icon
-                .city__name Краснодар
-              a(href="#modal").link.link--primary.modal-open Войти
-              a(href="").btn.btn--primary Разместить заявку
+                .city-selection
+                  .city-selection__city
+                    span Краснодар
+                    .fa.fa-angle-down
+                  .city-selection__body
+                    .city-selection__title Выберите город
+                    .city-selection__close
+                    .form-control
+                      input(type="text")
+                      label Название города
+                      i.form-control__icon.fa.fa-search
+                    ul.city-selection__list
+                      li
+                        a(href="").link Краснодар
+                      li
+                        a(href="").link Сочи
+                      li
+                        a(href="").link Армавир
+                      li
+                        a(href="").link Новороссийск
+                      li
+                        a(href="").link Анапа
+              a(href="#modal").link.link--primary.modal-open.open-enter-modal-desctop Войти
+              a(href="#modal").modal-open.open-enter-modal-mobile
+              a(href="").btn.btn--primary.btn--order-desc Разместить заявку
+              a(href="").btn.btn--primary.btn--order-mobile Заявка
               .mobile-menu-toggle
                 span
                 span
@@ -60,11 +82,11 @@ html(lang="ru")
       .grid.grid--no-gutters.banners
         .row.row--no-gutters
           .col.col--sm-6.col--no-gutters
-            a(href="").banner.banner--type-1
+            a(href="").banner.banner--type-1.banner--left
               i.banner__icon.banner__icon--microphone
               .banner__title Ежегодная встреча шоуменов
           .col.col--sm-6.col--no-gutters
-            a(href="").banner.banner--type-2
+            a(href="").banner.banner--type-2.banner-right
               i.banner__icon.banner__icon--thing
               .banner__title Премия «Золотая штучка»
 
@@ -74,11 +96,11 @@ html(lang="ru")
       footer.main-footer
         .grid.grid--container
           .row
-            .col.col--sm-2
+            .col.col--lg-2.col--sm-3
               .logo
-            .col.col--sm-6
+            .col.col--lg-6.col--sm-6
               p Проект &laquo;Свадебные штучки&raquo; не несёт ответственность за текстовые, фото-, видео-, и аудиоматериалы, предоставляемые специалистами и организациями, размещёнными на сайте www.wedding-office.ru.
-            .col.col--sm-4
+            .col.col--lg-4.col--sm-3
               .main-footer__socials.socials
                 a(href="").socials__item
                   i.fa.fa-vk

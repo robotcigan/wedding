@@ -12,31 +12,43 @@ $(document).ready(function () {
     $('.main-header').addClass('main-header--black');
   }
 
-  $(window).scroll(function () {
+  function mainHeaderScroll() {
     if ($(window).scrollTop() > 20) {
       $('.main-header').addClass('main-header--scroll');
     } else {
       $('.main-header').removeClass('main-header--scroll');
     }
+  }
+
+  // Шапка
+  $(window).scroll(function () {
+    mainHeaderScroll();
   });
+
+  mainHeaderScroll();
 
   // Табы
   $('.tabs__header .tabs__link').on('click', function () {
     var index = $(this).index();
     var parent = $(this).closest('.tabs');
-    var parentIndex = parent.index();
+    var link = $(this);
     // console.log(parentIndex)
     // console.log('index', parent.find('.tabs__content').index())
-    parent.find('.tabs__link--active').first().removeClass('tabs__link--active');
-    $(this).addClass('tabs__link--active');
-    parent.children('.tabs__contents').toggleClass('fuck').find('.tabs__content').removeClass('tabs__content--active');
-    parent.children('.tabs__contents').find('.tabs__content').eq(index).addClass('tabs__content--active');
-    $('.masonry').isotope({ filter: '*' });
+    if ($(this).parent().hasClass('tabs__header--links')) {
+      console.log('lol');
+    } else {
+      console.log('not lol');
+      parent.find('.tabs__link--active').first().removeClass('tabs__link--active');
+      link.addClass('tabs__link--active');
+      parent.find('.tabs__content').removeClass('tabs__content--active');
+      parent.find('.tabs__content').eq(index).addClass('tabs__content--active');
+      $('.masonry').isotope({ filter: '*' });
+    }
   });
 
   $('.accordion .accordion__btn').on('click', function () {
     var parent = $(this).closest('.accordion');
-    parent.find('.accordion__body').slideDown();
+    parent.find('.accordion__body').slideToggle();
   });
 
   $('.show-more').on('click', function () {
@@ -161,21 +173,6 @@ $(document).ready(function () {
     }]
   });
 
-  // Аудио
-  // mejs.i18n.language('ru'); // Setting German language
-
-  // $('audio,video').mediaelementplayer({
-  //     success: function(player, node) {
-
-  //       // Optional
-  //         $(player).closest('.mejs__container').attr('lang', mejs.i18n.language());
-
-  //         $('html').attr('lang', mejs.i18n.language());
-
-  //         // More code
-  //     }
-  // });
-
   // Sorting
   $('.sorting__item').on('click', function () {
     $('.sorting__item').removeClass('sorting__item--active');
@@ -196,12 +193,9 @@ $(document).ready(function () {
   });
 
   // Мобильное меню
-  // $('.mobile-menu-toggle').on('click', function () {
-  //   $('.page').toggleClass('page--active');
-  //   $('.mobile-header').toggleClass('mobile-header--active');
-  //   $(this).toggleClass('mobile-menu-toggle--active');
-  //   $('.mobile-menu').toggleClass('mobile-menu--active');
-  // });
+  $('.mobile-menu-toggle').on('click', function () {
+    $(this).toggleClass('mobile-menu-toggle--active');
+  });
 
   var slideout = new Slideout({
     'panel': document.getElementById('page'),
@@ -214,5 +208,42 @@ $(document).ready(function () {
 
   $('.mobile-menu-toggle').on('click', function () {
     slideout.toggle();
+  });
+
+  // Поля
+  $('.form-control input').on('keyup change', function () {
+    formValidation($(this));
+  });
+
+  function formValidation(self) {
+    if (self.val().length || self.text().length) {
+      self.parent().find('label').addClass('form-control__label--active');
+    } else {
+      self.parent().find('label').removeClass('form-control__label--active');
+    }
+  }
+
+  // Телефон маска
+  $('.phone-mask').inputmask({
+    mask: "+7 (999) 999 99 99",
+    showMaskOnHover: false
+  });
+
+  // Смена города
+  $('.city-selection__city').on('click', function () {
+    $(this).parent().addClass('city-selection--active');
+  });
+  $('.city-selection__close').on('click', function () {
+    $(this).closest('.city-selection').removeClass('city-selection--active');
+  });
+
+  // Закрытие блока по нажатию вне его области
+  $(document).on('click', function (event) {
+    $('body').addClass('body--cursor-pointer');
+    var div = $(".city-selection");
+    if (!$(event.target).closest(div).length) {
+      $(".city-selection").removeClass('city-selection--active');
+      $('body').removeClass('body--cursor-pointer');
+    }
   });
 });

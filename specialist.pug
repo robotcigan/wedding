@@ -12,19 +12,11 @@ block content
             a(href="").breadcrumbs__link.breadcrumbs__link--active Анна Веретина
 
 
-    .dashed.dashed--big.dashed--primary
-      .grid.grid--container
-        .row
-          .col.col--sm-8.col--sm-offset-2
-            .center Внимание! Публикация Вашего профиля в каталоге приостановлена. Пожалуйста, 
-              a(href="").link пополните баланс
-              | .
-
-    .row
+    .specialist-info.row
       .col.col--sm-3
         .specialist.specialist--big
           .specialist__photo(style="background-image: url(img/specialist.jpg)")
-            .specialist__plate Акция!
+            .specialist__plate Акция
         .text--center
           a(href="").btn.btn--primary Редактировать профиль
       .col.col--sm-6
@@ -41,7 +33,7 @@ block content
             li.tabs__link
               span Награды и сертификаты
 
-          .tabs__content
+          .tabs__content.tabs__content--active
 
             .row
               .col.col--sm-4
@@ -63,7 +55,8 @@ block content
 
             .accordion
               .accordion__body
-                  p dfsg
+                  p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor debitis ipsam, sit similique tenetur obcaecati quo quia, minima, ex, consectetur libero recusandae! Fugit odio, ducimus facilis unde, sequi itaque facere nobis in perspiciatis repellendus fuga nesciunt? Veritatis eligendi, fugiat, soluta, qui est ipsam quaerat corporis eveniet officiis facilis quisquam ex consequatur ut eaque voluptatem quasi et repellat!
+                  p Eligendi saepe quia, culpa illo ea neque suscipit dignissimos numquam at odio ab earum, repudiandae delectus iusto voluptatem non nemo impedit! Beatae labore numquam minus blanditiis molestias explicabo enim provident delectus quo. Amet dolorem autem esse, tenetur, nam tempore voluptatum beatae. Enim, pariatur!
               .accordion__btn.show-more Показать полностью
 
           .tabs__content
@@ -78,7 +71,7 @@ block content
                 span Показать еще
                 i.reload
 
-          .tabs__content.tabs__content--active
+          .tabs__content
             .masonry.documents-gallery
               -for(var y = 1; y < 6; y++)
                 .masonry__column
@@ -163,7 +156,7 @@ block content
 
       .tabs__content
         -for(var y = 0; y < 5; y++)
-          div
+          .audio
             audio(src="audio/horse.mp3" type="audio/mp3" controls="controls")
 
       .tabs__content

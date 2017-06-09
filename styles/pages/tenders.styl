@@ -52,7 +52,8 @@
         font-size 3rem
         font-weight 600
         line-height 1.2
-        margin-bottom .5rem
+        margin-bottom 1rem
+        margin-top 0
       &__subtitle
         color #777
         line-height 1.2
@@ -70,13 +71,6 @@
     height initial
     margin-bottom 2rem
     padding 4rem 0
-
-@media(max-width 992px)
-  .datepicker-container
-    &--catalog
-      margin-bottom 4rem
-
-@media(max-width 960px)
   .tender
     &__date
       border 0
@@ -84,6 +78,11 @@
       margin-top -3rem
       margin-bottom 1rem
       text-align left
+
+@media(max-width 992px)
+  .datepicker-container
+    &--catalog
+      margin-bottom 4rem
 
 @media(max-width 767px)
   .tender

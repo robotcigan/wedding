@@ -1,0 +1,56 @@
+extends layout.pug
+
+block content
+  .grig.grid--container
+    .row
+      .col.col--sm-12
+        .breadcrumbs
+          nav.breadcrumbs__nav
+            a(href="").breadcrumbs__link Главная
+            a(href="").breadcrumbs__link.breadcrumbs__link--active Личный кабинет
+
+    .row
+      .col.col--lg-8.col--lg-offset-2.col--md-10.col--md-offset-1.col--sm-12
+        .tabs
+          nav.tabs__header.tabs__header--links
+            a.tabs__link(href="./lk_specialist_edit_profile.html") Профиль
+            a.tabs__link(href="./lk_specialist_edit_portfolio.html") Портфолио
+            a.tabs__link.tabs__link--active(href="./lk_specialist_edit_sales.html") Акции
+            a.tabs__link(href="./lk_specialist_edit_balance.html") Баланс
+
+          .tabs__content.tabs__content--active
+            .row
+              .col.col--sm-6
+                form.form
+                  .form-control
+                    input(type="text" pattern="/^$|\s+/")
+                    label Название акции
+                  h4 Срок действия акции
+                  .row
+                    .col.col--sm-6
+                      .form-control
+                        input(type="text" pattern="/^$|\s+/").datepicker
+                        label C
+                        i.form-control__icon.fa.fa-calendar-o
+                    .col.col--sm-6
+                      .form-control
+                        input(type="text" pattern="/^$|\s+/").datepicker
+                        label По
+                        i.form-control__icon.fa.fa-calendar-o
+                  .form-control
+                    textarea(pattern="/^$|\s+/")
+                    label Информация
+                    .form-control__words 0/1000
+                  button.btn.btn--primary Добавить
+              .col.col--sm-6
+                -for(var i = 0; i < 4; i++)
+                  .dashed
+                    .dashed__header Love story в подарок! Фотосъемка свадебного дня со скидкой 30%
+                    .dashed__date с 25 декабря по 15 марта
+                    .dashed__content Купон предоставляет возможность приобрести пакет «Love story в подарок! Фотосъемка свадебного дня» -30%
+                    .dashed__btn-group
+                      .btn.btn--primary.btn--solid.btn--small Редактировать
+                      .btn.btn--black.btn--solid.btn--small.remove Удалить
+
+
+  include viewed.pug

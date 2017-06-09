@@ -1,0 +1,57 @@
+extends layout.pug
+
+block content
+  .registration-bg
+    .grig.grid--container
+      .row
+        .col.col--lg-8.col--lg-offset-2.col--md-10.col--md-offset-1.col--sm-12
+          .registration
+            form.registration__form
+              h1.h1 Мне нужны услуги для праздника
+              h3.h3 Персональные данные
+              .form-control
+                input(type="text")
+                label Фамилия
+              .form-control
+                input(type="text")
+                label Имя
+              .form-control
+                input(type="text")
+                label Отчество
+              .form-control
+                select(data-placeholder="Город").custom-select
+                  option
+                  option Сочи
+                  option Краснодар
+                i.form-control__icon.fa.fa-angle-down
+              .form-control
+                input(type="password")
+                label Пароль
+                  i.form-control__icon.fa.fa-lock
+              .form-control
+                input(type="password")
+                label Повторите пароль
+                i.form-control__icon.fa.fa-lock
+              h3.h3 Контактная информация
+              .form-control
+                input(type="email")
+                label E-mail
+                i.form-control__icon.fa.fa-envelope
+              .form-control
+                input(type="text")
+                label Номер телефона
+                i.form-control__icon.fa.fa-phone
+              h3.h3 Аватар
+              .ava.ava--small.nophoto
+              label(for="file-upload").btn.btn--primary.btn--solid Изменить фото
+                input(type="file" id="file-upload")
+              label.checkbox.checkbox--big
+                input(type="checkbox" id="checkbox-1")
+                label(for="checkbox-1")
+                span Я согласен на обработку моих персональных данных и с 
+                  a(href="").link условиями пользовательского соглашения
+              .center
+                button.btn.btn--primary Зарегистрироваться
+            .registration__flower
+
+            .registration__box

@@ -1,0 +1,41 @@
+extends layout.pug
+
+block content
+  .grid.grid--container
+    .breadcrumbs
+      .row.row--sm-center
+        .col.col--sm
+          nav.breadcrumbs__nav
+            a(href="").breadcrumbs__link Главная
+            a(href="").breadcrumbs__link.breadcrumbs__link--active Свадебный консультант
+    .row.offset
+      .row
+        .col.col--md-6.col--md-offset-1
+          h1.h1 Свадебный консультант
+          span.subtitle Ваш проводник в мире event-услуг
+          p Хотите грамотно спланировать свой свадебный день? Сэкономить время при выборе шоу-программы или ресторана? Оптимизировать бюджет? Получить ценные советы? На помощь придет свадебный консультант – борец со свадебными переполохами. Он четко знает, что у каждой проблемы есть свое решение. И готов поделиться им с Вами!
+          p Обратите внимание, что бесплатная помощь в организации свадьбы или любого другого праздника от экспертов проекта «Свадебные штучки» – это не попытка навязать ненужные услуги, а желание помочь сделать Ваш праздник идеальным. Мы с удовольствием подберем для Вас оптимальные решения, ведь знаем всю свадебную «кухню» изнутри и лично знакомы со всеми специалистами и организациями из нашего каталога.
+        .col.col--md-4
+          .consultant-form
+            h2.h4 Договоритесь о встрече прямо сейчас
+            form.form
+              .form-control
+                input(type="text")
+                label Как к вам обращаться?
+              .form-control
+                input(type="email")
+                label E-mail
+                i.form-control__icon.fa.fa-envelope
+              .form-control
+                input(type="tel").phone-mask
+                label Телефон
+                i.form-control__icon.fa.fa-phone
+              .form-control
+                input(type="text" pattern="/^$|\s+/").datepicker
+                label Дата мероприятия
+                i.form-control__icon.fa.fa-calendar-o
+              .center
+                .btn.btn--primary Отправить
+                  i.fa.fa-send
+
+    include viewed.pug

@@ -1,0 +1,44 @@
+extends layout.pug
+
+block content
+  .grig.grid--container
+    .row
+      .col.col--sm-12
+        .breadcrumbs
+          nav.breadcrumbs__nav
+            a(href="").breadcrumbs__link Главная
+            a(href="").breadcrumbs__link.breadcrumbs__link--active Личный кабинет
+
+    .row
+      .col.col--lg-8.col--lg-offset-2.col--md-10.col--md-offset-1.col--sm-12
+        .tabs
+          nav.tabs__header.tabs__header--links
+            a.tabs__link(href="./lk_user_edit_profile.html") Профиль
+            a.tabs__link.tabs__link--active(href="./lk_user_edit_orders.html") Заявки
+
+          .tabs__content.tabs__content--active
+            .row
+              .tenders
+                -for(var i = 0; i < 5; i++)
+                  .tender.tender--closed
+                    .row
+                      .col.col--sm-2
+                        .tender__date
+                          .tender__number 25
+                          .tender__month апреля
+                      .col.col--sm-8
+                        a(href="").tender__title Ведущий на 25.08.2017, Краснодар
+                        .tender__anons
+                          p У нас запланирована свадьба зимой. Гостей 10 – 30 человек.
+                          p Если вы свободны 03 Февраля 2017, пятница - ждем ваши предложения и информацию по ценам на услуги в этой заявке. Спасибо!
+                        .user
+                          .ava.ava--small(style="background: url(img/ava.jpg)")
+                          .user__info
+                            .user__name Виноградов Константин
+                            .phone
+                              i.fa.fa-phone
+                              span.phone__number + 7 918 XXX XXXX
+                              .phone__show Показать
+
+
+  include viewed.pug

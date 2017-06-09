@@ -1,0 +1,78 @@
+extends layout.pug
+
+block content
+  .tender-bg
+    .tender-bg__text.text
+      h1.text__title Тендеры помогают найти лучших специалистов
+      .text__subtitle Разнообразный и богатый опыт постоянный количественный рост и сфера нашей активности играет важную роль в формировании направлений прогрессивного развития.
+      .btn.btn--primary Разместить заявку
+  .grid.grid--container
+    .row
+      .col
+        .tender-filters
+          .custom-select-type-2
+            select(pattern="/^$|\s+/" data-placeholder="Ведущие").custom-select
+              option
+              option Ведущие
+              option Тамада
+              option Маг
+              option Сергей Дружко
+              option Звучит неплохо
+            i.fa.fa-angle-down
+          .custom-select-type-2
+            select(pattern="/^$|\s+/" data-placeholder="Актуальные").custom-select
+              option
+              option Актуальные
+              option Архивные
+            i.fa.fa-angle-down
+          .city-selection
+            .city-selection__city
+              span Краснодар
+              .fa.fa-angle-down
+            .city-selection__body
+              .city-selection__title Выберите город
+              .city-selection__close
+              .form-control
+                input(type="text")
+                label Название города
+                i.form-control__icon.fa.fa-search
+              ul.city-selection__list
+                li
+                  a(href="").link Краснодар
+                li
+                  a(href="").link Сочи
+                li
+                  a(href="").link Армавир
+                li
+                  a(href="").link Новороссийск
+                li
+                  a(href="").link Анапа
+  hr.hr
+  .grig.grid--container
+    .row
+      .col.col--xl-3.col--lg-4
+        h3.h3.tender-calendar-title Календарь событий
+        .datepicker-container.datepicker-container--catalog
+          .datepicker-inline.datepicker-inline--max-width
+      .col.col--xl-9.col--lg-8
+        .tenders
+          -for(var i = 0; i < 5; i++)
+            .tender.tender--closed
+              .row
+                .col.col--sm-2
+                  .tender__date
+                    .tender__number 25
+                    .tender__month апреля
+                .col.col--sm-8
+                  a(href="").tender__title Ведущий на 25.08.2017, Краснодар
+                  .tender__anons
+                    p У нас запланирована свадьба зимой. Гостей 10 – 30 человек.
+                    p Если вы свободны 03 Февраля 2017, пятница - ждем ваши предложения и информацию по ценам на услуги в этой заявке. Спасибо!
+                  .user
+                    .ava.ava--small(style="background: url(img/ava.jpg)")
+                    .user__info
+                      .user__name Виноградов Константин
+                      .phone
+                        i.fa.fa-phone
+                        span.phone__number + 7 918 XXX XXXX
+                        .phone__show Показать

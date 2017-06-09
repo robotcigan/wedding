@@ -1,0 +1,68 @@
+.city-selection
+  display inline-block
+  position relative
+  text-align left
+  &__body
+    animation smallFadeUp .4s
+    background-color #fff
+    box-shadow 0 5px 25px 4px rgba(#aaa, .1)
+    border $border
+    border-radius $radius
+    display none
+    max-height 32rem
+    left 0
+    padding 2rem
+    position absolute
+    top 3rem
+    width 26rem
+    z-index 50
+  &__title
+    font-size 2rem
+    font-weight 600
+    margin-bottom 1.5 rem
+  .form-control
+    margin-bottom .5rem
+  &__list
+    list-style-type none
+    padding 0
+    margin 0
+    li
+      margin-bottom .5rem
+      a
+        color $blue !important
+  &__close
+    circle(3rem)
+    cursor pointer
+    position absolute
+    right 1.5rem
+    top 2rem
+    &:before,
+    &:after
+      background-color $main
+      content ''
+      height 1px
+      left .5rem
+      position absolute
+      top 1.5rem
+      width 2rem
+    &:before
+      transform rotate(45deg)
+    &:after
+      transform rotate(-45deg)
+  &__city
+    cursor pointer
+    .fa
+      line-height 1
+      margin-left .5rem
+      transform translateY(1px)
+  .fa
+    transition transform .2s
+
+
+  &--active
+    .city-selection
+      &__body
+        display block
+    .fa-angle-down
+      transform rotate(180deg)
+

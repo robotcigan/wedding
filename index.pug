@@ -11,191 +11,241 @@ html(lang="ru")
 
   body
 
-    header.main-header.main-header--transparent
-      .grid.grid--container
-        .row.row--sm-center
-          .col.col--sm-8
-            a(href="/pages.html").logo
-            nav.header-nav
-              li: a(href="catalog.html").header-nav__link Каталог
-              li: a(href="tenders.html").header-nav__link Тендеры
-              li: a(href="news.html").header-nav__link Новости
-              li: a(href="articles.html").header-nav__link Статьи
-              li: a(href="consulatnt.html").header-nav__link Cвадебный консультант
-              li: a(href="about.html").header-nav__link О проекте
-          .col.col--sm-4.main-header__right
-            .city
-              .city__icon
-              .city__name Краснодар
-            a(href="#modal").link.link--primary.modal-open Войти
-            a(href="").btn.btn--primary Разместить заявку
+    #mobile-menu.mobile-menu
+      .mobile-nav.nav
+        li: a(href="catalog.html").header-nav__link Каталог
+        li: a(href="tenders.html").header-nav__link Тендеры
+        li: a(href="news.html").header-nav__link Новости
+        li: a(href="articles.html").header-nav__link Статьи
+        li: a(href="consulatnt.html").header-nav__link Cвадебный консультант
+        li: a(href="about_info.html").header-nav__link О проекте
+      .mobile-menu__bottom
+        .socials
+          a(href="").socials__item
+            i.fa.fa-vk
+          a(href="").socials__item
+            i.fa.fa-instagram
+          a(href="").socials__item
+            i.fa.fa-twitter
+          a(href="").socials__item
+            i.fa.fa-facebook
+        a(href="#modal").btn.btn--primary.btn--solid.modal-open Войти
+        a(href="").btn.btn--primary Разместить заявку 
+    #page.page
+      header.main-header.main-header--transparent
+        .grid.grid--container.grid--no-gutters
+          .row.row--sm-center.row--no-gutters
+            .col.col--xl-8.col--sm-7.col--no-gutters
+              a(href="./pages.html").logo
+              nav.header-nav
+                li: a(href="catalog.html").header-nav__link Каталог
+                li: a(href="tenders.html").header-nav__link Тендеры
+                li: a(href="news.html").header-nav__link Новости
+                li: a(href="articles.html").header-nav__link Статьи
+                li: a(href="consulatnt.html").header-nav__link Cвадебный консультант
+                li: a(href="about.html").header-nav__link О проекте
+            .col.col--xl-4.col--sm-5.col--no-gutters.main-header__right
+              .city
+                .city-selection
+                  .city-selection__city
+                    span Краснодар
+                    i.fa.fa-angle-down
+                  .city-selection__body
+                    .city-selection__title Выберите город
+                    .city-selection__close
+                    .form-control
+                      input(type="text")
+                      label Название города
+                      i.form-control__icon.fa.fa-search
+                    ul.city-selection__list
+                      li
+                        a(href="").link Краснодар
+                      li
+                        a(href="").link Сочи
+                      li
+                        a(href="").link Армавир
+                      li
+                        a(href="").link Новороссийск
+                      li
+                        a(href="").link Анапа
+              a(href="#modal").link.link--primary.modal-open Войти
+              a(href="").btn.btn--primary.btn--order-desc Разместить заявку
+              a(href="").btn.btn--primary.btn--order-mobile Заявка
 
-    .hero
-      .hero__align
-        .hero__content
-          h1.hero__header Добро пожаловать в наш праздничный офис!
-          .hero__subheader Мы собрали для Вас проверенных временем и имеющих отличные рекомендации  специалистов и организации, предоставляющие свадебные услуги в Краснодаре.
-    
-    .grid.grid--no-gutters.banners
-      .row.row--no-gutters
-        .col.col--sm-6.col--no-gutters
-          a(href="").banner.banner--type-1
-            i.banner__icon.banner__icon--microphone
-            .banner__title Ежегодная встреча шоуменов
-        .col.col--sm-6.col--no-gutters
-          a(href="").banner.banner--type-2
-            i.banner__icon.banner__icon--thing
-            .banner__title Премия «Золотая штучка»
+      .hero
+        .hero__align
+          .hero__content.grid.grid--container
+            h1.hero__header Добро пожаловать в наш праздничный офис!
+            .hero__subheader Мы собрали для Вас проверенных временем и имеющих отличные рекомендации  специалистов и организации, предоставляющие свадебные услуги в Краснодаре.
+      
+      .grid.grid--no-gutters.banners
+        .row.row--no-gutters
+          .col.col--sm-6.col--no-gutters
+            a(href="").banner.banner--type-1
+              i.banner__icon.banner__icon--microphone
+              .banner__title Ежегодная встреча шоуменов
+          .col.col--sm-6.col--no-gutters
+            a(href="").banner.banner--type-2
+              i.banner__icon.banner__icon--thing
+              .banner__title Премия «Золотая штучка»
 
-    main
-      .grid.grid--container
-        h2.h2 Все для подготовки к свадьбе в Краснодаре
-        .row.offset
-          .col.col--sm-9
-            .row.index-category
-              .col.col--sm-3
-                a(href="").index-category__link.index-category__link--active Эксклюзив
-                a(href="").index-category__link Песня-подарок
-                a(href="").index-category__link Ведущие
-                a(href="").index-category__link Шоу-программы
-                a(href="").index-category__link Диджеи и музыканыты
-                a(href="").index-category__link Видеографы
-              .col.col--sm-3
-                a(href="").index-category__link Свадебные салоны
-                a(href="").index-category__link Оформители
-                a(href="").index-category__link Фейерверки и салюты
-                a(href="").index-category__link Прокат автомобилей
-                a(href="").index-category__link Звук, свет, сцена
-                a(href="").index-category__link Обручальные кольца
-              .col.col--sm-3
-                a(href="").index-category__link Салоны красоты
-                a(href="").index-category__link Кейтеринг
-                a(href="").index-category__link Кондитеры
-                a(href="").index-category__link Аниматоры
-                a(href="").index-category__link Хендмейдеры
-                a(href="").index-category__link Фотографы
-              .col.col--sm-3
-                a(href="").index-category__link Кафе, рестораны
-                a(href="").index-category__link Свадебные распорядители
-                a(href="").index-category__link Отели и гостиницы
-                a(href="").index-category__link Свадебные агенства
-                a(href="").index-category__link Шоу-микс
-          .col.col--sm-3
-            img(src="img/ring.jpg", alt="").index-category__img
-        
-        include viewed.pug
-        
-      .index-events.offset
+      main
         .grid.grid--container
-          h2.h2 Мероприятия в Краснодаре
+          h2.h2 Все для подготовки к свадьбе в Краснодаре
+          .row.offset
+            .col.col--md-9
+              .row.index-category
+                .col.col--sm-3
+                  a(href="").index-category__link.index-category__link--active Эксклюзив
+                  a(href="").index-category__link Песня-подарок
+                  a(href="").index-category__link Ведущие
+                  a(href="").index-category__link Шоу-программы
+                  a(href="").index-category__link Диджеи и музыканыты
+                  a(href="").index-category__link Видеографы
+                .col.col--sm-3
+                  a(href="").index-category__link Свадебные салоны
+                  a(href="").index-category__link Оформители
+                  a(href="").index-category__link Фейерверки и салюты
+                  a(href="").index-category__link Прокат автомобилей
+                  a(href="").index-category__link Звук, свет, сцена
+                  a(href="").index-category__link Обручальные кольца
+                .col.col--sm-3
+                  a(href="").index-category__link Салоны красоты
+                  a(href="").index-category__link Кейтеринг
+                  a(href="").index-category__link Кондитеры
+                  a(href="").index-category__link Аниматоры
+                  a(href="").index-category__link Хендмейдеры
+                  a(href="").index-category__link Фотографы
+                .col.col--sm-3
+                  a(href="").index-category__link Кафе, рестораны
+                  a(href="").index-category__link Свадебные распорядители
+                  a(href="").index-category__link Отели и гостиницы
+                  a(href="").index-category__link Свадебные агенства
+                  a(href="").index-category__link Шоу-микс
+            .col.col--md-3
+              img(src="img/ring.jpg", alt="").index-category__img
+          
+          .offset
+            h2.h2 Другие пользователи сейчас смотрят
+            .row
+              -for(var i = 0; i < 6; i++)
+                .col.col--xl-2.col--md-4.col--sm-6
+                  .specialist
+                    a(href="" style="background-image: url(img/specialist.jpg)").specialist__photo
+                    a(href="").specialist__name Анна Веретина
+                    .specialist__role Ведущая
+          
+        .index-events.offset
+          .grid.grid--container
+            h2.h2 Мероприятия в Краснодаре
+            .row
+              .col.col--md-6
+                img(src="img/event.jpg", alt="")
+              .col.col--md-6
+                h3.h3 Ежегодная встреча шоуменов
+                p Равным образом дальнейшее развитие различных форм деятельности в значительной степени обуславливает создание направлений прогрессивного развития. Разнообразный и богатый опыт консультация с широким активом требуют определения и уточнения систем массового участия.
+                p Новая модель организационной деятельности обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия.
+                .btn.btn--primary Узнать подробности
+                  .btn__arrow
+                    i.fa.fa-angle-right
+
+        .grid.grid--container
+          .commercial.offset
+            h2.h2 Рекламные слайды
+            .commercial-slider
+              -for(var i = 0; i < 3; i++)
+                img(src="img/commercial.jpg", alt="")
+
+        .email-block.offset
+          .grid.grid--container
+            .row
+              .col.col--sm-6.col--sm-offset-3
+                .email-block__container.row.row--sm-center
+                  .col.col--sm-6
+                    .email-block__title
+                      span Будь в курсе
+                      |  новостей нашего проекта
+                  .col.col--sm-6
+                    .form-control.without-margin
+                      input(type="text" pattern="/^$|\s+/")
+                      label Ваш email
+                      i.form-control__icon.arrow
+
+
+        .grid.grid--container
+          .index-news.offset
+            h2.h2 Последние новости
+            .slider.news-slider.row
+              -for(var i = 0; i < 4; i++)
+                .col.col--sm-3.slide
+                  a(href="")
+                    img(src="img/news.jpg", alt="")
+                  a(href="").slide__title Новый специалист в категории «ведущие» - Стас Коновка
+                  .info
+                    time.date 14 марта 2017
+                    .view-count
+                      i.fa.fa-eye
+                      span 312
+                    .comment-count
+                      i.fa.fa-comments
+                      span 24
+
+        .app-ad.offset
+          .grid.grid--container
+            .row
+              .col.col--sm-7
+                .app-ad__title Скачайте мобильное приложение
+                .app-ad__subtitle Идейные соображения высшего порядка, а также реализация намеченных плановых заданий позволяет оценить значение позиций, занимаемых участниками в отношении.
+                a(href="").app-ad__img.apple
+                  img(src="img/apple.png", alt="")
+                a(href="").app-ad__img.google
+                  img(src="img/google.png", alt="")
+
+        .contacts
+          iframe(src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d90194.86944892893!2d39.01605595!3d45.053548!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1494861378249" frameborder="0" style="border:0" allowfullscreen)
+          .grid.grid--container
+            .contacts__left.left
+              h2.h2 Контакты
+              .left__label телефон
+              .left__header +7 (861) 218-73-53
+              .left__label e-mail
+              .left__header info@wedding-office.ru
+              .left__label адрес
+              .left__header г. Краснодар, ул. Северная, 65
+
+
+
+      footer.main-footer
+        .grid.grid--container
           .row
+            .col.col--sm-2
+              .logo
             .col.col--sm-6
-              img(src="img/event.jpg", alt="")
-            .col.col--sm-6
-              h3.h3 Ежегодная встреча шоуменов
-              p Равным образом дальнейшее развитие различных форм деятельности в значительной степени обуславливает создание направлений прогрессивного развития. Разнообразный и богатый опыт консультация с широким активом требуют определения и уточнения систем массового участия.
-              p Новая модель организационной деятельности обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия.
-              .btn.btn--primary Узнать подробности
-                .btn__arrow
-                  i.fa.fa-angle-right
-
-      .grid.grid--container
-        .commercial.offset
-          h2.h2 Рекламные слайды
-          .commercial-slider
-            -for(var i = 0; i < 3; i++)
-              img(src="img/commercial.jpg", alt="")
-
-      .email-block.offset
-        .grid.grid--container
-          .row
-            .col.col--sm-6.col--sm-offset-3
-              .email-block__container.row.row--sm-center
-                .col.col--sm-6
-                  .email-block__title
-                    span Будь в курсе
-                    |  новостей нашего проекта
-                .col.col--sm-6
-                  .form-control.without-margin
-                    input(type="text" pattern="/^$|\s+/")
-                    label Ваш email
-                    i.form-control__icon.arrow
-
-
-      .grid.grid--container
-        .index-news.offset
-          h2.h2 Последние новости
-          .slider.news-slider.row
-            -for(var i = 0; i < 4; i++)
-              .col.col--sm-3.slide
-                a(href="")
-                  img(src="img/news.jpg", alt="")
-                a(href="").slide__title Новый специалист в категории «ведущие» - Стас Коновка
-                .info
-                  time.date 14 марта 2017
-                  .view-count
-                    i.fa.fa-eye
-                    span 312
-                  .comment-count
-                    i.fa.fa-comments
-                    span 24
-
-      .app-ad.offset
-        .grid.grid--container
-          .row
-            .col.col--sm-7
-              .app-ad__title Скачайте мобильное приложение
-              .app-ad__subtitle Идейные соображения высшего порядка, а также реализация намеченных плановых заданий позволяет оценить значение позиций, занимаемых участниками в отношении.
-              .app-ad__img.apple
-                img(src="img/apple.png", alt="")
-              .app-ad__img.google
-                img(src="img/google.png", alt="")
-
-      .contacts
-        iframe(src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d90194.86944892893!2d39.01605595!3d45.053548!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1494861378249" frameborder="0" style="border:0" allowfullscreen)
-        .grid.grid--container
-          .contacts__left.left
-            h2.h2 Контакты
-            .left__label телефон
-            .left__header +7 (861) 218-73-53
-            .left__label e-mail
-            .left__header info@wedding-office.ru
-            .left__label адрес
-            .left__header г. Краснодар, ул. Северная, 65
-
-
-
-    footer.main-footer
-      .grid.grid--container
-        .row
-          .col.col--sm-2
-            .logo
-          .col.col--sm-6
-            p Проект &laquo;Свадебные штучки&raquo; не несёт ответственность за текстовые, фото-, видео-, и аудиоматериалы, предоставляемые специалистами и организациями, размещёнными на сайте www.wedding-office.ru.
-          .col.col--sm-4
-            .main-footer__socials.socials
-              a(href="").socials__item
-                i.fa.fa-vk
-              a(href="").socials__item
-                i.fa.fa-instagram
-              a(href="").socials__item
-                i.fa.fa-twitter
-              a(href="").socials__item
-                i.fa.fa-facebook
-
-      .main-footer__bottom
-        .grid.grid--container
-          .row.row--sm-center
-            .col.col--sm-8
-              .copyright
-                span &copy; 2017 ООО &laquo;Бизнес Медиа Групп&raquo;. Информационный портал «Свадебные штучки»
+              p Проект &laquo;Свадебные штучки&raquo; не несёт ответственность за текстовые, фото-, видео-, и аудиоматериалы, предоставляемые специалистами и организациями, размещёнными на сайте www.wedding-office.ru.
             .col.col--sm-4
-              .webformula
-                img(src="img/wf.png", alt="")
-                span &mdash; разработка сайта 
-                a(href="").link Webformula
+              .main-footer__socials.socials
+                a(href="").socials__item
+                  i.fa.fa-vk
+                a(href="").socials__item
+                  i.fa.fa-instagram
+                a(href="").socials__item
+                  i.fa.fa-twitter
+                a(href="").socials__item
+                  i.fa.fa-facebook
 
-  
+        .main-footer__bottom
+          .grid.grid--container
+            .row.row--sm-center
+              .col.col--sm-8
+                .copyright
+                  span &copy; 2017 ООО &laquo;Бизнес Медиа Групп&raquo;. Информационный портал «Свадебные штучки»
+              .col.col--sm-4
+                .webformula
+                  img(src="img/wf.png", alt="")
+                  span &mdash; разработка сайта 
+                  a(href="").link Webformula
+
+    
     #modal.modal
       .modal__title Войти
       form.form
