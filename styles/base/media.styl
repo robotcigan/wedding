@@ -168,18 +168,42 @@
     display none
 
 @media(max-width 767px)
-  .sidebar
-    margin-bottom 6rem
-  .contacts
-    &__left.left
-      width 50%
-
-@media(max-width 500px)
+  .main-header
+    &--transparent&--scroll
+      background transparent
+      box-shadow none
+      .logo
+        background-image url("../../img/logo-white.png")
   .hero
     &__header
       font-size 2.8rem
     &__subheader
       font-size 1.6rem
+  .sidebar
+    margin-bottom 6rem
+  .contacts
+    &__left.left
+      width 50%
+  .row
+    margin 0 -2%
+  .row--no-gutters
+    margin 0
+  .index-news
+    .slick-prev
+      left 3rem
+      z-index 5
+    .slick-next
+      right 3rem
+    .slick-prev
+    .slick-next
+      top 33%
+      &:before
+        background #fff
+        border-radius 50%
+        circle(3.2rem)
+        display block
+
+@media(max-width 500px)
   .main-footer
     .logo
       margin-bottom 1rem
@@ -206,8 +230,17 @@
       padding 0
       position initial
       max-width 100%
+  
+  .specialist
+    &__name
+      font-size 2.4rem
+    &__role
+      font-size 1.4rem
 
 @media(max-width 350px)
+  .hero
+    &__header
+      font-size 2.4rem
   .specialist
     &__photo
       img

@@ -1,7 +1,7 @@
 extends layout.pug
 
 block content
-  .grig.grid--container
+  .grid.grid--container
     .row
       .col.col--sm-12
         .breadcrumbs
@@ -13,13 +13,14 @@ block content
 
 
     .specialist-info.row
-      .col.col--sm-3
+      .col.col--lg-3.col--md-4.col--sm-5.specialist-profile-left
         .specialist.specialist--big
           .specialist__photo(style="background-image: url(img/specialist.jpg)")
             .specialist__plate Акция
         .text--center
-          a(href="").btn.btn--primary Редактировать профиль
-      .col.col--sm-6
+          a(href="").btn.btn--primary.btn--full-width Редактировать 
+            span.btn--mobile-hide профиль
+      .col.col--lg-6.col--md-8.col--sm-7.specialist-profile-center
         h1.h1.without-offset Анна Веретина
         .specialist__role Ведущая
 
@@ -29,9 +30,10 @@ block content
             li.tabs__link.tabs__link--active
               span Общая информация
             li.tabs__link
-              span Акции
-            li.tabs__link
               span Награды и сертификаты
+            li.tabs__link.tabs__link--primary
+              span Акции
+                i.gift
 
           .tabs__content.tabs__content--active
 
@@ -60,18 +62,6 @@ block content
               .accordion__btn.show-more Показать полностью
 
           .tabs__content
-            -for(var x = 0; x < 2; x++)
-              .dashed
-                .dashed__header Love story в подарок! Фотосъемка свадебного дня со скидкой 30%
-                .dashed__date с 25 декабря по 15 марта
-                .dashed__content Купон предоставляет возможность приобрести пакет «Love story в подарок! Фотосъемка свадебного дня» -30%
-            
-            .center
-              .btn.btn--secondary.btn--solid.btn--small
-                span Показать еще
-                i.reload
-
-          .tabs__content
             .masonry.documents-gallery
               -for(var y = 1; y < 6; y++)
                 .masonry__column
@@ -83,40 +73,54 @@ block content
                 span Показать еще
                 i.reload
 
+          .tabs__content
+            -for(var x = 0; x < 2; x++)
+              .dashed
+                .dashed__header Love story в подарок! Фотосъемка свадебного дня со скидкой 30%
+                .dashed__date с 25 декабря по 15 марта
+                .dashed__content Купон предоставляет возможность приобрести пакет «Love story в подарок! Фотосъемка свадебного дня» -30%
+            
+            .center
+              .btn.btn--secondary.btn--solid.btn--small
+                span Показать еще
+                i.reload
 
 
 
-      .col.col--sm-3.specialist-aside
-        h3.h3 Контакты
-        .phone
-          i.fa.fa-phone
-          span.phone__number + 7 918 XXX XXXX
-          .phone__show Показать
-        .phone
-          i.fa.fa-phone
-          span.phone__number + 7 918 XXX XXXX
-          .phone__show Показать
-        .mail
-          i.fa.fa-envelope
-          span disneyka.krd@mail.ru
-        h3.h3 Соц. сети
-        .socials-type-2
-          a(href="")
-            i.fa.fa-vk
-          a(href="")
-            i.fa.fa-odnoklassniki
-          a(href="")
-            i.fa.fa-facebook
-          a(href="")
-            i.fa.fa-twitter
-          a(href="")
-            i.fa.fa-instagram
-          a(href="")
-            i.fa.fa-youtube-play
-          a(href="")
-            i.fa.fa-vimeo
-          a(href="")
-            i.myworld.myworld--color
+      .col.col--lg-3.col--sm.specialist-profile-right.specialist-aside
+        .row
+          .col.col--sm-6.col--lg-12
+            h3.h3 Контакты
+            .phone
+              i.fa.fa-phone
+              span.phone__number + 7 918 XXX XXXX
+              .phone__show Показать
+            .phone
+              i.fa.fa-phone
+              span.phone__number + 7 918 XXX XXXX
+              .phone__show Показать
+            .mail
+              i.fa.fa-envelope
+              span disneyka.krd@mail.ru
+          .col.col--sm-6.col--lg-12
+            h3.h3 Соц. сети
+            .socials-type-2
+              a(href="")
+                i.fa.fa-vk
+              a(href="")
+                i.fa.fa-odnoklassniki
+              a(href="")
+                i.fa.fa-facebook
+              a(href="")
+                i.fa.fa-twitter
+              a(href="")
+                i.fa.fa-instagram
+              a(href="")
+                i.fa.fa-youtube-play
+              a(href="")
+                i.fa.fa-vimeo
+              a(href="")
+                i.myworld.myworld--color
         h3.h3 Адрес
         p.specialist-adress г. Краснодар, ул. Красная, д.23
         .specialist-map

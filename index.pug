@@ -30,7 +30,7 @@ html(lang="ru")
           a(href="").socials__item
             i.fa.fa-facebook
         a(href="#modal").btn.btn--primary.btn--solid.modal-open Войти
-        a(href="").btn.btn--primary Разместить заявку 
+        a(href="").btn.btn--primary Разместить заявку
     #page.page
       header.main-header.main-header--transparent
         .grid.grid--container.grid--no-gutters
@@ -71,6 +71,10 @@ html(lang="ru")
               a(href="#modal").link.link--primary.modal-open Войти
               a(href="").btn.btn--primary.btn--order-desc Разместить заявку
               a(href="").btn.btn--primary.btn--order-mobile Заявка
+              .mobile-menu-toggle
+                span
+                span
+                span
 
       .hero
         .hero__align
@@ -159,13 +163,13 @@ html(lang="ru")
         .email-block.offset
           .grid.grid--container
             .row
-              .col.col--sm-6.col--sm-offset-3
+              .col.col--xl-6.col--xl-offset-3.col--sm-8.col--sm-offset-2
                 .email-block__container.row.row--sm-center
-                  .col.col--sm-6
+                  .col.col--xl-6.col--sm-5.col--sm-offset-1
                     .email-block__title
                       span Будь в курсе
                       |  новостей нашего проекта
-                  .col.col--sm-6
+                  .col.col--xl-6.col--sm-5
                     .form-control.without-margin
                       input(type="text" pattern="/^$|\s+/")
                       label Ваш email
@@ -202,7 +206,8 @@ html(lang="ru")
                   img(src="img/google.png", alt="")
 
         .contacts
-          iframe(src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d90194.86944892893!2d39.01605595!3d45.053548!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1494861378249" frameborder="0" style="border:0" allowfullscreen)
+          //- iframe(src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d90194.86944892893!2d39.01605595!3d45.053548!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1494861378249" frameborder="0" style="border:0" allowfullscreen)
+          #contact-map
           .grid.grid--container
             .contacts__left.left
               h2.h2 Контакты
@@ -212,8 +217,6 @@ html(lang="ru")
               .left__header info@wedding-office.ru
               .left__label адрес
               .left__header г. Краснодар, ул. Северная, 65
-
-
 
       footer.main-footer
         .grid.grid--container
@@ -281,5 +284,21 @@ html(lang="ru")
                   i.fa.fa-twitter
               .modal__label Впервые на сайте?
               .btn.btn--primary.btn--full-width.btn--solid Зарегистрировтаься
+
+  script(async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDchviwzT-bqwd1Mr6YMnjyBdjrDUDCjU8&callback=initMap")
+  script.
+    function initMap() {
+      var map = new google.maps.Map(document.getElementById('contact-map'), {
+        zoom: 14,
+        center: {lat: 45.049, lng: 38.905}
+      });
+
+      var image = 'img/baloon.png';
+      var beachMarker = new google.maps.Marker({
+        position: {lat: 45.046489, lng: 38.938612},
+        map: map,
+        icon: image
+      });
+    }
 
   include components/layoutlibs.pug

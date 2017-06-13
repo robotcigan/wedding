@@ -26,6 +26,8 @@
 
 .without-margin
   margin 0
+  &.form-control
+    min-height initial
 
 .empty
   display block
@@ -146,6 +148,9 @@ hr.hr
       color #fff
     .city__name
       color #fff
+    .mobile-menu-toggle
+      span
+        background-color #fff
   &--scroll
     background-color #fff
     box-shadow 0 8px 20px 5px rgba($gray, .1)
@@ -375,6 +380,7 @@ hr.hr
 
 
 .masonry
+  opacity 0
   margin-left -1.6rem
   margin-right -1.6rem
   clearfix()

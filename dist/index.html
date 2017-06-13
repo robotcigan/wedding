@@ -20,7 +20,7 @@
         <li><a class="header-nav__link" href="about_info.html">О проекте</a></li>
       </div>
       <div class="mobile-menu__bottom">
-        <div class="socials"><a class="socials__item" href=""><i class="fa fa-vk"></i></a><a class="socials__item" href=""><i class="fa fa-instagram"></i></a><a class="socials__item" href=""><i class="fa fa-twitter"></i></a><a class="socials__item" href=""><i class="fa fa-facebook"></i></a></div><a class="btn btn--primary btn--solid modal-open" href="#modal">Войти</a><a class="btn btn--primary" href="">Разместить заявку </a>
+        <div class="socials"><a class="socials__item" href=""><i class="fa fa-vk"></i></a><a class="socials__item" href=""><i class="fa fa-instagram"></i></a><a class="socials__item" href=""><i class="fa fa-twitter"></i></a><a class="socials__item" href=""><i class="fa fa-facebook"></i></a></div><a class="btn btn--primary btn--solid modal-open" href="#modal">Войти</a><a class="btn btn--primary" href="">Разместить заявку</a>
       </div>
     </div>
     <div class="page" id="page">
@@ -58,6 +58,7 @@
                   </div>
                 </div>
               </div><a class="link link--primary modal-open" href="#modal">Войти</a><a class="btn btn--primary btn--order-desc" href="">Разместить заявку</a><a class="btn btn--primary btn--order-mobile" href="">Заявка</a>
+              <div class="mobile-menu-toggle"><span></span><span></span><span></span></div>
             </div>
           </div>
         </div>
@@ -154,12 +155,12 @@
         <div class="email-block offset">
           <div class="grid grid--container">
             <div class="row">
-              <div class="col col--sm-6 col--sm-offset-3">
+              <div class="col col--xl-6 col--xl-offset-3 col--sm-8 col--sm-offset-2">
                 <div class="email-block__container row row--sm-center">
-                  <div class="col col--sm-6">
+                  <div class="col col--xl-6 col--sm-5 col--sm-offset-1">
                     <div class="email-block__title"><span>Будь в курсе</span> новостей нашего проекта</div>
                   </div>
-                  <div class="col col--sm-6">
+                  <div class="col col--xl-6 col--sm-5">
                     <div class="form-control without-margin">
                       <input type="text" pattern="/^$|s+/">
                       <label>Ваш email</label><i class="form-control__icon arrow"></i>
@@ -216,7 +217,7 @@
           </div>
         </div>
         <div class="contacts">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d90194.86944892893!2d39.01605595!3d45.053548!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1494861378249" frameborder="0" style="border:0;" allowfullscreen></iframe>
+          <div id="contact-map"></div>
           <div class="grid grid--container">
             <div class="contacts__left left">
               <h2 class="h2">Контакты</h2>
@@ -292,11 +293,27 @@
       </form>
     </div>
   </body>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDchviwzT-bqwd1Mr6YMnjyBdjrDUDCjU8&amp;callback=initMap"></script>
+  <script>
+    function initMap() {
+      var map = new google.maps.Map(document.getElementById('contact-map'), {
+        zoom: 14,
+        center: {lat: 45.049, lng: 38.905}
+      });
+    
+      var image = 'img/baloon.png';
+      var beachMarker = new google.maps.Marker({
+        position: {lat: 45.046489, lng: 38.938612},
+        map: map,
+        icon: image
+      });
+    }
+    
+  </script>
   <script src="js/jquery.min.js"></script>
   <script src="js/slideout.min.js"></script>
-  <script src="js/wow.min.js"></script>
-  <script src="js/slick.min.js"></script>
   <script src="js/isotope.pkgd.min.js"></script>
+  <script src="js/slick.min.js"></script>
   <script src="js/jquery.magnific-popup.min.js"></script>
   <script src="js/flatpickr.min.js"></script>
   <script src="js/select2.min.js"></script>

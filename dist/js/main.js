@@ -2,8 +2,8 @@
 
 $(document).ready(function () {
 
-  // wow
-  new WOW().init();
+  // // wow
+  // new WOW().init();
 
   // Header шапка
   var page = window.location.pathname;
@@ -57,6 +57,9 @@ $(document).ready(function () {
 
   // Masonry
   $('.masonry').masonry();
+  $('.masonry').on('layoutComplete', function () {
+    $(this).css('opacity', 1);
+  });
 
   $('.masonry').isotope({ filter: '*' });
 
@@ -80,6 +83,7 @@ $(document).ready(function () {
     gallery: {
       enabled: true
     }
+
   });
 
   $('.remove').on('click', function () {
@@ -153,8 +157,8 @@ $(document).ready(function () {
     responsive: [{
       breakpoint: 1024,
       settings: {
-        slidesToShow: 3,
-        slidesToScroll: 3,
+        slidesToShow: 2,
+        slidesToScroll: 1,
         infinite: true,
         dots: true
       }
@@ -162,7 +166,7 @@ $(document).ready(function () {
       breakpoint: 600,
       settings: {
         slidesToShow: 2,
-        slidesToScroll: 2
+        slidesToScroll: 1
       }
     }, {
       breakpoint: 480,
@@ -206,6 +210,8 @@ $(document).ready(function () {
     'easing': 'cubic-bezier(.32,2,.55,.27)'
   });
 
+  slideout.disableTouch();
+
   $('.mobile-menu-toggle').on('click', function () {
     slideout.toggle();
   });
@@ -242,7 +248,7 @@ $(document).ready(function () {
     $('body').addClass('body--cursor-pointer');
     var div = $(".city-selection");
     if (!$(event.target).closest(div).length) {
-      $(".city-selection").removeClass('city-selection--active');
+      div.removeClass('city-selection--active');
       $('body').removeClass('body--cursor-pointer');
     }
   });

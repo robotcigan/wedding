@@ -7,6 +7,9 @@
     border-color $light-gray
     border none
 
+.select2-container--default .select2-selection--single .select2-selection__arrow
+  display none
+
 .select2-dropdown.select2-dropdown--below
   animation smallFadeUp .3s forwards
 
@@ -279,6 +282,7 @@
         border-bottom 0
         display block
       &__link
+        color $main
         display inline-block
         margin-right 5rem
         padding 0
@@ -311,6 +315,17 @@
               position absolute
               size(2.8rem, 3rem)
               z-index -1
+          &.tabs__link--primary
+            span
+              background-color $primary
+              color #fff
+              &:before
+                background url('../../img/select-left-pink.png') 50% no-repeat
+              &:after
+                background url('../../img/select-right-pink.png') 50% no-repeat
+              .gift
+                background url('../../img/gift-white.png') no-repeat
+
   &__header
     &--links
       .tabs
@@ -375,4 +390,7 @@
   margin-top 1rem
 
 
-
+@media(max-width 1000px)
+  .btn
+    &--mobile-hide
+      display none
