@@ -68,10 +68,18 @@
       </header>
       <div class="grid grid--no-gutters banners">
         <div class="row row--no-gutters">
-          <div class="col col--sm-6 col--no-gutters"><a class="banner banner--type-1 banner--left" href=""><i class="banner__icon banner__icon--microphone"></i>
-              <div class="banner__title">Ежегодная встреча шоуменов</div></a></div>
-          <div class="col col--sm-6 col--no-gutters"><a class="banner banner--type-2 banner-right" href=""><i class="banner__icon banner__icon--thing"></i>
-              <div class="banner__title">Премия «Золотая штучка»</div></a></div>
+          <div class="col col--sm-6 col--no-gutters"><a class="banner banner--type-1" href=""></a></div>
+          <div class="col col--sm-6 col--no-gutters"><a class="banner banner--type-2" href=""></a></div>
+        </div>
+        <div class="banners__grid grid grid--container">
+          <div class="row">
+            <div class="col col--sm-6 banners__left"><i class="banner__icon banner__icon--microphone"></i>
+              <div class="banner__title">Ежегодная встреча шоуменов</div>
+            </div>
+            <div class="col col--sm-6 banners__right"><i class="banner__icon banner__icon--thing"></i>
+              <div class="banner__title">Премия «Золотая штучка»</div>
+            </div>
+          </div>
         </div>
       </div>
       <main>
@@ -80,14 +88,28 @@
             <h1 class="h1 without-offset">Размещение заявки</h1>
             <p>Укажите данные для связи с вами и дату мероприятия</p>
             <div class="row">
-              <div class="col col--sm-6">
+              <div class="col col--md-6">
                 <form class="form offset">
-                  <div class="form-control">
-                    <select class="custom-select" data-placeholder="Город">
-                      <option></option>
-                      <option>Крым</option>
-                      <option>Краснодар</option>
-                    </select><i class="form-control__icon fa fa-angle-down"></i>
+                  <div class="city-selection city-selection--full-width">
+                    <div class="form-control city-selection__city">
+                      <input type="text">
+                      <label>Выберите город</label>
+                    </div>
+                    <div class="city-selection__body">
+                      <div class="city-selection__title">Выберите город</div>
+                      <div class="city-selection__close"></div>
+                      <div class="form-control">
+                        <input type="text">
+                        <label>Название города</label><i class="form-control__icon fa fa-search"></i>
+                      </div>
+                      <ul class="city-selection__list">
+                        <li><a class="link" href="">Краснодар</a></li>
+                        <li><a class="link" href="">Сочи</a></li>
+                        <li><a class="link" href="">Армавир</a></li>
+                        <li><a class="link" href="">Новороссийск</a></li>
+                        <li><a class="link" href="">Анапа</a></li>
+                      </ul>
+                    </div>
                   </div>
                   <div class="form-control">
                     <input type="text">
@@ -112,7 +134,7 @@
                   </label>
                 </form>
               </div>
-              <div class="col col--sm-6 text--xs-center">
+              <div class="col col--md-6 text--xs-center">
                 <div class="datepicker-inline"></div>
               </div>
             </div>
@@ -186,7 +208,7 @@
   </body>
   <script src="js/jquery.min.js"></script>
   <script src="js/slideout.min.js"></script>
-  <script src="js/isotope.pkgd.min.js"></script>
+  <script src="js/masonry.pkgd.min.js"></script>
   <script src="js/slick.min.js"></script>
   <script src="js/jquery.magnific-popup.min.js"></script>
   <script src="js/flatpickr.min.js"></script>

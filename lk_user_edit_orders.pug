@@ -20,7 +20,7 @@ block content
             .row
               .tenders
                 -for(var i = 0; i < 5; i++)
-                  .tender.tender--closed
+                  .tender
                     .row
                       .col.col--sm-2
                         .tender__date
@@ -39,6 +39,10 @@ block content
                               i.fa.fa-phone
                               span.phone__number + 7 918 XXX XXXX
                               .phone__show Показать
+                    .tender__controls
+                      .btn.btn--primary.btn--small.btn--solid Закрыть
+                      br
+                      .btn.btn--black.btn--small.btn--solid.remove Удалить
 
 
   include viewed.pug

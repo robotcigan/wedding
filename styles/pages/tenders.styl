@@ -3,6 +3,7 @@
   border-radius $radius
   margin-bottom 4rem
   padding 2rem
+  position relative
   &--closed
     position relative
     &:after
@@ -35,6 +36,12 @@
     text-decoration none
   &__anons
     margin-bottom 2rem
+  &__controls
+    position absolute
+    right 2rem
+    top 2rem
+    .btn
+      margin-bottom 1rem
 
 .tender-bg
   align-items center
@@ -60,6 +67,7 @@
         margin-bottom 3rem
   & + .hr
     margin-bottom 8rem
+  
 
 .tender-calendar-title
   margin-bottom 1rem

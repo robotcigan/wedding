@@ -86,10 +86,14 @@ html(lang="ru")
         .row.row--no-gutters
           .col.col--sm-6.col--no-gutters
             a(href="").banner.banner--type-1
-              i.banner__icon.banner__icon--microphone
-              .banner__title Ежегодная встреча шоуменов
           .col.col--sm-6.col--no-gutters
             a(href="").banner.banner--type-2
+        .banners__grid.grid.grid--container
+          .row
+            .col.col--sm-6.banners__left
+              i.banner__icon.banner__icon--microphone
+              .banner__title Ежегодная встреча шоуменов
+            .col.col--sm-6.banners__right
               i.banner__icon.banner__icon--thing
               .banner__title Премия «Золотая штучка»
 
@@ -160,20 +164,31 @@ html(lang="ru")
               -for(var i = 0; i < 3; i++)
                 img(src="img/commercial.jpg", alt="")
 
+        //- .email-block.offset
+        //-   .grid.grid--container
+        //-     .row
+        //-       .col.col--xl-6.col--xl-offset-3.col--sm-9.col--sm-offset-3
+        //-         .email-block__container.row.row--sm-center
+        //-           .col.col--xl-6.col--sm-6.col--md-offset-1.col--xl-offset-0
+        //-             .email-block__title
+        //-               span Будь в курсе
+        //-               |  новостей нашего проекта
+        //-           .col.col--xl-6.col--sm-6
+        //-             .form-control.without-margin
+        //-               input(type="text")
+        //-               label Ваш email
+        //-               i.form-control__icon.arrow
+
         .email-block.offset
-          .grid.grid--container
-            .row
-              .col.col--xl-6.col--xl-offset-3.col--sm-8.col--sm-offset-2
-                .email-block__container.row.row--sm-center
-                  .col.col--xl-6.col--sm-5.col--sm-offset-1
-                    .email-block__title
-                      span Будь в курсе
-                      |  новостей нашего проекта
-                  .col.col--xl-6.col--sm-5
-                    .form-control.without-margin
-                      input(type="text" pattern="/^$|\s+/")
-                      label Ваш email
-                      i.form-control__icon.arrow
+          .email-block__container
+              .email-block__title
+                span Будь в курсе
+                |  новостей нашего проекта
+              .form-control.without-margin
+                input(type="text")
+                label Ваш email
+                i.form-control__icon.arrow
+
 
 
         .grid.grid--container
@@ -197,7 +212,7 @@ html(lang="ru")
         .app-ad.offset
           .grid.grid--container
             .row
-              .col.col--sm-7
+              .col.col--lg-7
                 .app-ad__title Скачайте мобильное приложение
                 .app-ad__subtitle Идейные соображения высшего порядка, а также реализация намеченных плановых заданий позволяет оценить значение позиций, занимаемых участниками в отношении.
                 a(href="").app-ad__img.apple
@@ -253,11 +268,11 @@ html(lang="ru")
       .modal__title Войти
       form.form
         .form-control.form-control--error
-          input(type="email" pattern="/^$|\s+/")
+          input(type="email")
           label E-mail
           i.form-control__icon.fa.fa-envelope
         .form-control
-          input(type="password" pattern="/^$|\s+/")
+          input(type="password")
           label Пароль
           i.form-control__icon.fa.fa-lock
         .row
@@ -289,8 +304,8 @@ html(lang="ru")
   script.
     function initMap() {
       var map = new google.maps.Map(document.getElementById('contact-map'), {
-        zoom: 14,
-        center: {lat: 45.049, lng: 38.905}
+        zoom: 15,
+        center: {lat: 45.046, lng: 38.93}
       });
 
       var image = 'img/baloon.png';

@@ -164,14 +164,6 @@ block content
             audio(src="audio/horse.mp3" type="audio/mp3" controls="controls")
 
       .tabs__content
-        form.comment.comment-form
-          .comment__left
-            label.comment__photo.nophoto(for="nophoto")
-              input#nophoto(type="file")
-          .comment__right
-            .comment__name Александр Романов
-            textarea.comment__textarea(placeholder="Ваш отзыв")
-            button.btn.btn--primary.btn--solid Отправить
         -for(var y = 0; y < 5; y++)
           .comment
             .comment__left

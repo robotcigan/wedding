@@ -26,23 +26,23 @@ $(document).ready(function () {
   mainHeaderScroll();
 
   // Табы
-  $('.tabs__header .tabs__link').on('click', function() {
-    let index = $(this).index();
-    let parent = $(this).closest('.tabs');
-    let link = $(this);
-    // console.log(parentIndex)
-    // console.log('index', parent.find('.tabs__content').index())
-    if ( $(this).parent().hasClass('tabs__header--links') ) {
-      console.log('lol')
-    } else {
-      console.log('not lol')
-      parent.find('.tabs__link--active').first().removeClass('tabs__link--active');
-      link.addClass('tabs__link--active');
-      parent.find('.tabs__content').removeClass('tabs__content--active');
-      parent.find('.tabs__content').eq(index).addClass('tabs__content--active');
-      $('.masonry').isotope({ filter: '*' });
-    }
-  });
+  // $('.tabs__header .tabs__link').on('click', function() {
+  //   let index = $(this).index();
+  //   let parent = $(this).closest('.tabs');
+  //   let link = $(this);
+  //   // console.log(parentIndex)
+  //   // console.log('index', parent.find('.tabs__content').index())
+  //   if ( $(this).parent().hasClass('tabs__header--links') ) {
+  //     console.log('lol')
+  //   } else {
+  //     console.log('not lol')
+  //     parent.find('.tabs__link--active').first().removeClass('tabs__link--active');
+  //     link.addClass('tabs__link--active');
+  //     parent.find('.tabs__content').removeClass('tabs__content--active');
+  //     parent.find('.tabs__content').eq(index).addClass('tabs__content--active');
+  //     $('.masonry').isotope({ filter: '*' });
+  //   }
+  // });
 
   $('.accordion .accordion__btn').on('click', function() {
     let parent = $(this).closest('.accordion');
@@ -54,25 +54,24 @@ $(document).ready(function () {
   });
 
   // Masonry
-  $('.masonry').masonry();
-  $('.masonry').on('layoutComplete', function () {
-    $(this).css('opacity', 1);
-  })
+  // $('.masonry').masonry();
+  
+  // if ($('.masonry').length) {
+  //   var container = document.querySelector('.masonry');
+  //   var msnry = new Masonry( container );
 
-  $('.masonry').isotope({ filter: '*' });
+  //   msnry.on( 'layoutComplete', function( msnryInstance, laidOutItems ) {
+  //     $('.masonry').css('opacity', 1);
+  //     $(window).trigger('resize');
+  //   });
 
-  $('.btn.btn--dashed').eq(0).on('click', function() {
-    $('.masonry').isotope({ filter: '*' });
-  })
-
-  $('.btn.btn--dashed').eq(1).on('click', function() {
-    $('.masonry').isotope({ filter: '.masonry-column__country' });
-  })
-
-  $('.btn.btn--dashed').eq(2).on('click', function() {
-    $('.masonry').isotope({ filter: '.masonry-column__city' });
-  })
-
+  //   msnry.layout();
+  // }
+  // $('.masonry').on('layoutComplete', function () {
+  //   console.log('fdsgf')
+  //   $('.masonry').css('opacity', 1);
+  // })
+  // $('.masonry').isotope({ filter: '*' });
 
     // Image gallery
   $('.portfolio-gallery').magnificPopup({
@@ -99,10 +98,10 @@ $(document).ready(function () {
   });
 
   $('.reg-action__container--first').mouseenter(function() {
-    $('.reg-action').css("background-image", "url('../img/registration-specialist.jpg')")
+    $('.reg-action').css("background-image", "url('./img/registration-specialist.jpg')")
   });
   $('.reg-action__container--second').mouseenter(function() {
-    $('.reg-action').css("background-image", "url('../img/registration-user.jpg')")
+    $('.reg-action').css("background-image", "url('./img/registration-user.jpg')")
   });
 
 
@@ -117,7 +116,7 @@ $(document).ready(function () {
     dateFormat: "d.m.Y",
     altInput: true,
     onChange: function(selectedDates, dateStr, instance) {
-      $('.datepicker-inline-date').val(dateStr);
+      $('.datepicker-inline-date').val(dateStr).trigger('change');
     }
   });
 
@@ -159,9 +158,7 @@ $(document).ready(function () {
         breakpoint: 1024,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: true
+          slidesToScroll: 1
         }
       },
       {
@@ -221,7 +218,7 @@ $(document).ready(function () {
   }); 
 
     // Поля
-  $('.form-control input').on('keyup change', function () {
+  $('.form-control input').on('keyup change ', function () {
     formValidation($(this));
   });
 
@@ -258,3 +255,8 @@ $(document).ready(function () {
   });
 
 });
+
+$(window).on("load", function () {
+  $('.masonry').masonry();
+  $('.masonry').css('opacity', 1);
+})

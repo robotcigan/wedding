@@ -109,6 +109,9 @@ hr.hr
     display inline-block
     vertical-align middle
 
+.slideout-panel
+  will-change initial
+
 .main-header
   background-color #fff
   // border-bottom 1px solid $light-gray
@@ -116,6 +119,7 @@ hr.hr
   padding-bottom 1.5rem
   padding-top 1.5rem
   position fixed
+  // position sticky
   top 0
   transition all .4s
   width 100%
@@ -163,20 +167,22 @@ hr.hr
         &:hover
           color $primary
     .btn
-      border none
+      border 1px solid transparent
       background-color $primary
     .link
       color $primary
     .city__name
       color $main
+    .city-selection
+      &__city
+        color $main
 
 
 
 .banners
+  position relative
   .banner
-    color #fff
-    display inline-block
-    font-weight 700
+    display block
     height 4.8rem
     text-align center
     text-decoration none
@@ -189,24 +195,29 @@ hr.hr
       margin-right .5rem
       vertical-align middle
     &__title
+      color #fff
+      font-weight 700
       display inline-block
       line-height 4.8rem
       vertical-align middle
     &--type-1
       background $secondary url('../../img/pattern1.png') repeat
-      .banner__icon
-        background url('../../img/pattern-icon-1.png') no-repeat
-        width 3.2rem
     &--type-2
       background $primary url('../../img/pattern2.png')
-      .banner__icon
-        background url('../../img/pattern-icon-2.png') no-repeat
-        width 5rem
-    &--left
-      padding-left (175 / 1366 * 100)vw
-    &--right
-      padding-right (175 / 1366 * 100)vw
-
+  &__grid
+    left 0
+    position absolute
+    right 0
+    text-align center
+    top 0
+  &__left
+    .banner__icon
+      background url('../../img/pattern-icon-1.png') no-repeat
+      width 3.2rem
+  &__right
+    .banner__icon
+      background url('../../img/pattern-icon-2.png') no-repeat
+      width 5rem
 
 
 .center
@@ -402,26 +413,23 @@ hr.hr
     display block
     width 100%
 
-.portfolio-gallery
-  &--with-remove
-    .masonry
-      &__column
-        position relative
-    .remove
-      background-color #000
-      border-radius 50%
-      circle(2.5rem)
-      content ''
-      cursor pointer
-      display inline-block
-      right 2.5rem
-      position absolute
-      top 2.5rem
-      text-align center
-      .fa
-        color #fff
-        font-size 1.4rem
-        line-height 1
+.remove-container
+  position relative
+.remove
+  background-color #000
+  border-radius 50%
+  circle(2.5rem)
+  content ''
+  cursor pointer
+  display inline-block
+  right 2.5rem
+  position absolute
+  top 2.5rem
+  text-align center
+  .fa
+    color #fff
+    font-size 1.4rem
+    line-height 1
 
 .user
   display inline-block

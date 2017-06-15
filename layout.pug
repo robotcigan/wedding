@@ -82,13 +82,19 @@ html(lang="ru")
       .grid.grid--no-gutters.banners
         .row.row--no-gutters
           .col.col--sm-6.col--no-gutters
-            a(href="").banner.banner--type-1.banner--left
+            a(href="").banner.banner--type-1
+          .col.col--sm-6.col--no-gutters
+            a(href="").banner.banner--type-2
+        .banners__grid.grid.grid--container
+          .row
+            .col.col--sm-6.banners__left
               i.banner__icon.banner__icon--microphone
               .banner__title Ежегодная встреча шоуменов
-          .col.col--sm-6.col--no-gutters
-            a(href="").banner.banner--type-2.banner-right
+            .col.col--sm-6.banners__right
               i.banner__icon.banner__icon--thing
               .banner__title Премия «Золотая штучка»
+ 
+
 
       main
         block content

@@ -73,10 +73,18 @@
       </div>
       <div class="grid grid--no-gutters banners">
         <div class="row row--no-gutters">
-          <div class="col col--sm-6 col--no-gutters"><a class="banner banner--type-1" href=""><i class="banner__icon banner__icon--microphone"></i>
-              <div class="banner__title">Ежегодная встреча шоуменов</div></a></div>
-          <div class="col col--sm-6 col--no-gutters"><a class="banner banner--type-2" href=""><i class="banner__icon banner__icon--thing"></i>
-              <div class="banner__title">Премия «Золотая штучка»</div></a></div>
+          <div class="col col--sm-6 col--no-gutters"><a class="banner banner--type-1" href=""></a></div>
+          <div class="col col--sm-6 col--no-gutters"><a class="banner banner--type-2" href=""></a></div>
+        </div>
+        <div class="banners__grid grid grid--container">
+          <div class="row">
+            <div class="col col--sm-6 banners__left"><i class="banner__icon banner__icon--microphone"></i>
+              <div class="banner__title">Ежегодная встреча шоуменов</div>
+            </div>
+            <div class="col col--sm-6 banners__right"><i class="banner__icon banner__icon--thing"></i>
+              <div class="banner__title">Премия «Золотая штучка»</div>
+            </div>
+          </div>
         </div>
       </div>
       <main>
@@ -153,21 +161,11 @@
           </div>
         </div>
         <div class="email-block offset">
-          <div class="grid grid--container">
-            <div class="row">
-              <div class="col col--xl-6 col--xl-offset-3 col--sm-8 col--sm-offset-2">
-                <div class="email-block__container row row--sm-center">
-                  <div class="col col--xl-6 col--sm-5 col--sm-offset-1">
-                    <div class="email-block__title"><span>Будь в курсе</span> новостей нашего проекта</div>
-                  </div>
-                  <div class="col col--xl-6 col--sm-5">
-                    <div class="form-control without-margin">
-                      <input type="text" pattern="/^$|s+/">
-                      <label>Ваш email</label><i class="form-control__icon arrow"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
+          <div class="email-block__container">
+            <div class="email-block__title"><span>Будь в курсе</span> новостей нашего проекта</div>
+            <div class="form-control without-margin">
+              <input type="text">
+              <label>Ваш email</label><i class="form-control__icon arrow"></i>
             </div>
           </div>
         </div>
@@ -209,7 +207,7 @@
         <div class="app-ad offset">
           <div class="grid grid--container">
             <div class="row">
-              <div class="col col--sm-7">
+              <div class="col col--lg-7">
                 <div class="app-ad__title">Скачайте мобильное приложение</div>
                 <div class="app-ad__subtitle">Идейные соображения высшего порядка, а также реализация намеченных плановых заданий позволяет оценить значение позиций, занимаемых участниками в отношении.</div><a class="app-ad__img apple" href=""><img src="img/apple.png" alt=""></a><a class="app-ad__img google" href=""><img src="img/google.png" alt=""></a>
               </div>
@@ -263,11 +261,11 @@
       <div class="modal__title">Войти</div>
       <form class="form">
         <div class="form-control form-control--error">
-          <input type="email" pattern="/^$|s+/">
+          <input type="email">
           <label>E-mail</label><i class="form-control__icon fa fa-envelope"></i>
         </div>
         <div class="form-control">
-          <input type="password" pattern="/^$|s+/">
+          <input type="password">
           <label>Пароль</label><i class="form-control__icon fa fa-lock"></i>
         </div>
         <div class="row">
@@ -297,8 +295,8 @@
   <script>
     function initMap() {
       var map = new google.maps.Map(document.getElementById('contact-map'), {
-        zoom: 14,
-        center: {lat: 45.049, lng: 38.905}
+        zoom: 15,
+        center: {lat: 45.046, lng: 38.93}
       });
     
       var image = 'img/baloon.png';
@@ -312,7 +310,7 @@
   </script>
   <script src="js/jquery.min.js"></script>
   <script src="js/slideout.min.js"></script>
-  <script src="js/isotope.pkgd.min.js"></script>
+  <script src="js/masonry.pkgd.min.js"></script>
   <script src="js/slick.min.js"></script>
   <script src="js/jquery.magnific-popup.min.js"></script>
   <script src="js/flatpickr.min.js"></script>

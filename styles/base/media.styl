@@ -67,7 +67,7 @@
   &:before
     // background-color rgba(#fff, .97)
     content ''
-    left -2.4rem
+    left -2.5rem
     position absolute
     top -3rem
     circle(8rem)
@@ -102,6 +102,22 @@
   .tender-bg
     height 45rem
 
+@media(max-width 1350px)
+  .index-news
+    .slick-prev
+      left 3rem
+      z-index 5
+    .slick-next
+      right 3rem
+    .slick-prev
+    .slick-next
+      top 33%
+      &:before
+        background #fff
+        border-radius 50%
+        circle(3.2rem)
+        display block
+
 @media(max-width 1300px)
   .grid--container
     max-width 96%
@@ -117,6 +133,11 @@
       a
         display block
         line-height 1
+  .app-ad
+    .grid.grid--container
+      &:after
+        background-position bottom
+        width 40%
 
 
 @media(max-width 1200px)
@@ -145,6 +166,10 @@
       width 50%
   .index-category__img
     display none
+  .app-ad
+    .grid.grid--container
+      &:after
+        display none
   // .hero
   //   &__align
   //     padding 0
@@ -167,6 +192,7 @@
   .open-enter-modal-mobile
     display none
 
+
 @media(max-width 767px)
   .main-header
     &--transparent&--scroll
@@ -188,20 +214,12 @@
     margin 0 -2%
   .row--no-gutters
     margin 0
-  .index-news
-    .slick-prev
-      left 3rem
-      z-index 5
-    .slick-next
-      right 3rem
-    .slick-prev
-    .slick-next
-      top 33%
-      &:before
-        background #fff
-        border-radius 50%
-        circle(3.2rem)
-        display block
+
+@media(max-width 650px)
+  .banners
+    .banner
+      &__title
+        font-size 1.4rem
 
 @media(max-width 500px)
   .main-footer
@@ -234,8 +252,14 @@
   .specialist
     &__name
       font-size 2.4rem
+    &__photo
+      img
+        width 100%
     &__role
       font-size 1.4rem
+
+  .app-ad__img
+    margin-bottom 1rem
 
 @media(max-width 350px)
   .hero

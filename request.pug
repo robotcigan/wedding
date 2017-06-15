@@ -6,14 +6,30 @@ block content
       h1.h1.without-offset Размещение заявки
       p Укажите данные для связи с вами и дату мероприятия
       .row
-        .col.col--sm-6
+        .col.col--md-6
           form.form.offset
-            .form-control
-              select(data-placeholder="Город").custom-select
-                option
-                option Крым
-                option Краснодар
-              i.form-control__icon.fa.fa-angle-down
+            .city-selection.city-selection--full-width
+              .form-control.city-selection__city
+                input(type="text")
+                label Выберите город
+              .city-selection__body
+                .city-selection__title Выберите город
+                .city-selection__close
+                .form-control
+                  input(type="text")
+                  label Название города
+                  i.form-control__icon.fa.fa-search
+                ul.city-selection__list
+                  li
+                    a(href="").link Краснодар
+                  li
+                    a(href="").link Сочи
+                  li
+                    a(href="").link Армавир
+                  li
+                    a(href="").link Новороссийск
+                  li
+                    a(href="").link Анапа
             .form-control
               input(type="text")
               label Имя
@@ -34,7 +50,7 @@ block content
               label(for="checkbox-1")
               span Я согласен с условиями 
               a(href="").link пользовательского соглашения
-        .col.col--sm-6.text--xs-center
+        .col.col--md-6.text--xs-center
           .datepicker-inline
         
       .center
