@@ -2,9 +2,6 @@
 
 $(document).ready(function () {
 
-  // // wow
-  // new WOW().init();
-
   // Header шапка
   var page = window.location.pathname;
 
@@ -28,21 +25,38 @@ $(document).ready(function () {
   mainHeaderScroll();
 
   // Табы
-  // $('.tabs__header .tabs__link').on('click', function() {
-  //   let index = $(this).index();
-  //   let parent = $(this).closest('.tabs');
-  //   let link = $(this);
-  //   // console.log(parentIndex)
-  //   // console.log('index', parent.find('.tabs__content').index())
-  //   if ( $(this).parent().hasClass('tabs__header--links') ) {
-  //     console.log('lol')
-  //   } else {
-  //     console.log('not lol')
-  //     parent.find('.tabs__link--active').first().removeClass('tabs__link--active');
-  //     link.addClass('tabs__link--active');
-  //     parent.find('.tabs__content').removeClass('tabs__content--active');
-  //     parent.find('.tabs__content').eq(index).addClass('tabs__content--active');
-  //     $('.masonry').isotope({ filter: '*' });
+  $('.tabs__header .tabs__link').on('click', function () {
+    var index = $(this).index();
+    var parent = $(this).closest('.tabs');
+    var link = $(this);
+    // console.log(parentIndex)
+    // console.log('index', parent.find('.tabs__content').index())
+    if ($(this).parent().hasClass('tabs__header--links')) {
+      console.log('lol');
+    } else {
+      parent.find('.tabs__link--active').first().removeClass('tabs__link--active');
+      link.addClass('tabs__link--active');
+      parent.find('.tabs__content').removeClass('tabs__content--active');
+      parent.find('.tabs__content').eq(index).addClass('tabs__content--active');
+      // $('.masonry').isotope({ filter: '*' });
+      $('.masonry').masonry('destroy');
+      $('.masonry').masonry();
+    }
+  });
+
+  // $('.lazy').lazy({
+  //   effect: "fadeIn",
+  //   effectTime: 200,
+  //   threshold: 0,
+  //   // placeholder: "https://facebook.ampla.com.br/moura/aniversario/img/loading.gif",
+  //   beforeLoad: function (element) {
+  //     console.log('load')
+  //   },
+  //   afterLoad: function(element) {
+  //     let items = $(`<div class="masonry__column"><a href="${element[0].src}"><img href=${element[0].src}></a></div>`)
+  //     $('.portfolio-gallery').append(items).masonry( 'appended', items );
+  //     // $('.portfolio-gallery').masonry('destroy');
+  //     $('.portfolio-gallery').masonry();
   //   }
   // });
 
@@ -86,7 +100,7 @@ $(document).ready(function () {
 
   });
 
-  $('.remove').on('click', function () {
+  $('.delete').on('click', function () {
     confirm("Удалить работу?");
   });
 
@@ -112,11 +126,25 @@ $(document).ready(function () {
     altInput: true
   });
 
+  function dates() {
+    if ($('.datepicker-container').length) {
+      var _dates = $('.datepicker-container').data('dates');
+      var datesArray = _dates.split(', ');
+      return datesArray;
+    }
+  }
+
   $('.datepicker-inline').flatpickr({
     inline: true,
     dateFormat: "d.m.Y",
-    altInput: true,
+    // mode: "range",
+    minDate: "today",
+    // maxDate: "09.09.2017",
+    // altInput: true,
+    // defaultDate: dates(),
     onChange: function onChange(selectedDates, dateStr, instance) {
+      console.log($(this).data('dates'));
+      // this.defaultDate = dates();
       $('.datepicker-inline-date').val(dateStr).trigger('change');
     }
   });
@@ -143,6 +171,8 @@ $(document).ready(function () {
 
   // Слайдеры
   $('.commercial-slider').slick({
+    autoplay: true,
+    autoplaySpeed: 5000,
     dots: false,
     arrows: true
   });
@@ -186,6 +216,16 @@ $(document).ready(function () {
     type: 'inline'
   });
 
+  // Модалочка нового пароля
+  if (window.location.hash === '#new-password') {
+    $.magnificPopup.open({
+      items: {
+        src: '#new-password'
+      },
+      type: 'inline'
+    });
+  }
+
   $('.gallery').magnificPopup({
     type: 'image',
     delegate: 'a',
@@ -227,10 +267,31 @@ $(document).ready(function () {
     }
   }
 
+  $('.form-control input').each(function () {
+    formValidation($(this));
+  });
+
   // Телефон маска
   $('.phone-mask').inputmask({
     mask: "+7 (999) 999 99 99",
     showMaskOnHover: false
+  });
+
+  $('.phone .phone__show').on('click', function () {
+    $(this).closest('.phone').find('.phone__popup').addClass('phone__popup--active');
+    $(this).hide();
+    $(this).closest('.phone').find('.phone__number').hide();
+    $(this).closest('.phone').find('.phone__number-link').addClass('phone__number-link--active');
+  });
+
+  // Закрытие блока по нажатию вне его области
+  $(document).on('click', function (event) {
+    $('body').addClass('body--cursor-pointer');
+    var div = $(".phone .phone__popup");
+    if (!$(event.target).closest($('.phone')).length) {
+      div.removeClass('phone__popup--active');
+      $('body').removeClass('body--cursor-pointer');
+    }
   });
 
   // Смена города
@@ -249,6 +310,35 @@ $(document).ready(function () {
       div.removeClass('city-selection--active');
       $('body').removeClass('body--cursor-pointer');
     }
+  });
+
+  // Кнопки сохранить и редактировать в акциях
+  $('.audio .btn--edit').on('click', function () {
+    $(this).closest('.audio').find('.audio__title').hide();
+    $(this).closest('.audio').find('.audio__title-edit').show();
+    $(this).hide();
+    $(this).closest('.audio').find('.btn--save').css('display', 'inline-block');
+  });
+  $('.audio .btn--save').on('click', function () {
+    $(this).closest('.audio').find('.audio__title-edit').hide();
+    $(this).closest('.audio').find('.audio__title').show();
+    $(this).hide();
+    $(this).closest('.audio').find('.btn--edit').css('display', 'inline-block');
+  });
+
+  // При нажатии на плеер другие останавливаются
+  $('audio, video').bind('play', function () {
+    var activated = this;
+    $('audio, video').each(function () {
+      if (this != activated) this.pause();
+    });
+  });
+
+  // Dragndrop
+  $('.dragndrop').on('dragover dragenter', function () {
+    $(this).addClass('dragndrop--active');
+  }).on('dragleave dragend drop', function () {
+    $(this).removeClass('dragndrop--active');
   });
 });
 

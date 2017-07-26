@@ -1,3 +1,6 @@
+.tenders
+  width 100%
+
 .tender
   border 1px solid $light-gray
   border-radius $radius
@@ -29,11 +32,16 @@
     line-height 1
   &__title
     color $primary
+    display inline-block
     font-size 2.4rem
     font-weight 600
     line-height 1.2
-    margin-bottom 2rem
+    margin-bottom 1rem
     text-decoration none
+  &__status
+    color $secondary
+    display block
+    margin-bottom 1rem
   &__anons
     margin-bottom 2rem
   &__controls
@@ -42,6 +50,8 @@
     top 2rem
     .btn
       margin-bottom 1rem
+      text-align center
+      width 10rem
 
 .tender-bg
   align-items center

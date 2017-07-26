@@ -1,0 +1,26 @@
+$src = '../fonts/Montserrat/'
+$name = 'Montserrat'
+
+font(name, type, weight, style)
+  font-family name
+  src url($src + 'Proxima Nova' + type + '.eot?#iefix') format('embedded-opentype'),
+      url($src + 'Proxima Nova' + type + '.otf') format('opentype'),
+      url($src + 'Proxima Nova' + type + '.woff') format('woff'),
+      url($src + 'Proxima Nova' + type + '.ttf') format('truetype')
+  font-weight weight
+  font-style style
+
+@font-face
+  font($name,' Light', 300, normal)
+
+@font-face
+  font($name,' Regular', 400, normal)
+
+@font-face
+  font($name,' SemiBold', 600, normal)
+
+@font-face
+  font($name,' Bold', 700, normal)
+
+@font-face
+  font($name,' Black', 800, normal)

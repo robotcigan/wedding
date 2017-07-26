@@ -19,8 +19,22 @@
         <li><a class="header-nav__link" href="consultant.html">Cвадебный консультант</a></li>
         <li><a class="header-nav__link" href="about_info.html">О проекте</a></li>
       </div>
+      <div class="city-selection">
+        <div class="city-selection__city"><span>Краснодар</span>
+          <div class="fa fa-angle-down"></div>
+        </div>
+        <div class="city-selection__body">
+          <div class="city-selection__title">Выберите город</div>
+          <div class="city-selection__close"></div>
+          <ul class="city-selection__list">
+            <li><a class="link" href="">Краснодар</a></li>
+            <li><a class="link" href="">Сочи</a></li>
+            <li><a class="link" href="">Армавир</a></li>
+          </ul>
+        </div>
+      </div>
       <div class="mobile-menu__bottom">
-        <div class="socials"><a class="socials__item" href=""><i class="fa fa-vk"></i></a><a class="socials__item" href=""><i class="fa fa-instagram"></i></a><a class="socials__item" href=""><i class="fa fa-twitter"></i></a><a class="socials__item" href=""><i class="fa fa-facebook"></i></a></div><a class="btn btn--primary btn--solid modal-open" href="#modal">Войти</a><a class="btn btn--primary" href="">Разместить заявку </a>
+        <div class="socials"><a class="socials__item" href=""><i class="fa fa-vk"></i></a><a class="socials__item" href=""><i class="fa fa-instagram"></i></a><a class="socials__item" href=""><i class="fa fa-twitter"></i></a><a class="socials__item" href=""><i class="fa fa-facebook"></i></a></div><a class="btn btn--primary btn--solid modal-open" href="#enter">Войти</a><a class="btn btn--primary" href="">Разместить заявку </a>
       </div>
     </div>
     <div class="page" id="page">
@@ -60,7 +74,10 @@
                     </ul>
                   </div>
                 </div>
-              </div><a class="link link--primary modal-open open-enter-modal-desctop" href="#modal">Войти</a><a class="modal-open open-enter-modal-mobile" href="#modal"></a><a class="btn btn--primary btn--order-desc" href="">Разместить заявку</a><a class="btn btn--primary btn--order-mobile" href="">Заявка</a>
+              </div><a class="link link--primary modal-open open-enter-modal-desctop" href="#enter">Войти</a>
+              <div class="is-login"><img src="./img/user.png" alt="">
+                <div class="is-login__body"><a class="is-login__link" href="">Профиль</a><a class="is-login__link" href="">Выйти</a></div>
+              </div><a class="modal-open open-enter-modal-mobile" href="#enter"></a><a class="btn btn--primary btn--order-desc" href="">Разместить заявку</a><a class="btn btn--primary btn--order-mobile" href="">Заявка</a>
               <div class="mobile-menu-toggle"><span></span><span></span><span></span></div>
             </div>
           </div>
@@ -104,107 +121,141 @@
                       <li class="tabs__link"><span>Аудио</span></li>
                       <li class="tabs__link"><span>Награды и сертификаты</span></li>
                     </nav>
-                    <label class="dashed dashed--gray"><span>Поместите файлы сюда</span>
-                      <input type="file" multiple>
-                    </label>
                     <div class="tabs__contents">
                       <div class="tabs__content tabs__content--active">
+                        <form class="dragndrop dropzone dashed dashed--gray" action="/" method="post" enctype="multipart/form-data">
+                          <input type="file" multiple>
+                        </form>
                         <div class="masonry masonry--offset portfolio-gallery">
-                          <div class="masonry__column remove-container"><span class="remove"><i class="fa fa-close"></i></span><a href="img/masonry/1.jpg"><img src="img/masonry/1.jpg" alt=""></a></div>
-                          <div class="masonry__column remove-container"><span class="remove"><i class="fa fa-close"></i></span><a href="img/masonry/2.jpg"><img src="img/masonry/2.jpg" alt=""></a></div>
-                          <div class="masonry__column remove-container"><span class="remove"><i class="fa fa-close"></i></span><a href="img/masonry/3.jpg"><img src="img/masonry/3.jpg" alt=""></a></div>
-                          <div class="masonry__column remove-container"><span class="remove"><i class="fa fa-close"></i></span><a href="img/masonry/4.jpg"><img src="img/masonry/4.jpg" alt=""></a></div>
-                          <div class="masonry__column remove-container"><span class="remove"><i class="fa fa-close"></i></span><a href="img/masonry/5.jpg"><img src="img/masonry/5.jpg" alt=""></a></div>
-                          <div class="masonry__column remove-container"><span class="remove"><i class="fa fa-close"></i></span><a href="img/masonry/6.jpg"><img src="img/masonry/6.jpg" alt=""></a></div>
-                          <div class="masonry__column remove-container"><span class="remove"><i class="fa fa-close"></i></span><a href="img/masonry/7.jpg"><img src="img/masonry/7.jpg" alt=""></a></div>
-                          <div class="masonry__column remove-container"><span class="remove"><i class="fa fa-close"></i></span><a href="img/masonry/8.jpg"><img src="img/masonry/8.jpg" alt=""></a></div>
-                          <div class="masonry__column remove-container"><span class="remove"><i class="fa fa-close"></i></span><a href="img/masonry/9.jpg"><img src="img/masonry/9.jpg" alt=""></a></div>
+                          <div class="masonry__column remove-container"><span class="remove delete"><i class="fa fa-close"></i></span><a href="img/masonry/1.jpg"><img src="img/masonry/1.jpg" alt=""></a></div>
+                          <div class="masonry__column remove-container"><span class="remove delete"><i class="fa fa-close"></i></span><a href="img/masonry/2.jpg"><img src="img/masonry/2.jpg" alt=""></a></div>
+                          <div class="masonry__column remove-container"><span class="remove delete"><i class="fa fa-close"></i></span><a href="img/masonry/3.jpg"><img src="img/masonry/3.jpg" alt=""></a></div>
+                          <div class="masonry__column remove-container"><span class="remove delete"><i class="fa fa-close"></i></span><a href="img/masonry/4.jpg"><img src="img/masonry/4.jpg" alt=""></a></div>
+                          <div class="masonry__column remove-container"><span class="remove delete"><i class="fa fa-close"></i></span><a href="img/masonry/5.jpg"><img src="img/masonry/5.jpg" alt=""></a></div>
+                          <div class="masonry__column remove-container"><span class="remove delete"><i class="fa fa-close"></i></span><a href="img/masonry/6.jpg"><img src="img/masonry/6.jpg" alt=""></a></div>
+                          <div class="masonry__column remove-container"><span class="remove delete"><i class="fa fa-close"></i></span><a href="img/masonry/7.jpg"><img src="img/masonry/7.jpg" alt=""></a></div>
+                          <div class="masonry__column remove-container"><span class="remove delete"><i class="fa fa-close"></i></span><a href="img/masonry/8.jpg"><img src="img/masonry/8.jpg" alt=""></a></div>
+                          <div class="masonry__column remove-container"><span class="remove delete"><i class="fa fa-close"></i></span><a href="img/masonry/9.jpg"><img src="img/masonry/9.jpg" alt=""></a></div>
                         </div>
                       </div>
                       <div class="tabs__content">
+                        <h3 class="h3">Вставьте ссылку на ролик с vimeo.com</h3>
+                        <div class="video-url">
+                          <div class="form-control">
+                            <input type="text">
+                            <label>Ссылка на ролик в vimeo</label>
+                          </div><a class="btn btn--primary" href="">Сохранить</a>
+                        </div>
                         <div class="row">
-                          <div class="col col--sm-4">
-                            <div class="video remove-container"><span class="remove"><i class="fa fa-close"></i></span><img src="img/video.jpg" alt=""></div>
+                          <div class="col col--sm-4"><a class="video modal-open remove-container" href="#video"><span class="remove delete"><i class="fa fa-close"></i></span><img src="img/video.jpg" alt=""></a></div>
+                          <div class="col col--sm-4"><a class="video modal-open remove-container" href="#video"><span class="remove delete"><i class="fa fa-close"></i></span><img src="img/video.jpg" alt=""></a></div>
+                          <div class="col col--sm-4"><a class="video modal-open remove-container" href="#video"><span class="remove delete"><i class="fa fa-close"></i></span><img src="img/video.jpg" alt=""></a></div>
+                          <div class="col col--sm-4"><a class="video modal-open remove-container" href="#video"><span class="remove delete"><i class="fa fa-close"></i></span><img src="img/video.jpg" alt=""></a></div>
+                          <div class="col col--sm-4"><a class="video modal-open remove-container" href="#video"><span class="remove delete"><i class="fa fa-close"></i></span><img src="img/video.jpg" alt=""></a></div>
+                          <div class="col col--sm-4"><a class="video modal-open remove-container" href="#video"><span class="remove delete"><i class="fa fa-close"></i></span><img src="img/video.jpg" alt=""></a></div>
+                          <div class="col col--sm-4"><a class="video modal-open remove-container" href="#video"><span class="remove delete"><i class="fa fa-close"></i></span><img src="img/video.jpg" alt=""></a></div>
+                        </div>
+                      </div>
+                      <div class="tabs__content">
+                        <form class="dragndrop dropzone dashed dashed--gray" action="/" method="post" enctype="multipart/form-data">
+                          <input type="file" multiple>
+                        </form>
+                        <div class="audio row row--sm-bottom">
+                          <div class="col col--sm-7">
+                            <div class="audio__title">Группа «Фрукты» - Свадебный переполох</div>
+                            <div class="form-control audio__title-edit">
+                              <input type="text" value="Группа «Фрукты» - Свадебный переполох">
+                              <label>Название</label>
+                            </div>
+                            <audio class="video-js vjs-default-skin" id="audio_example" controls preload="auto" data-setup="{}">
+                              <source src="./audio/Led zeppelin-whole lotta love.mp3" type="audio/mp3">
+                            </audio>
                           </div>
-                          <div class="col col--sm-4">
-                            <div class="video remove-container"><span class="remove"><i class="fa fa-close"></i></span><img src="img/video.jpg" alt=""></div>
+                          <div class="col col--sm-5">
+                            <div class="btn btn--primary btn--solid btn--small btn--edit">Редактировать</div>
+                            <div class="btn btn--primary btn--solid btn--small btn--save">Сохранить</div>
+                            <div class="btn btn--black btn--solid btn--small delete">Удалить</div>
                           </div>
-                          <div class="col col--sm-4">
-                            <div class="video remove-container"><span class="remove"><i class="fa fa-close"></i></span><img src="img/video.jpg" alt=""></div>
+                        </div>
+                        <div class="audio row row--sm-bottom">
+                          <div class="col col--sm-7">
+                            <div class="audio__title">Группа «Фрукты» - Свадебный переполох</div>
+                            <div class="form-control audio__title-edit">
+                              <input type="text" value="Группа «Фрукты» - Свадебный переполох">
+                              <label>Название</label>
+                            </div>
+                            <audio class="video-js vjs-default-skin" id="audio_example" controls preload="auto" data-setup="{}">
+                              <source src="./audio/Led zeppelin-whole lotta love.mp3" type="audio/mp3">
+                            </audio>
                           </div>
-                          <div class="col col--sm-4">
-                            <div class="video remove-container"><span class="remove"><i class="fa fa-close"></i></span><img src="img/video.jpg" alt=""></div>
+                          <div class="col col--sm-5">
+                            <div class="btn btn--primary btn--solid btn--small btn--edit">Редактировать</div>
+                            <div class="btn btn--primary btn--solid btn--small btn--save">Сохранить</div>
+                            <div class="btn btn--black btn--solid btn--small delete">Удалить</div>
                           </div>
-                          <div class="col col--sm-4">
-                            <div class="video remove-container"><span class="remove"><i class="fa fa-close"></i></span><img src="img/video.jpg" alt=""></div>
+                        </div>
+                        <div class="audio row row--sm-bottom">
+                          <div class="col col--sm-7">
+                            <div class="audio__title">Группа «Фрукты» - Свадебный переполох</div>
+                            <div class="form-control audio__title-edit">
+                              <input type="text" value="Группа «Фрукты» - Свадебный переполох">
+                              <label>Название</label>
+                            </div>
+                            <audio class="video-js vjs-default-skin" id="audio_example" controls preload="auto" data-setup="{}">
+                              <source src="./audio/Led zeppelin-whole lotta love.mp3" type="audio/mp3">
+                            </audio>
                           </div>
-                          <div class="col col--sm-4">
-                            <div class="video remove-container"><span class="remove"><i class="fa fa-close"></i></span><img src="img/video.jpg" alt=""></div>
+                          <div class="col col--sm-5">
+                            <div class="btn btn--primary btn--solid btn--small btn--edit">Редактировать</div>
+                            <div class="btn btn--primary btn--solid btn--small btn--save">Сохранить</div>
+                            <div class="btn btn--black btn--solid btn--small delete">Удалить</div>
                           </div>
-                          <div class="col col--sm-4">
-                            <div class="video remove-container"><span class="remove"><i class="fa fa-close"></i></span><img src="img/video.jpg" alt=""></div>
+                        </div>
+                        <div class="audio row row--sm-bottom">
+                          <div class="col col--sm-7">
+                            <div class="audio__title">Группа «Фрукты» - Свадебный переполох</div>
+                            <div class="form-control audio__title-edit">
+                              <input type="text" value="Группа «Фрукты» - Свадебный переполох">
+                              <label>Название</label>
+                            </div>
+                            <audio class="video-js vjs-default-skin" id="audio_example" controls preload="auto" data-setup="{}">
+                              <source src="./audio/Led zeppelin-whole lotta love.mp3" type="audio/mp3">
+                            </audio>
+                          </div>
+                          <div class="col col--sm-5">
+                            <div class="btn btn--primary btn--solid btn--small btn--edit">Редактировать</div>
+                            <div class="btn btn--primary btn--solid btn--small btn--save">Сохранить</div>
+                            <div class="btn btn--black btn--solid btn--small delete">Удалить</div>
+                          </div>
+                        </div>
+                        <div class="audio row row--sm-bottom">
+                          <div class="col col--sm-7">
+                            <div class="audio__title">Группа «Фрукты» - Свадебный переполох</div>
+                            <div class="form-control audio__title-edit">
+                              <input type="text" value="Группа «Фрукты» - Свадебный переполох">
+                              <label>Название</label>
+                            </div>
+                            <audio class="video-js vjs-default-skin" id="audio_example" controls preload="auto" data-setup="{}">
+                              <source src="./audio/Led zeppelin-whole lotta love.mp3" type="audio/mp3">
+                            </audio>
+                          </div>
+                          <div class="col col--sm-5">
+                            <div class="btn btn--primary btn--solid btn--small btn--edit">Редактировать</div>
+                            <div class="btn btn--primary btn--solid btn--small btn--save">Сохранить</div>
+                            <div class="btn btn--black btn--solid btn--small delete">Удалить</div>
                           </div>
                         </div>
                       </div>
                       <div class="tabs__content">
-                        <div class="audio row row--sm-bottom">
-                          <div class="col col--sm-7">
-                            <div class="audio__title">Группа «Фрукты» - Свадебный переполох</div>
-                            <audio src="audio/horse.mp3" type="audio/mp3" controls="controls"></audio>
-                          </div>
-                          <div class="col col--sm-5">
-                            <div class="btn btn--primary btn--solid btn--small">Редактировать</div>
-                            <div class="btn btn--black btn--solid btn--small remove">Удалить</div>
-                          </div>
-                        </div>
-                        <div class="audio row row--sm-bottom">
-                          <div class="col col--sm-7">
-                            <div class="audio__title">Группа «Фрукты» - Свадебный переполох</div>
-                            <audio src="audio/horse.mp3" type="audio/mp3" controls="controls"></audio>
-                          </div>
-                          <div class="col col--sm-5">
-                            <div class="btn btn--primary btn--solid btn--small">Редактировать</div>
-                            <div class="btn btn--black btn--solid btn--small remove">Удалить</div>
-                          </div>
-                        </div>
-                        <div class="audio row row--sm-bottom">
-                          <div class="col col--sm-7">
-                            <div class="audio__title">Группа «Фрукты» - Свадебный переполох</div>
-                            <audio src="audio/horse.mp3" type="audio/mp3" controls="controls"></audio>
-                          </div>
-                          <div class="col col--sm-5">
-                            <div class="btn btn--primary btn--solid btn--small">Редактировать</div>
-                            <div class="btn btn--black btn--solid btn--small remove">Удалить</div>
-                          </div>
-                        </div>
-                        <div class="audio row row--sm-bottom">
-                          <div class="col col--sm-7">
-                            <div class="audio__title">Группа «Фрукты» - Свадебный переполох</div>
-                            <audio src="audio/horse.mp3" type="audio/mp3" controls="controls"></audio>
-                          </div>
-                          <div class="col col--sm-5">
-                            <div class="btn btn--primary btn--solid btn--small">Редактировать</div>
-                            <div class="btn btn--black btn--solid btn--small remove">Удалить</div>
-                          </div>
-                        </div>
-                        <div class="audio row row--sm-bottom">
-                          <div class="col col--sm-7">
-                            <div class="audio__title">Группа «Фрукты» - Свадебный переполох</div>
-                            <audio src="audio/horse.mp3" type="audio/mp3" controls="controls"></audio>
-                          </div>
-                          <div class="col col--sm-5">
-                            <div class="btn btn--primary btn--solid btn--small">Редактировать</div>
-                            <div class="btn btn--black btn--solid btn--small remove">Удалить</div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="tabs__content">
+                        <form class="dragndrop dropzone dashed dashed--gray" action="/" method="post" enctype="multipart/form-data">
+                          <input type="file" multiple>
+                        </form>
                         <div class="masonry documents-gallery">
-                          <div class="masonry__column remove-container"><span class="remove"><i class="fa fa-close"></i></span><a href="img/documents/1.jpg"><img src="img/documents/1.jpg" alt=""></a></div>
-                          <div class="masonry__column remove-container"><span class="remove"><i class="fa fa-close"></i></span><a href="img/documents/2.jpg"><img src="img/documents/2.jpg" alt=""></a></div>
-                          <div class="masonry__column remove-container"><span class="remove"><i class="fa fa-close"></i></span><a href="img/documents/3.jpg"><img src="img/documents/3.jpg" alt=""></a></div>
-                          <div class="masonry__column remove-container"><span class="remove"><i class="fa fa-close"></i></span><a href="img/documents/4.jpg"><img src="img/documents/4.jpg" alt=""></a></div>
-                          <div class="masonry__column remove-container"><span class="remove"><i class="fa fa-close"></i></span><a href="img/documents/5.jpg"><img src="img/documents/5.jpg" alt=""></a></div>
+                          <div class="masonry__column remove-container"><span class="remove delete"><i class="fa fa-close"></i></span><a href="img/documents/1.jpg"><img src="img/documents/1.jpg" alt=""></a></div>
+                          <div class="masonry__column remove-container"><span class="remove delete"><i class="fa fa-close"></i></span><a href="img/documents/2.jpg"><img src="img/documents/2.jpg" alt=""></a></div>
+                          <div class="masonry__column remove-container"><span class="remove delete"><i class="fa fa-close"></i></span><a href="img/documents/3.jpg"><img src="img/documents/3.jpg" alt=""></a></div>
+                          <div class="masonry__column remove-container"><span class="remove delete"><i class="fa fa-close"></i></span><a href="img/documents/4.jpg"><img src="img/documents/4.jpg" alt=""></a></div>
+                          <div class="masonry__column remove-container"><span class="remove delete"><i class="fa fa-close"></i></span><a href="img/documents/5.jpg"><img src="img/documents/5.jpg" alt=""></a></div>
                         </div>
                       </div>
                     </div>
@@ -213,6 +264,13 @@
               </div>
             </div>
           </div>
+        </div>
+        <div class="modal modal--without-border" id="video">
+          <video class="video-js" id="my-player" controls fluid="true" preload="auto" poster="./img/video.jpg" data-setup="{}">
+            <source src="//vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+            <source src="//vjs.zencdn.net/v/oceans.webm" type="video/webm">
+            <source src="//vjs.zencdn.net/v/oceans.ogv" type="video/ogg">
+          </video>
         </div>
         <div class="grid grid--container viewed">
           <h2 class="h2">Другие пользователи сейчас смотрят</h2>
@@ -278,15 +336,15 @@
         </div>
       </footer>
     </div>
-    <div class="modal" id="modal">
+    <div class="modal" id="enter">
       <div class="modal__title">Войти</div>
       <form class="form">
         <div class="form-control form-control--error">
-          <input type="email" pattern="/^$|s+/">
+          <input type="email">
           <label>E-mail</label><i class="form-control__icon fa fa-envelope"></i>
         </div>
         <div class="form-control">
-          <input type="password" pattern="/^$|s+/">
+          <input type="password">
           <label>Пароль</label><i class="form-control__icon fa fa-lock"></i>
         </div>
         <div class="row">
@@ -296,7 +354,7 @@
               <label for="checkbox-1"></label><span>Запомнить пароль</span>
             </label>
           </div>
-          <div class="col col--sm-5 text-right"><a class="link" href="">Забыли пароль</a></div>
+          <div class="col col--sm-5 text-right"><a class="link modal-open" href="#forgot">Забыли пароль</a></div>
         </div>
         <p class="text-error">Неверное имя пользователя или пароль. Проверьте правильность введенных данных.
           <div class="col col--sm-8 col--sm-offset-2">
@@ -311,10 +369,47 @@
         </p>
       </form>
     </div>
+    <div class="modal" id="forgot">
+      <div class="modal__title">Восстановление пароля</div>
+      <form class="form">
+        <div class="form-control">
+          <input type="email">
+          <label>E-mail</label><i class="form-control__icon fa fa-envelope"></i>
+        </div>
+        <p>Введите адрес электронной почты, который вы указывали при регистрации.
+          <div class="col col--sm-8 col--sm-offset-2">
+            <div class="center"><a class="btn btn--primary btn--full-width modal-open" href="#was-sent">Отправить</a></div>
+          </div>
+        </p>
+      </form>
+    </div>
+    <div class="modal" id="was-sent">
+      <div class="modal__title">Восстановление пароля</div>
+      <form class="form">
+        <p>На ваш e-mail выслана ссылка для восстановления пароля.</p>
+      </form>
+    </div>
+    <div class="modal" id="new-password">
+      <div class="modal__title">Восстановление пароля</div>
+      <form class="form">
+        <div class="form-control">
+          <input type="password">
+          <label>Новый пароль</label><i class="form-control__icon fa fa-lock"></i>
+        </div>
+        <div class="form-control">
+          <input type="password">
+          <label>Повторите пароль</label><i class="form-control__icon fa fa-lock"></i>
+          <div class="col col--sm-8 col--sm-offset-2">
+            <div class="center"><a class="btn btn--primary btn--full-width modal-open" href="#was-sent">Подтвердить</a></div>
+          </div>
+        </div>
+      </form>
+    </div>
   </body>
   <script src="js/jquery.min.js"></script>
   <script src="js/slideout.min.js"></script>
   <script src="js/masonry.pkgd.min.js"></script>
+  <script src="js/dropzone.js"></script>
   <script src="js/slick.min.js"></script>
   <script src="js/jquery.magnific-popup.min.js"></script>
   <script src="js/flatpickr.min.js"></script>
@@ -322,5 +417,7 @@
   <script src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
   <script src="//yastatic.net/share2/share.js"></script>
   <script src="js/jquery.inputmask.bundle.min.js"></script>
+  <script src="./js/video.min.js"></script>
+  <script src="./js/jquery.lazy.min.js"></script>
   <script src="js/main.js"></script>
 </html>

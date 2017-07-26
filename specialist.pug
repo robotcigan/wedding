@@ -89,19 +89,21 @@ block content
 
       .col.col--lg-3.col--sm.specialist-profile-right.specialist-aside
         .row
-          .col.col--sm-6.col--lg-12
+          .col.col--sm-6.col--lg-12.contacts__block
             h3.h3 Контакты
             .phone
               i.fa.fa-phone
               span.phone__number + 7 918 XXX XXXX
+              a(href="tel:+79187772312").phone__number-link + 7 918 777 23 12
               .phone__show Показать
+              .phone__popup Пожалуйста, скажите специалисту, что вы нашли его на сайте «Свадебные штучки»
             .phone
               i.fa.fa-phone
               span.phone__number + 7 918 XXX XXXX
               .phone__show Показать
             .mail
               i.fa.fa-envelope
-              span disneyka.krd@mail.ru
+              a(href="mailto:disneyka.krd@mail.ru") disneyka.krd@mail.ru
           .col.col--sm-6.col--lg-12
             h3.h3 Соц. сети
             .socials-type-2
@@ -124,7 +126,8 @@ block content
         h3.h3 Адрес
         p.specialist-adress г. Краснодар, ул. Красная, д.23
         .specialist-map
-          iframe(src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d90140.36064485228!2d38.95759305000001!3d45.08809935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1493724942535" frameborder="0" style="border:0" allowfullscreen)
+          a(href="#specialist-map").btn.btn--primary.modal-open Открыть на карте
+          //- iframe(src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d90140.36064485228!2d38.95759305000001!3d45.08809935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1493724942535" frameborder="0" style="border:0" allowfullscreen)
 
 
     h2.h1 Портфолио
@@ -144,7 +147,8 @@ block content
           -for(var i = 1; i < 10; i++)
             .masonry__column
               a(href="img/masonry/" + i + ".jpg")
-                img(src="img/masonry/" + i + ".jpg", alt="")
+                //- img.lazy(data-src="img/masonry/" + i + ".jpg")
+                img(src="img/masonry/" + i + ".jpg")
 
         .center
           .btn.btn--secondary.btn--solid
@@ -155,8 +159,8 @@ block content
         .row
           -for(var x = 0; x < 7; x++)
             .col.col--sm-4
-              .video
-                img(src="img/video.jpg", alt="")
+              a(href="#video").video.modal-open
+                img(src="https://i.vimeocdn.com/video/226500452_1280x720.jpg", alt="")
 
       .tabs__content
         -for(var y = 0; y < 5; y++)
@@ -174,5 +178,10 @@ block content
               .comment__date 3 марта 2017
               .comment-text Не следует, однако забывать, что укрепление и развитие структуры влечет за собой процесс внедрения и модернизации соответствующий условий активизации. С другой стороны постоянное информационно - пропагандистское обеспечение нашей деятельности обеспечивает широкому кругу (специалистов) участие в формировании модели развития. Идейные соображения высшего порядка, а также дальнейшее развитие различных форм деятельности влечет за собой процесс внедрения и модернизации соответствующий условий активизации. Равным образом реализация намеченных плановых заданий влечет за собой процесс внедрения
 
+  #specialist-map.modal.modal--map.modal--without-border
+    iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2819.405336100939!2d38.97346321598989!3d45.03699586986703!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40f04f993fbb5637%3A0x769c11802555314c!2z0YPQuy4g0JrRgNCw0YHQvdCw0Y8sIDE1NCwg0JrRgNCw0YHQvdC-0LTQsNGALCDQmtGA0LDRgdC90L7QtNCw0YDRgdC60LjQuSDQutGA0LDQuSwgMzUwMDE1!5e0!3m2!1sru!2sru!4v1499441162994" width="600" height="450" frameborder="0" style="border:0" allowfullscreen)
+
+  #video.modal.modal--without-border
+    iframe(src="https://player.vimeo.com/video/226500452?autoplay=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen)
 
   include viewed.pug

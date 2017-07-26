@@ -4,8 +4,10 @@
 @import 'base/typography.styl'
 @import 'base/animations.styl'
 @import 'base/icons.styl'
+@import 'base/modal.styl'
 @import 'base/form.styl'
 @import 'base/city-selection.styl'
+@import 'base/lazy.styl'
 
 @import 'modification/modification.styl'
 
@@ -92,6 +94,7 @@ hr.hr
   float left
   margin-right 2rem
   width 15rem
+    
 
 .city
   display inline-block
@@ -167,7 +170,8 @@ hr.hr
         &:hover
           color $primary
     .btn
-      border 1px solid transparent
+      // border 1px solid transparent
+      border-color transparent
       background-color $primary
     .link
       color $primary
@@ -177,7 +181,37 @@ hr.hr
       &__city
         color $main
 
-
+.is-login
+  border none
+  display inline-block
+  text-decoration none
+  margin-right 1.5rem
+  vertical-align middle
+  position relative
+  &__body
+    background-color #fff
+    box-shadow $shadow
+    border $border
+    border-radius $radius
+    display none
+    position absolute
+    right -.5rem
+    text-align left
+    top 3rem
+  &__link
+    border-bottom $border
+    color $main
+    cursor pointer
+    display block
+    padding 1rem 2rem
+    padding-right 4rem
+    text-decoration none
+    &:hover
+      color $primary
+  &:hover
+    .is-login
+      &__body
+        display block
 
 .banners
   position relative
@@ -200,6 +234,7 @@ hr.hr
       display inline-block
       line-height 4.8rem
       vertical-align middle
+      text-decoration none
     &--type-1
       background $secondary url('../../img/pattern1.png') repeat
     &--type-2
@@ -231,6 +266,7 @@ hr.hr
   padding 1.2rem 0
   &__link
     color $main
+    display inline-block
     position relative
     margin-right 3.2rem
     text-decoration none
@@ -290,6 +326,15 @@ hr.hr
     &--special
       color $primary
       font-weight 600
+      &.sidebar__link--active
+        background-color rgba($primary, .1)
+
+.form-control
+  #subscribe_form 
+    .form-control__icon
+      border none
+      cursor pointer
+      z-index 100
 
 .catalog
   margin-bottom 3rem
@@ -305,7 +350,7 @@ hr.hr
     background-size cover !important
     display block
     height 24rem
-    margin-bottom .5rem
+    margin-bottom 1rem
     overflow hidden
     position relative
     // text-align center
@@ -328,6 +373,8 @@ hr.hr
     display block
     font-size 1.8rem
     font-weight 600
+    line-height 1
+    margin-bottom .5rem
     text-decoration none
     &:hover
       color $primary
@@ -335,7 +382,10 @@ hr.hr
     color $primary
     font-size 1.2rem
     font-weight 600
+    line-height 1
     text-transform uppercase
+    & + .tabs
+      margin-top 1rem
   &--big
     .specialist__photo
       height 38rem
@@ -346,6 +396,7 @@ hr.hr
 
 .phone
   margin-bottom 1rem
+  position relative
   .fa
     color $gray
     display inline-block
@@ -362,6 +413,27 @@ hr.hr
     font-weight 600
     letter-spacing 1px
     text-transform uppercase
+  &__popup
+    animation smallFadeUp .3s
+    background-color #fff
+    box-shadow $shadow
+    border-radius $radius
+    border $border
+    display none
+    left 0
+    padding 1.5rem 3rem
+    position absolute
+    top 3rem
+    z-index 50
+    &--active
+      display block
+  &__number-link
+    color $main
+    display none
+    margin-right .5rem
+    text-decoration none
+    &--active
+      display inline-block
 
 .specialist-info
   margin-bottom 6rem
@@ -371,9 +443,15 @@ hr.hr
   margin-bottom .3rem
 
 .mail
+  color $main
+  display block
+  text-decoration none
   .fa
     color $gray
     margin-right 1rem
+  a
+    color $main
+    text-decoration none
 
 .balance-title
   font-size 2.4rem
@@ -405,13 +483,6 @@ hr.hr
   &--offset
     margin-bottom 4rem
 
-.audio
-  margin-bottom 2rem
-  &__title
-    margin-bottom .5rem
-  audio
-    display block
-    width 100%
 
 .remove-container
   position relative
@@ -422,14 +493,18 @@ hr.hr
   content ''
   cursor pointer
   display inline-block
-  right 2.5rem
+  right 2rem
   position absolute
-  top 2.5rem
+  top 2rem
   text-align center
   .fa
     color #fff
     font-size 1.4rem
     line-height 1
+.documents-gallery
+  .remove
+    right 2.5rem
+    top 2.5rem
 
 .user
   display inline-block
@@ -466,6 +541,7 @@ hr.hr
   border 2px dashed $secondary
   margin-bottom 2rem
   padding 2.4rem
+  position relative
   &__header
     font-weight 600
     line-height 1.4
@@ -502,6 +578,9 @@ hr.hr
   //   margin-bottom 1rem
   //   text-decoration none
 
+.dragndrop
+  &--active
+    border-color $primary
 
 .viewed
   margin-bottom 8rem
@@ -580,63 +659,6 @@ hr.hr
   .fa-vimeo
     color $vimeo
 
-
-
-.modal
-  animation bigFadeUp .3s forwards ease
-  background #fff
-  box-shadow 0 1rem 2rem rgba($main, .1)
-  border-radius $radius
-  display none
-  margin 0 auto
-  max-width 40rem
-  padding 2.4rem
-  position relative
-  width auto
-  &__title
-    font-size 2.4rem
-    font-weight 600
-    margin-bottom 2rem
-  &__label
-    color $gray
-    margin .5rem 0
-    &--type-2
-      margin 2.4rem 0
-      position relative
-      &:before,
-      &:after
-        background-color $light-gray
-        content ''
-        height 1px
-        position absolute
-        top 45%
-        width 25%
-      &:before
-        left 0
-      &:after
-        right 0
-  .socials-type-2
-    margin 2rem 0
-  .center
-    margin-top 1.6rem
-
-.mfp-ready .modal
-  display block
-
-.mfp-close,
-.mfp-close:active
-  top 1.5rem
-  right 1rem
-
-.mfp-gallery
-  .mfp-close,
-  .mfp-close:active
-    opacity 1
-    top 2.4rem
-    right -4rem
-  .mfp-close:hover
-    color $primary
-    cursor pointer
 
 .webformula
   float right

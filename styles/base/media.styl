@@ -5,7 +5,7 @@
   display none
 
 .open-enter-modal-mobile
-  background url('../../img/user.svg') no-repeat
+  background url('../../img/user.png') no-repeat
   background-size contain
   display none
   circle(2.4rem)
@@ -16,10 +16,11 @@
   background-color rgba(#fff, 1)
   display none
   padding-left 3rem
+  padding-right 2rem
   width 29rem
   .socials
-    margin-bottom 3rem
-    margin-top 1rem
+    margin-bottom 2rem
+    margin-top 2rem
   .social__item
     .fa
       circle(4rem)
@@ -39,7 +40,9 @@
         color $facebook
   .btn--primary
     margin-bottom 1rem
-
+  .city-selection
+    &__body
+      max-width 24rem
 
 .mobile-nav.nav
   margin-top 3rem
@@ -50,7 +53,7 @@
     display inline-block
     font-size 2rem
     line-height 1
-    margin-bottom 3rem
+    margin-bottom 2rem
     text-decoration none
     vertical-align text-top
     &:hover
@@ -150,6 +153,8 @@
   .socials
     &__item
       margin-bottom 1rem
+  .offset
+    margin-bottom 6rem
 
 
 @media(max-width 1000px)
@@ -187,6 +192,8 @@
       display none
     .link.link--primary
       display none
+  .is-login
+    display none
   .header-nav
     display none
   .open-enter-modal-mobile
@@ -211,17 +218,26 @@
     &__left.left
       width 50%
   .row
-    margin 0 -2%
+    // margin 0 -2%
+    margin 0 -16px
   .row--no-gutters
     margin 0
+  // .col
+  //   padding 0 2%
 
 @media(max-width 650px)
   .banners
     .banner
       &__title
         font-size 1.4rem
+  .offset
+    margin-bottom 3rem
+  .h2
+    font-size 2.4rem
 
 @media(max-width 500px)
+  .dashed
+    padding 2rem 1.3rem
   .main-footer
     .logo
       margin-bottom 1rem
@@ -232,6 +248,8 @@
       margin-top 1rem
   .masonry
     &__column
+      margin-bottom 0
+      padding 0 1.6rem
       width 100%
   .sorting
     &__item

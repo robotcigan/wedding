@@ -19,8 +19,22 @@
         <li><a class="header-nav__link" href="consultant.html">Cвадебный консультант</a></li>
         <li><a class="header-nav__link" href="about_info.html">О проекте</a></li>
       </div>
+      <div class="city-selection">
+        <div class="city-selection__city"><span>Краснодар</span>
+          <div class="fa fa-angle-down"></div>
+        </div>
+        <div class="city-selection__body">
+          <div class="city-selection__title">Выберите город</div>
+          <div class="city-selection__close"></div>
+          <ul class="city-selection__list">
+            <li><a class="link" href="">Краснодар</a></li>
+            <li><a class="link" href="">Сочи</a></li>
+            <li><a class="link" href="">Армавир</a></li>
+          </ul>
+        </div>
+      </div>
       <div class="mobile-menu__bottom">
-        <div class="socials"><a class="socials__item" href=""><i class="fa fa-vk"></i></a><a class="socials__item" href=""><i class="fa fa-instagram"></i></a><a class="socials__item" href=""><i class="fa fa-twitter"></i></a><a class="socials__item" href=""><i class="fa fa-facebook"></i></a></div><a class="btn btn--primary btn--solid modal-open" href="#modal">Войти</a><a class="btn btn--primary" href="">Разместить заявку </a>
+        <div class="socials"><a class="socials__item" href=""><i class="fa fa-vk"></i></a><a class="socials__item" href=""><i class="fa fa-instagram"></i></a><a class="socials__item" href=""><i class="fa fa-twitter"></i></a><a class="socials__item" href=""><i class="fa fa-facebook"></i></a></div><a class="btn btn--primary btn--solid modal-open" href="#enter">Войти</a><a class="btn btn--primary" href="">Разместить заявку </a>
       </div>
     </div>
     <div class="page" id="page">
@@ -60,7 +74,10 @@
                     </ul>
                   </div>
                 </div>
-              </div><a class="link link--primary modal-open open-enter-modal-desctop" href="#modal">Войти</a><a class="modal-open open-enter-modal-mobile" href="#modal"></a><a class="btn btn--primary btn--order-desc" href="">Разместить заявку</a><a class="btn btn--primary btn--order-mobile" href="">Заявка</a>
+              </div><a class="link link--primary modal-open open-enter-modal-desctop" href="#enter">Войти</a>
+              <div class="is-login"><img src="./img/user.png" alt="">
+                <div class="is-login__body"><a class="is-login__link" href="">Профиль</a><a class="is-login__link" href="">Выйти</a></div>
+              </div><a class="modal-open open-enter-modal-mobile" href="#enter"></a><a class="btn btn--primary btn--order-desc" href="">Разместить заявку</a><a class="btn btn--primary btn--order-mobile" href="">Заявка</a>
               <div class="mobile-menu-toggle"><span></span><span></span><span></span></div>
             </div>
           </div>
@@ -112,15 +129,15 @@
         </div>
       </footer>
     </div>
-    <div class="modal" id="modal">
+    <div class="modal" id="enter">
       <div class="modal__title">Войти</div>
       <form class="form">
         <div class="form-control form-control--error">
-          <input type="email" pattern="/^$|s+/">
+          <input type="email">
           <label>E-mail</label><i class="form-control__icon fa fa-envelope"></i>
         </div>
         <div class="form-control">
-          <input type="password" pattern="/^$|s+/">
+          <input type="password">
           <label>Пароль</label><i class="form-control__icon fa fa-lock"></i>
         </div>
         <div class="row">
@@ -130,7 +147,7 @@
               <label for="checkbox-1"></label><span>Запомнить пароль</span>
             </label>
           </div>
-          <div class="col col--sm-5 text-right"><a class="link" href="">Забыли пароль</a></div>
+          <div class="col col--sm-5 text-right"><a class="link modal-open" href="#forgot">Забыли пароль</a></div>
         </div>
         <p class="text-error">Неверное имя пользователя или пароль. Проверьте правильность введенных данных.
           <div class="col col--sm-8 col--sm-offset-2">
@@ -145,10 +162,47 @@
         </p>
       </form>
     </div>
+    <div class="modal" id="forgot">
+      <div class="modal__title">Восстановление пароля</div>
+      <form class="form">
+        <div class="form-control">
+          <input type="email">
+          <label>E-mail</label><i class="form-control__icon fa fa-envelope"></i>
+        </div>
+        <p>Введите адрес электронной почты, который вы указывали при регистрации.
+          <div class="col col--sm-8 col--sm-offset-2">
+            <div class="center"><a class="btn btn--primary btn--full-width modal-open" href="#was-sent">Отправить</a></div>
+          </div>
+        </p>
+      </form>
+    </div>
+    <div class="modal" id="was-sent">
+      <div class="modal__title">Восстановление пароля</div>
+      <form class="form">
+        <p>На ваш e-mail выслана ссылка для восстановления пароля.</p>
+      </form>
+    </div>
+    <div class="modal" id="new-password">
+      <div class="modal__title">Восстановление пароля</div>
+      <form class="form">
+        <div class="form-control">
+          <input type="password">
+          <label>Новый пароль</label><i class="form-control__icon fa fa-lock"></i>
+        </div>
+        <div class="form-control">
+          <input type="password">
+          <label>Повторите пароль</label><i class="form-control__icon fa fa-lock"></i>
+          <div class="col col--sm-8 col--sm-offset-2">
+            <div class="center"><a class="btn btn--primary btn--full-width modal-open" href="#was-sent">Подтвердить</a></div>
+          </div>
+        </div>
+      </form>
+    </div>
   </body>
   <script src="js/jquery.min.js"></script>
   <script src="js/slideout.min.js"></script>
   <script src="js/masonry.pkgd.min.js"></script>
+  <script src="js/dropzone.js"></script>
   <script src="js/slick.min.js"></script>
   <script src="js/jquery.magnific-popup.min.js"></script>
   <script src="js/flatpickr.min.js"></script>
@@ -156,5 +210,7 @@
   <script src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
   <script src="//yastatic.net/share2/share.js"></script>
   <script src="js/jquery.inputmask.bundle.min.js"></script>
+  <script src="./js/video.min.js"></script>
+  <script src="./js/jquery.lazy.min.js"></script>
   <script src="js/main.js"></script>
 </html>

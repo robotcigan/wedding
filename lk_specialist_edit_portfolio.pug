@@ -31,47 +31,72 @@ block content
                 li.tabs__link
                   span Награды и сертификаты
 
-              label.dashed.dashed--gray
-                span Поместите файлы сюда
-                input(type="file" multiple)
-
               .tabs__contents
                 .tabs__content.tabs__content--active
+                  form(action="/" method="post" enctype="multipart/form-data").dragndrop.dropzone.dashed.dashed--gray
+                    input(type="file" multiple)
                   .masonry.masonry--offset.portfolio-gallery
                     -for(var i = 1; i < 10; i++)
                       .masonry__column.remove-container
-                        span.remove
+                        span.remove.delete
                           i.fa.fa-close
                         a(href="img/masonry/" + i + ".jpg")
                           img(src="img/masonry/" + i + ".jpg", alt="")
 
+
                 .tabs__content
+                  h3.h3 Вставьте ссылку на ролик с vimeo.com
+                  .video-url
+                    .form-control
+                      input(type="text")
+                      label Ссылка на ролик в vimeo
+                    a(href="").btn.btn--primary Сохранить
                   .row
                     -for(var x = 0; x < 7; x++)
                       .col.col--sm-4
-                        .video.remove-container
-                          span.remove
+                        a(href="#video").video.modal-open.remove-container
+                          span.remove.delete
                             i.fa.fa-close
                           img(src="img/video.jpg", alt="")
 
                 .tabs__content
+                  form(action="/" method="post" enctype="multipart/form-data").dragndrop.dropzone.dashed.dashed--gray
+                    input(type="file" multiple)
                   -for(var y = 0; y < 5; y++)
                     .audio.row.row--sm-bottom
                       .col.col--sm-7
                         .audio__title Группа «Фрукты» - Свадебный переполох
-                        audio(src="audio/horse.mp3" type="audio/mp3" controls="controls")
+                        .form-control.audio__title-edit
+                          input(type="text" value="Группа «Фрукты» - Свадебный переполох")
+                          label Название
+                        audio#audio_example.video-js.vjs-default-skin(controls preload="auto" data-setup='{}')
+                          source(src="./audio/Led zeppelin-whole lotta love.mp3" type='audio/mp3')
                       .col.col--sm-5
-                        .btn.btn--primary.btn--solid.btn--small Редактировать
-                        .btn.btn--black.btn--solid.btn--small.remove Удалить
+                        .btn.btn--primary.btn--solid.btn--small.btn--edit Редактировать
+                        .btn.btn--primary.btn--solid.btn--small.btn--save Сохранить
+                        .btn.btn--black.btn--solid.btn--small.delete Удалить
 
                 .tabs__content
+                  form(action="/" method="post" enctype="multipart/form-data").dragndrop.dropzone.dashed.dashed--gray
+                    input(type="file" multiple)
                   .masonry.documents-gallery
                     -for(var y = 1; y < 6; y++)
                       .masonry__column.remove-container
-                        span.remove
+                        span.remove.delete
                           i.fa.fa-close
                         a(href="img/documents/" + y + ".jpg")
                           img(src="img/documents/" + y + ".jpg", alt="")
 
+
+  #video.modal.modal--without-border
+    video#my-player.video-js(
+      controls
+      fluid="true"
+      preload="auto"
+      poster="./img/video.jpg"
+      data-setup="{}")
+      source(src="//vjs.zencdn.net/v/oceans.mp4" type="video/mp4")
+      source(src="//vjs.zencdn.net/v/oceans.webm" type="video/webm")
+      source(src="//vjs.zencdn.net/v/oceans.ogv" type="video/ogg")
 
   include viewed.pug

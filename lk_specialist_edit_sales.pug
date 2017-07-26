@@ -10,7 +10,7 @@ block content
             a(href="").breadcrumbs__link.breadcrumbs__link--active Личный кабинет
 
     .row
-      .col.col--lg-8.col--lg-offset-2.col--md-10.col--md-offset-1.col--sm-12
+      .col.col--xl-8.col--xl-offset-2.col--sm-12
         .tabs
           nav.tabs__header.tabs__header--links
             a.tabs__link(href="./lk_specialist_edit_profile.html") Профиль
@@ -20,7 +20,7 @@ block content
 
           .tabs__content.tabs__content--active
             .row
-              .col.col--sm-6
+              .col.col--sm-6.sales-form-block
                 form.form
                   .form-control
                     input(type="text" pattern="/^$|\s+/")
@@ -50,7 +50,7 @@ block content
                     .dashed__content Купон предоставляет возможность приобрести пакет «Love story в подарок! Фотосъемка свадебного дня» -30%
                     .dashed__btn-group
                       .btn.btn--primary.btn--solid.btn--small Редактировать
-                      .btn.btn--black.btn--solid.btn--small.remove Удалить
+                      .btn.btn--black.btn--solid.btn--small.delete Удалить
 
 
   include viewed.pug

@@ -18,14 +18,17 @@ block content
             .specialist__plate Акция
         span.social-share-word Поделиться
         .socials
-          a(href="").socials__item
-            i.fa.fa-vk
-          a(href="").socials__item
-            i.fa.fa-odnoklassniki
-          a(href="").socials__item
-            i.fa.fa-twitter
-          a(href="").socials__item
-            i.fa.fa-facebook
+          .ya-share2( data-services="vkontakte,facebook,twitter,odnoklassniki" data-title:twitter="Yandex" data-counter)
+
+        //- .socials
+        //-   a(href="").socials__item
+        //-     i.fa.fa-vk
+        //-   a(href="").socials__item
+        //-     i.fa.fa-odnoklassniki
+        //-   a(href="").socials__item
+        //-     i.fa.fa-twitter
+        //-   a(href="").socials__item
+        //-     i.fa.fa-facebook
       .col.col--sm-6
         h1.h1.without-offset Анна Веретина
         .specialist__role Ведущая
@@ -159,7 +162,7 @@ block content
           -for(var x = 0; x < 7; x++)
             .col.col--sm-4
               .video
-                img(src="img/video.jpg", alt="")
+                img(src="https://i.vimeocdn.com/video/621276289_1280x720.jpg", alt="")
 
       .tabs__content
         -for(var y = 0; y < 5; y++)

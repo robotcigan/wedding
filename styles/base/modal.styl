@@ -1,0 +1,82 @@
+.modal
+  animation bigFadeUp .3s forwards ease
+  background #fff
+  box-shadow 0 1rem 2rem rgba($main, .1)
+  border-radius $radius
+  display none
+  margin 0 auto
+  max-width 40rem
+  padding 2.4rem
+  position relative
+  width auto
+  &__title
+    font-size 2.4rem
+    font-weight 600
+    margin-bottom 2rem
+  &__label
+    color $gray
+    margin .5rem 0
+    &--type-2
+      margin 2.4rem 0
+      position relative
+      &:before,
+      &:after
+        background-color $light-gray
+        content ''
+        height 1px
+        position absolute
+        top 45%
+        width 25%
+      &:before
+        left 0
+      &:after
+        right 0
+  .socials-type-2
+    margin 2rem 0
+  .center
+    margin-top 1.6rem
+  &--without-border
+    background-color transparent
+    box-shadow none
+    padding 0
+    max-width 50%
+    height 50vh
+    iframe
+      height 100%
+      width 100%
+    .mfp-close,
+    .mfp-close:active
+      color #fff
+      font-size 3.2rem
+      opacity 1
+      right -5rem
+      top -1.5rem
+  &--map
+    max-width 70%
+
+
+.mfp-ready .modal
+  display block
+
+.mfp-close,
+.mfp-close:active
+  top 1.5rem
+  right 1rem
+
+.mfp-gallery
+  .mfp-close,
+  .mfp-close:active
+    opacity 1
+    top 2.4rem
+    right -4rem
+  .mfp-close:hover
+    color $primary
+    cursor pointer
+
+@media(max-width 767px)
+  .modal
+    max-width 90%
+    .mfp-close,
+    .mfp-close:active
+      top -6rem
+      right -2rem

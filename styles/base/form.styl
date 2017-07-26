@@ -251,8 +251,11 @@
       transform translateY(1px)
   .fa
     margin-left 1rem
+  &--save
+    display none
 
-
+.audio__title-edit
+  display none
 
 .tabs
   &__header
@@ -260,7 +263,7 @@
     display flex
     flex-basis auto
     justify-content space-between
-    margin-bottom 2rem
+    margin-bottom 1rem
   &__link
     color $gray
     cursor pointer
@@ -389,7 +392,36 @@
   max-width 100% !important
   margin-top 1rem
 
+@media(max-width 1200px)
+  .btn.btn--primary.btn--solid.btn--small
+    padding .7rem 1rem
+
 @media(max-width 1000px)
   .btn
     &--mobile-hide
       display none
+
+@media(max-width 500px)
+  .tabs
+    &__header
+      display block
+      margin-bottom 2rem
+    &__link
+      border-bottom 0
+      border $border
+      display block
+      margin-right 0
+      padding-left 1.6rem !important
+      text-align left
+      width 100%
+      span
+        background-color transparent !important
+        padding 0 !important
+        &:before,
+        &:after
+          display none
+      &--active
+        border-left 2px solid $primary
+
+
+

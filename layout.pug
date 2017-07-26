@@ -18,6 +18,24 @@ html(lang="ru")
         li: a(href="articles.html").header-nav__link Статьи
         li: a(href="consultant.html").header-nav__link Cвадебный консультант
         li: a(href="about_info.html").header-nav__link О проекте
+      .city-selection
+        .city-selection__city
+          span Краснодар
+          .fa.fa-angle-down
+        .city-selection__body
+          .city-selection__title Выберите город
+          .city-selection__close
+          //- .form-control
+          //-   input(type="text")
+          //-   label Название города
+          //-   i.form-control__icon.fa.fa-search
+          ul.city-selection__list
+            li
+              a(href="").link Краснодар
+            li
+              a(href="").link Сочи
+            li
+              a(href="").link Армавир
       .mobile-menu__bottom
         .socials
           a(href="").socials__item
@@ -28,7 +46,7 @@ html(lang="ru")
             i.fa.fa-twitter
           a(href="").socials__item
             i.fa.fa-facebook
-        a(href="#modal").btn.btn--primary.btn--solid.modal-open Войти
+        a(href="#enter").btn.btn--primary.btn--solid.modal-open Войти
         a(href="").btn.btn--primary Разместить заявку 
     #page.page
       section.empty
@@ -68,8 +86,13 @@ html(lang="ru")
                         a(href="").link Новороссийск
                       li
                         a(href="").link Анапа
-              a(href="#modal").link.link--primary.modal-open.open-enter-modal-desctop Войти
-              a(href="#modal").modal-open.open-enter-modal-mobile
+              a(href="#enter").link.link--primary.modal-open.open-enter-modal-desctop Войти
+              .is-login
+                img(src="./img/user.png", alt="")
+                .is-login__body
+                  a(href="").is-login__link Профиль
+                  a(href="").is-login__link Выйти
+              a(href="#enter").modal-open.open-enter-modal-mobile
               a(href="").btn.btn--primary.btn--order-desc Разместить заявку
               a(href="").btn.btn--primary.btn--order-mobile Заявка
               .mobile-menu-toggle
@@ -129,15 +152,15 @@ html(lang="ru")
                   span &mdash; разработка сайта 
                   a(href="").link Webformula
 
-    #modal.modal
+    #enter.modal
       .modal__title Войти
       form.form
         .form-control.form-control--error
-          input(type="email" pattern="/^$|\s+/")
+          input(type="email")
           label E-mail
           i.form-control__icon.fa.fa-envelope
         .form-control
-          input(type="password" pattern="/^$|\s+/")
+          input(type="password")
           label Пароль
           i.form-control__icon.fa.fa-lock
         .row
@@ -147,7 +170,7 @@ html(lang="ru")
               label(for="checkbox-1")
               span Запомнить пароль
           .col.col--sm-5.text-right
-            a(href="").link Забыли пароль
+            a(href="#forgot").link.modal-open Забыли пароль
         p.text-error Неверное имя пользователя или пароль. Проверьте правильность введенных данных.
           .col.col--sm-8.col--sm-offset-2
             .center
@@ -164,5 +187,38 @@ html(lang="ru")
                   i.fa.fa-twitter
               .modal__label Впервые на сайте?
               .btn.btn--primary.btn--full-width.btn--solid Зарегистрировтаься
+
+    #forgot.modal
+      .modal__title Восстановление пароля
+      form.form
+        .form-control
+          input(type="email")
+          label E-mail
+          i.form-control__icon.fa.fa-envelope
+        p Введите адрес электронной почты, который вы указывали при регистрации.
+          .col.col--sm-8.col--sm-offset-2
+            .center
+              a(href="#was-sent").btn.btn--primary.btn--full-width.modal-open Отправить
+
+    #was-sent.modal
+      .modal__title Восстановление пароля
+      form.form
+        p На ваш e-mail выслана ссылка для восстановления пароля.
+
+    #new-password.modal
+      .modal__title Восстановление пароля
+      form.form
+        .form-control
+          input(type="password")
+          label Новый пароль
+          i.form-control__icon.fa.fa-lock
+        .form-control
+          input(type="password")
+          label Повторите пароль
+          i.form-control__icon.fa.fa-lock
+          .col.col--sm-8.col--sm-offset-2
+            .center
+              a(href="#was-sent").btn.btn--primary.btn--full-width.modal-open Подтвердить
+
 
   include components/layoutlibs.pug

@@ -8,6 +8,13 @@
   margin-top 0
 
 .specialist-map
+  align-items center
+  background url('../../img/map.jpg') no-repeat
+  background-size cover
+  display flex
+  justify-content center
+  min-height 10rem
+  width 100%
   iframe
     height 15rem
     width 100%
@@ -17,23 +24,73 @@
   display inline-block
   margin-bottom 3rem
   position relative
+  max-width 100%
   &:before
     content ''
     background rgba($main, .2)
     position absolute
     circle(100%)
-  &:after
-    content ''
-    background url('../../img/play.png')
-    background-size contain
-    circle(4.8rem)
-    center()
+  // &:after
+  //   content ''
+  //   background url('../../img/play.png')
+  //   background-size contain
+  //   circle(4.8rem)
+  //   center()
   img
     display block
     max-width 100%
+  video
+    max-width 100%
+
+.video-js
+  max-width 100%
+.my-player-dimensions
+  height initial
+  width 100%
+  min-height 41rem
+
+.contacts__block
+  margin-bottom 2rem
+
+.audio
+  margin-bottom 2rem
+  &__title
+    margin-bottom .5rem
+  audio
+    display block
+    width 100%
+  .vjs-text-track-display
+    display none
+  .video-js .vjs-fullscreen-control
+    display none
+  // Reset the height of the player to the height of the controller
+  .audio_example-dimensions
+    height 30px
+    width 100%
+
+
+.video-url
+  align-items flex-start
+  display flex
+  justify-content space-between
+  margin-bottom 2rem
+  .form-control
+    margin-bottom 0
+    margin-right 4rem
+    width 100%
 
 @media(max-width 1200px)
   .specialist-profile-left
   .specialist-profile-center
   .specialist-profile-right
     margin-bottom 2rem
+    
+@media(max-width 500px)
+  .video-url
+    .form-control
+      margin-right 1rem
+      input
+        padding-right 0
+
+
+
